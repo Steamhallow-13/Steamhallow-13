@@ -1,8 +1,11 @@
 {
 	"version": 1,
-	"map_name": "MultiZ Debug",
+	"map_name": "Runtime Keep",
 	"map_path": "map_files/debug",
-	"map_file": "multiz.dmm",
+	"map_file": "runtimekeep.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
 	"ignored_unit_tests": [
 		"/datum/unit_test/cargo_dep_order_locations",
 		"/datum/unit_test/job_roundstart_spawnpoints",
@@ -12,18 +15,28 @@
 	"traits": [
 		{
 			"Up": true,
-			"Linkage": "Cross"
+			"Mining": true,
+			"Linkage": null,
+			"Gravity": true,
+			"Baseturf": "/turf/open/misc/dirt/jungle",
+			"No Parallax": true
 		},
 		{
 			"Up": true,
 			"Down": true,
 			"Baseturf": "/turf/open/openspace",
-			"Linkage": "Cross"
+			"Mining": true,
+			"Linkage": null,
+			"Gravity": true,
+			"No Parallax": true
 		},
 		{
 			"Down": true,
 			"Baseturf": "/turf/open/openspace",
-			"Linkage": "Cross"
+			"Mining": true,
+			"Linkage": null,
+			"Gravity": true,
+			"No Parallax": true
 		}
 	]
 }

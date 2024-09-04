@@ -57,8 +57,5 @@ endmap
 map gateway_test
 endmap
 
-map multiz_debug
-endmap
-
-map runtimestation
+map runtimekeep
 endmap
