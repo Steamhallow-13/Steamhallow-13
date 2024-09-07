@@ -664,75 +664,86 @@
 		var/mob/living/carbon/human/human_target = target
 		human_target.w_uniform?.add_fingerprint(src)
 
-	SEND_SIGNAL(target, COMSIG_LIVING_DISARM_HIT, src, zone_selected, weapon)
-	var/shove_dir = get_dir(loc, target.loc)
-	var/turf/target_shove_turf = get_step(target.loc, shove_dir)
-	var/turf/target_old_turf = target.loc
+	var/datum/roll_result/roll = stat_roll(10, /datum/rpg_skill/prowess)
 
-	//Are we hitting anything? or
-	if(shove_flags & SHOVE_CAN_MOVE)
-		if(SEND_SIGNAL(target_shove_turf, COMSIG_LIVING_DISARM_PRESHOVE, src, target, weapon) & COMSIG_LIVING_ACT_SOLID)
-			shove_flags |= SHOVE_BLOCKED
-		else
-			target.Move(target_shove_turf, shove_dir)
-			if(get_turf(target) == target_old_turf)
-				shove_flags |= SHOVE_BLOCKED
+	switch(roll.outcome)
 
-	if(!(shove_flags & SHOVE_BLOCKED))
-		target.setGrabState(GRAB_PASSIVE)
+		if(SUCCESS, CRIT_SUCCESS)
 
-	//Directional checks to make sure that we're not shoving through a windoor or something like that
-	if((shove_flags & SHOVE_BLOCKED) && (shove_dir in GLOB.cardinals))
-		var/target_turf = get_turf(target)
-		for(var/obj/obj_content in target_turf)
-			if(obj_content.flags_1 & ON_BORDER_1 && obj_content.dir == shove_dir && obj_content.density)
-				shove_flags |= SHOVE_DIRECTIONAL_BLOCKED
-				break
-		if(target_turf != target_shove_turf && !(shove_flags && SHOVE_DIRECTIONAL_BLOCKED)) //Make sure that we don't run the exact same check twice on the same tile
-			for(var/obj/obj_content in target_shove_turf)
-				if(obj_content.flags_1 & ON_BORDER_1 && obj_content.dir == REVERSE_DIR(shove_dir) && obj_content.density)
-					shove_flags |= SHOVE_DIRECTIONAL_BLOCKED
-					break
+			SEND_SIGNAL(target, COMSIG_LIVING_DISARM_HIT, src, zone_selected, weapon)
+			var/shove_dir = get_dir(loc, target.loc)
+			var/turf/target_shove_turf = get_step(target.loc, shove_dir)
+			var/turf/target_old_turf = target.loc
 
-	if(shove_flags & SHOVE_CAN_HIT_SOMETHING)
-		//Don't hit people through windows, ok?
-		if(!(shove_flags & SHOVE_DIRECTIONAL_BLOCKED) && (SEND_SIGNAL(target_shove_turf, COMSIG_LIVING_DISARM_COLLIDE, src, target, shove_flags, weapon) & COMSIG_LIVING_SHOVE_HANDLED))
-			return
-		if((shove_flags & SHOVE_BLOCKED) && !(shove_flags & (SHOVE_KNOCKDOWN_BLOCKED|SHOVE_CAN_KICK_SIDE)))
-			target.Knockdown(SHOVE_KNOCKDOWN_SOLID)
-			target.apply_status_effect(/datum/status_effect/next_shove_stuns)
-			target.visible_message(span_danger("[name] shoves [target.name], knocking [target.p_them()] down!"),
-				span_userdanger("You're knocked down from a shove by [name]!"), span_hear("You hear aggressive shuffling followed by a loud thud!"), COMBAT_MESSAGE_RANGE, src)
-			to_chat(src, span_danger("You shove [target.name], knocking [target.p_them()] down!"))
-			log_combat(src, target, "shoved", "knocking them down[weapon ? " with [weapon]" : ""]")
-			return
+			//Are we hitting anything? or
+			if(shove_flags & SHOVE_CAN_MOVE)
+				if(SEND_SIGNAL(target_shove_turf, COMSIG_LIVING_DISARM_PRESHOVE, src, target, weapon) & COMSIG_LIVING_ACT_SOLID)
+					shove_flags |= SHOVE_BLOCKED
+				else
+					target.Move(target_shove_turf, shove_dir)
+					if(get_turf(target) == target_old_turf)
+						shove_flags |= SHOVE_BLOCKED
 
-	if(shove_flags & SHOVE_CAN_KICK_SIDE) //KICK HIM IN THE NUTS
-		target.Paralyze(SHOVE_CHAIN_PARALYZE)
-		target.apply_status_effect(/datum/status_effect/no_side_kick)
-		target.visible_message(span_danger("[name] kicks [target.name] onto [target.p_their()] side!"),
-						span_userdanger("You're kicked onto your side by [name]!"), span_hear("You hear aggressive shuffling followed by a loud thud!"), COMBAT_MESSAGE_RANGE, src)
-		to_chat(src, span_danger("You kick [target.name] onto [target.p_their()] side!"))
-		addtimer(CALLBACK(target, TYPE_PROC_REF(/mob/living, SetKnockdown), 0), SHOVE_CHAIN_PARALYZE)
-		log_combat(src, target, "kicks", "onto their side (paralyzing)")
-		return
+			if(!(shove_flags & SHOVE_BLOCKED))
+				target.setGrabState(GRAB_PASSIVE)
 
-	target.get_shoving_message(src, weapon, shove_flags)
+			//Directional checks to make sure that we're not shoving through a windoor or something like that
+			if((shove_flags & SHOVE_BLOCKED) && (shove_dir in GLOB.cardinals))
+				var/target_turf = get_turf(target)
+				for(var/obj/obj_content in target_turf)
+					if(obj_content.flags_1 & ON_BORDER_1 && obj_content.dir == shove_dir && obj_content.density)
+						shove_flags |= SHOVE_DIRECTIONAL_BLOCKED
+						break
+				if(target_turf != target_shove_turf && !(shove_flags && SHOVE_DIRECTIONAL_BLOCKED)) //Make sure that we don't run the exact same check twice on the same tile
+					for(var/obj/obj_content in target_shove_turf)
+						if(obj_content.flags_1 & ON_BORDER_1 && obj_content.dir == REVERSE_DIR(shove_dir) && obj_content.density)
+							shove_flags |= SHOVE_DIRECTIONAL_BLOCKED
+							break
 
-	//Take their lunch money
-	var/target_held_item = target.get_active_held_item()
-	var/append_message = weapon ? " with [weapon]" : ""
-	// If it's in our typecache, they're staggered and it exists, disarm. If they're knocked down, disarm too.
-	if(target_held_item && target.get_timed_status_effect_duration(/datum/status_effect/staggered) && is_type_in_typecache(target_held_item, GLOB.shove_disarming_types) || target_held_item && target.body_position == LYING_DOWN)
-		target.dropItemToGround(target_held_item)
-		append_message = "causing [target.p_them()] to drop [target_held_item]"
-		target.visible_message(span_danger("[target.name] drops \the [target_held_item]!"),
-			span_warning("You drop \the [target_held_item]!"), null, COMBAT_MESSAGE_RANGE)
+			if(shove_flags & SHOVE_CAN_HIT_SOMETHING)
+				//Don't hit people through windows, ok?
+				if(!(shove_flags & SHOVE_DIRECTIONAL_BLOCKED) && (SEND_SIGNAL(target_shove_turf, COMSIG_LIVING_DISARM_COLLIDE, src, target, shove_flags, weapon) & COMSIG_LIVING_SHOVE_HANDLED))
+					return
+				if((shove_flags & SHOVE_BLOCKED) && !(shove_flags & (SHOVE_KNOCKDOWN_BLOCKED|SHOVE_CAN_KICK_SIDE)))
+					target.Knockdown(SHOVE_KNOCKDOWN_SOLID)
+					target.apply_status_effect(/datum/status_effect/next_shove_stuns)
+					target.visible_message(span_danger("[name] shoves [target.name], knocking [target.p_them()] down!"),
+						span_userdanger("You're knocked down from a shove by [name]!"), span_hear("You hear aggressive shuffling followed by a loud thud!"), COMBAT_MESSAGE_RANGE, src)
+					to_chat(src, span_danger("You shove [target.name], knocking [target.p_them()] down!"))
+					log_combat(src, target, "shoved", "knocking them down[weapon ? " with [weapon]" : ""]")
+					return
 
-	if(shove_flags & SHOVE_CAN_STAGGER)
-		target.adjust_staggered_up_to(STAGGERED_SLOWDOWN_LENGTH, 10 SECONDS)
+			if(shove_flags & SHOVE_CAN_KICK_SIDE) //KICK HIM IN THE NUTS
+				target.Paralyze(SHOVE_CHAIN_PARALYZE)
+				target.apply_status_effect(/datum/status_effect/no_side_kick)
+				target.visible_message(span_danger("[name] kicks [target.name] onto [target.p_their()] side!"),
+								span_userdanger("You're kicked onto your side by [name]!"), span_hear("You hear aggressive shuffling followed by a loud thud!"), COMBAT_MESSAGE_RANGE, src)
+				to_chat(src, span_danger("You kick [target.name] onto [target.p_their()] side!"))
+				addtimer(CALLBACK(target, TYPE_PROC_REF(/mob/living, SetKnockdown), 0), SHOVE_CHAIN_PARALYZE)
+				log_combat(src, target, "kicks", "onto their side (paralyzing)")
+				return
 
-	log_combat(src, target, "shoved", append_message)
+			target.get_shoving_message(src, weapon, shove_flags)
+
+			//Take their lunch money
+			var/target_held_item = target.get_active_held_item()
+			var/append_message = weapon ? " with [weapon]" : ""
+			// If it's in our typecache, they're staggered and it exists, disarm. If they're knocked down, disarm too.
+			if(target_held_item && target.get_timed_status_effect_duration(/datum/status_effect/staggered) && is_type_in_typecache(target_held_item, GLOB.shove_disarming_types) || target_held_item && target.body_position == LYING_DOWN)
+				target.dropItemToGround(target_held_item)
+				append_message = "causing [target.p_them()] to drop [target_held_item]"
+				target.visible_message(span_danger("[target.name] drops \the [target_held_item]!"),
+					span_warning("You drop \the [target_held_item]!"), null, COMBAT_MESSAGE_RANGE)
+
+			if(shove_flags & SHOVE_CAN_STAGGER)
+				target.adjust_staggered_up_to(STAGGERED_SLOWDOWN_LENGTH, 10 SECONDS)
+
+			log_combat(src, target, "shoved", append_message)
+
+		if(CRIT_FAILURE)
+			if(!target.stat = DEAD)
+			to_chat(src, roll.create_tooltip("You realize your folly quick as [target.name] instinctually shoots to shove you in kind."))
+			target.disarm(src)
 
 ///Check if the universal conditions for disarming/shoving are met.
 /mob/living/proc/can_disarm(mob/living/target)

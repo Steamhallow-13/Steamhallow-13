@@ -1,5 +1,5 @@
-#define FAILURE 0
-#define SUCCESS 1
+#define FLASHLIGHT_FAILURE 0
+#define FLASHLIGHT_SUCCESS 1
 #define NO_FUEL 2
 #define ALREADY_LIT 3
 
@@ -504,19 +504,19 @@
 			balloon_alert(user, "already lit!")
 		return ALREADY_LIT
 	if(!toggle_light())
-		return FAILURE
+		return FLASHLIGHT_FAILURE
 
 	if(fuel != INFINITY)
 		START_PROCESSING(SSobj, src)
 
-	return SUCCESS
+	return FLASHLIGHT_SUCCESS
 
 /obj/item/flashlight/flare/fire_act(exposed_temperature, exposed_volume)
 	ignition()
 	return ..()
 
 /obj/item/flashlight/flare/attack_self(mob/user)
-	if(ignition(user) == SUCCESS)
+	if(ignition(user) == FLASHLIGHT_SUCCESS)
 		user.visible_message(span_notice("[user] lights \the [src]."), span_notice("You light \the [initial(src.name)]!"))
 
 /obj/item/flashlight/flare/get_temperature()
@@ -590,18 +590,18 @@
 	if(!istype(user))
 		return
 
-	var/success_msg = fire_starter.ignition_effect(src, user)
+	var/FLASHLIGHT_SUCCESS_msg = fire_starter.ignition_effect(src, user)
 	var/ignition_result
 
-	if(success_msg)
+	if(FLASHLIGHT_SUCCESS_msg)
 		ignition_result = ignition()
 
 	switch(ignition_result)
-		if(SUCCESS)
+		if(FLASHLIGHT_SUCCESS)
 			update_appearance(UPDATE_ICON | UPDATE_NAME)
 			if(!quiet && !silent)
-				user.visible_message(success_msg)
-			return SUCCESS
+				user.visible_message(FLASHLIGHT_SUCCESS_msg)
+			return FLASHLIGHT_SUCCESS
 		if(ALREADY_LIT)
 			if(!silent)
 				balloon_alert(user, "already lit!")
@@ -980,7 +980,7 @@
 	light_range = 4
 	light_power = 2
 
-#undef FAILURE
-#undef SUCCESS
+#undef FLASHLIGHT_FAILURE
+#undef FLASHLIGHT_SUCCESS
 #undef NO_FUEL
 #undef ALREADY_LIT
