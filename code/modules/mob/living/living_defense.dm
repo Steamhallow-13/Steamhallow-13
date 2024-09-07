@@ -664,7 +664,7 @@
 		var/mob/living/carbon/human/human_target = target
 		human_target.w_uniform?.add_fingerprint(src)
 
-	var/datum/roll_result/roll = stat_roll(10, /datum/rpg_skill/prowess)
+	var/datum/roll_result/roll = stat_roll(10, /datum/rpg_skill/prowess) // STEAMHALLOW TODO - defenders should roll on a durability skill here
 
 	switch(roll.outcome)
 

@@ -2,6 +2,7 @@
 	var/name = ""
 	var/desc = ""
 
+	// Additional points allocated on top of the parent type stat's own.
 	var/value = 0
 	var/list/modifiers
 
