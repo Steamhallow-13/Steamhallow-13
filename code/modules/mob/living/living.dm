@@ -38,6 +38,8 @@
 	if(buckled)
 		buckled.unbuckle_mob(src,force=1)
 
+	QDEL_NULL(stats)
+
 	remove_from_all_data_huds()
 	GLOB.mob_living_list -= src
 	if(imaginary_group)

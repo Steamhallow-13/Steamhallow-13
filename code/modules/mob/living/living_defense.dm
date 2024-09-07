@@ -741,9 +741,9 @@
 			log_combat(src, target, "shoved", append_message)
 
 		if(CRIT_FAILURE)
-			if(!target.stat = DEAD)
-			to_chat(src, roll.create_tooltip("You realize your folly quick as [target.name] instinctually shoots to shove you in kind."))
-			target.disarm(src)
+			if(!target.stat >= SOFT_CRIT)
+				to_chat(src, roll.create_tooltip("You realize your folly quick as [target.name] instinctually shoots to shove you in kind."))
+				target.disarm(src)
 
 ///Check if the universal conditions for disarming/shoving are met.
 /mob/living/proc/can_disarm(mob/living/target)

@@ -150,7 +150,7 @@ GLOBAL_DATUM_INIT(success_roll, /datum/roll_result/success, new)
 	var/tooltip_html = "[success_prob]% | Result: <span style='font-weight: bold;color: [color]'><b>[roll]</b></span> | Check: <b>[requirement]</b>"
 	var/seperator = "<span style='color: #bbbbad;font-style: italic'>: </span>"
 
-	return "[prefix] <span data-component=\"Tooltip\" data-innerhtml=\"[tooltip_html]\" class=\"tooltip\">[finished_prob_string]</span>[seperator][body]"
+	return "[prefix] [span_tooltip(tooltip_html, finished_prob_string)] [seperator] [body]"
 
 /datum/roll_result/success
 	outcome = SUCCESS
