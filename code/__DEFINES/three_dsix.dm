@@ -6,3 +6,18 @@
 /// The baseline value for a stat.
 #define STATS_BASELINE_VALUE 11
 
+/*
+	SKILL MODIFIER SOURCES
+*/
+
+/// Alchohol withdrawl
+#define SKILL_SOURCE_ALCHOHOL_WITHDRAWL "Alchohol withdrawl"
+
+/// Combat mode
+#define SKILL_SOURCE_COMBAT_MODE "Adrenaline rush"
+
+/// Confusion status effect.
+#define SKILL_SOURCE_CONFUSION "Confused"
+
+/// Knockdown status effect
+#define SKILL_SOURCE_FLOORED "Knocked down"

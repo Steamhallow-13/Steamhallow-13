@@ -151,6 +151,12 @@
 	combat_mode = new_mode
 	if(hud_used?.action_intent)
 		hud_used.action_intent.update_appearance()
+
+	if(combat_mode)
+		stats?.set_skill_modifier(4, /datum/rpg_skill/strength, SKILL_SOURCE_COMBAT_MODE) // Hefty boost for switching into.
+	else
+		stats?.remove_skill_modifier(/datum/rpg_skill/strength, SKILL_SOURCE_COMBAT_MODE)
+
 	if(silent || !(client?.prefs.read_preference(/datum/preference/toggle/sound_combatmode)))
 		return
 	if(combat_mode)

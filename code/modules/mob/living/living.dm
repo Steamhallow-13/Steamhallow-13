@@ -2504,13 +2504,14 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 	if(body_position == STANDING_UP) //force them on the ground
 		set_body_position(LYING_DOWN)
 		set_lying_angle(pick(90, 270))
+		stats?.set_skill_modifier(-2, /datum/rpg_skill/prowess, SKILL_SOURCE_FLOORED)
 
 
 /// Proc to append behavior to the condition of being floored. Called when the condition ends.
 /mob/living/proc/on_floored_end()
 	if(!resting)
 		get_up()
-
+		stats?.remove_skill_modifier(/datum/rpg_skill/prowess, SKILL_SOURCE_FLOORED)
 
 /// Proc to append behavior to the condition of being handsblocked. Called when the condition starts.
 /mob/living/proc/on_handsblocked_start()
