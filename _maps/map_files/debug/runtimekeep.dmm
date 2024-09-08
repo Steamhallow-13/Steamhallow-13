@@ -98,11 +98,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
-"bU" = (
-/obj/machinery/door/airlock/glass,
-/obj/structure/cable,
-/turf/open/floor/iron,
-/area/station/service/abandoned_gambling_den)
 "cb" = (
 /obj/machinery/door/airlock,
 /turf/open/floor/plating,
@@ -677,7 +672,6 @@
 /area/station/maintenance/aft)
 "jI" = (
 /obj/effect/turf_decal/stripes/corner,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/service/abandoned_gambling_den)
 "jN" = (
@@ -986,7 +980,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/service/abandoned_gambling_den)
 "px" = (
@@ -31633,8 +31626,8 @@ xt
 aq
 DJ
 fv
-bU
-AS
+UB
+Pz
 uL
 uL
 uL
