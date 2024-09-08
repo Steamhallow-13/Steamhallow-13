@@ -80,7 +80,7 @@
 
 	// Attacker --> Victim --> Empty space --> Wall
 	attacker.forceMove(run_loc_floor_bottom_left)
-	attacker.stats.set_stat_modifier(INFINITY, /datum/rpg_stat/prowess, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
+	attacker.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/prowess, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 	victim.forceMove(locate(run_loc_floor_bottom_left.x + 1, run_loc_floor_bottom_left.y, run_loc_floor_bottom_left.z))
 	dense_object.forceMove(locate(run_loc_floor_bottom_left.x + 3, run_loc_floor_bottom_left.y, run_loc_floor_bottom_left.z))
 
