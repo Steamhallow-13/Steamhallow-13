@@ -21,3 +21,6 @@
 
 /// Knockdown status effect
 #define SKILL_SOURCE_FLOORED "Knocked down"
+
+/// Part of a unit test
+#define SKILL_SOURCE_UNIT_TEST "being prob(80)'d"
