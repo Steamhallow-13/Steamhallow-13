@@ -1214,28 +1214,47 @@
 	. = TRUE
 	//If we're in an aggressive grab or higher, we're lying down, we're vulnerable to grabs, or we're staggered and we have some amount of stamina loss, we must resist
 	if(pulledby.grab_state || body_position == LYING_DOWN || HAS_TRAIT(src, TRAIT_GRABWEAKNESS) || get_timed_status_effect_duration(/datum/status_effect/staggered) && (getFireLoss()*0.5 + getBruteLoss()*0.5) >= 40)
-		var/altered_grab_state = pulledby.grab_state
-		if((body_position == LYING_DOWN || HAS_TRAIT(src, TRAIT_GRABWEAKNESS) || get_timed_status_effect_duration(/datum/status_effect/staggered)) && pulledby.grab_state < GRAB_KILL) //If prone, resisting out of a grab is equivalent to 1 grab state higher. won't make the grab state exceed the normal max, however
-			altered_grab_state++
-		var/resist_chance = BASE_GRAB_RESIST_CHANCE /// see defines/combat.dm, this should be baseline 60%
-		resist_chance = (resist_chance/altered_grab_state) ///Resist chance divided by the value imparted by your grab state. It isn't until you reach neckgrab that you gain a penalty to escaping a grab.
-		if(prob(resist_chance))
-			visible_message(span_danger("[src] breaks free of [pulledby]'s grip!"), \
-							span_danger("You break free of [pulledby]'s grip!"), null, null, pulledby)
-			to_chat(pulledby, span_warning("[src] breaks free of your grip!"))
-			log_combat(pulledby, src, "broke grab")
+		var/can_bypass_roll = TRUE // assume mobs can bypass by default
+		var/altered_grab_modifier = 0
+		if(isliving(pulledby))
+			can_bypass_roll = FALSE
+		if(!can_bypass_roll)
+			if((body_position == LYING_DOWN || HAS_TRAIT(src, TRAIT_GRABWEAKNESS) || get_timed_status_effect_duration(/datum/status_effect/staggered)) && pulledby.grab_state < GRAB_KILL) //If prone, add disadvantage
+				altered_grab_modifier -= 3
+			var/datum/roll_result/resist_roll = stat_roll(skill_path = /datum/rpg_skill/strength, modifier = altered_grab_modifier, defender = pulledby, defender_skill_path = /datum/rpg_skill/grip)
+			switch(resist_roll.outcome)
+				if(CRIT_SUCCESS) // Flawless Escape; standard SS13 grab resist
+					visible_message(span_danger("[src] effortlessly breaks free of [pulledby]'s grip!"), ignored_mobs = list(pulledby, src))
+					to_chat(src, resist_roll.create_tooltip("In a flurry of movement; you easily break free of [pulledby]'s grip!"))
+					to_chat(pulledby, span_warning("[src] effortlessly breaks free of your grip!"))
+					log_combat(pulledby, src, "broke grab (crit success roll)")
+					pulledby.stop_pulling()
+					return FALSE
+				if(SUCCESS) // Little scuffed but you manage
+					visible_message(span_danger("[src] breaks free of [pulledby]'s grip!"), ignored_mobs = list(pulledby, src))
+					to_chat(src, resist_roll.create_tooltip("You break free of [pulledby]'s grip!"))
+					to_chat(pulledby, span_warning("[src] breaks free of your grip!"))
+					adjustStaminaLoss(rand(5,10)) // Little worse for wear but still alright
+					log_combat(pulledby, src, "broke grab (success roll)")
+					pulledby.stop_pulling()
+					return FALSE
+				if(FAILURE) // You don't manage; but are mostly okay (standard SS13 resist fail)
+					adjustStaminaLoss(rand(15,20))//failure to escape still imparts a pretty serious penalty
+					visible_message(span_danger("[src] struggles as they fail to break free of [pulledby]'s grip!"), ignored_mobs = list(pulledby, src))
+					to_chat(src, resist_roll.create_tooltip("You struggle as you fail to break free of [pulledby]'s grip!"))
+					to_chat(pulledby, span_danger("[src] struggles as they fail to break free of your grip!"))
+					if(moving_resist && client) //we resisted by trying to move
+						client.move_delay = world.time + 4 SECONDS
+				if(CRIT_FAILURE) // Use up all of your energy in the process. D'oh!
+					adjustStaminaLoss(/mob/living::max_stamina)
+					visible_message(span_danger("[src] struggles and flails as they fail to break free of [pulledby]'s grip; but collapses in exhaustion!"), ignored_mobs = list(pulledby, src))
+					to_chat(src, resist_roll.create_tooltip("You struggle and flail as you fail to break free of [pulledby]'s grip; collapsing in exhaustion!"))
+					to_chat(pulledby, span_danger("[src] struggles and flail as they fail to break free of your grip - but you keep steady hand as they tire themselves out!"))
+					if(moving_resist && client) //we resisted by trying to move
+						client.move_delay = world.time + 8 SECONDS // mortis
+		else
 			pulledby.stop_pulling()
 			return FALSE
-		else
-			adjustStaminaLoss(rand(15,20))//failure to escape still imparts a pretty serious penalty
-			visible_message(span_danger("[src] struggles as they fail to break free of [pulledby]'s grip!"), \
-							span_warning("You struggle as you fail to break free of [pulledby]'s grip!"), null, null, pulledby)
-			to_chat(pulledby, span_danger("[src] struggles as they fail to break free of your grip!"))
-		if(moving_resist && client) //we resisted by trying to move
-			client.move_delay = world.time + 4 SECONDS
-	else
-		pulledby.stop_pulling()
-		return FALSE
 
 /mob/living/proc/resist_buckle()
 	buckled.user_unbuckle_mob(src,src)
