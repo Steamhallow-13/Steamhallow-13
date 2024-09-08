@@ -19,6 +19,7 @@
 
 	// Position shover (bottom left) and the shovee (1 tile right of bottom left, no wall behind them)
 	shoves_the_guy.forceMove(run_loc_floor_bottom_left)
+	shoves_the_guy.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/prowess, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 	set_glasses_wearer(wears_the_glasses, right_of_shover, glasses)
 
 	TEST_ASSERT(wears_the_glasses.glasses == glasses, "Dummy failed to equip the glasses.")
