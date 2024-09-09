@@ -52,22 +52,6 @@ GLOBAL_DATUM_INIT(success_roll, /datum/roll_result/success, new)
 	var/crit_fail = max((requirement + crit_fail_modifier), 4)
 	var/crit_success = min((requirement + 7), 17)
 
-	// if(dice >= requirement)
-	// 	var/list/out = list(
-	// 		"ROLL: [dice]",
-	// 		"SUCCESS PROB: %[round(dice_probability(3, 6, requirement - modifier), 0.01)]",
-	// 		"CRIT SP: %[round(dice_probability(3, 6, crit_success), 0.01)]",
-	// 		"MOD: [modifier]",
-	// 		"LOWEST POSSIBLE: [3 + modifier]",
-	// 		"HIGHEST POSSIBLE:[18 + modifier]",
-	// 		"CRIT SUCCESS: [crit_success]",
-	// 		"SUCCESS: [requirement]",
-	// 		"FAIL: [requirement-1]",
-	// 		"CRIT FAIL:[crit_fail]",
-	// 		"~~~~~~~~~~~~~~~"
-	// 	)
-	// 	to_chat(world, span_adminnotice(jointext(out, "")))
-
 	var/datum/roll_result/result = new()
 	result.success_prob = round(dice_probability(3, 6, requirement - modifier), 0.01)
 	result.crit_success_prob = round(dice_probability(3, 6, crit_success), 0.01)

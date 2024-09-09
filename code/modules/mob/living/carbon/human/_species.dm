@@ -900,7 +900,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		log_combat(user, target, "attempted to punch")
 
 	// Handle rolling here. Unarmed rolls on humans are handled seperately from melee rolls & unarmed rolls on basic mobs; because techdebt is funny.
-	var/datum/roll_result/attack_roll = user.stat_roll(requirement = 9, skill_path = /datum/rpg_skill/swinging, modifier = hit_modifier, defender = target, defender_skill_path = /datum/rpg_skill/prowess)
+	var/potential_requirement = 9 // This is a bit of a hack; if you punch yourself it needs to be 100%; but there's no way to bypass this with how it's structured; so...
+	if(user == target)
+		potential_requirement = 3
+	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/swinging, modifier = hit_modifier, defender = target, defender_skill_path = /datum/rpg_skill/prowess)
 
 	switch(attack_roll.outcome)
 
