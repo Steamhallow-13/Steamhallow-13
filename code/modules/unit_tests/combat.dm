@@ -4,7 +4,7 @@
 
 	// Avoid all randomness in tests
 	ADD_TRAIT(puncher, TRAIT_PERFECT_ATTACKER, INNATE_TRAIT)
-	attacker.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/swinging, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
+	puncher.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/swinging, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 
 	puncher.set_combat_mode(TRUE)
 	victim.attack_hand(puncher, list(RIGHT_CLICK = FALSE))
