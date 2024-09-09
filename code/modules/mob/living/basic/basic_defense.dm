@@ -31,7 +31,7 @@
 	if(user == src) // Drones, holoparasites; edgecases ala them
 		potential_requirement = 3
 
-	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/swinging, defender = src, defender_skill_path = /datum/rpg_skill/prowess)
+	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/force, defender = src, defender_skill_path = /datum/rpg_skill/mobility)
 
 	switch(attack_roll.outcome)
 

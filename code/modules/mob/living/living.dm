@@ -1221,7 +1221,7 @@
 		if(!can_bypass_roll)
 			if((body_position == LYING_DOWN || HAS_TRAIT(src, TRAIT_GRABWEAKNESS) || get_timed_status_effect_duration(/datum/status_effect/staggered)) && pulledby.grab_state < GRAB_KILL) //If prone, add disadvantage
 				altered_grab_modifier -= 3
-			var/datum/roll_result/resist_roll = stat_roll(skill_path = /datum/rpg_skill/strength, modifier = altered_grab_modifier, defender = pulledby, defender_skill_path = /datum/rpg_skill/grip)
+			var/datum/roll_result/resist_roll = stat_roll(skill_path = /datum/rpg_skill/force, modifier = altered_grab_modifier, defender = pulledby, defender_skill_path = /datum/rpg_skill/grappling)
 			switch(resist_roll.outcome)
 				if(CRIT_SUCCESS) // Flawless Escape; standard SS13 grab resist
 					visible_message(span_danger("[src] effortlessly breaks free of [pulledby]'s grip!"), ignored_mobs = list(pulledby, src))
@@ -2504,14 +2504,14 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 	if(body_position == STANDING_UP) //force them on the ground
 		set_body_position(LYING_DOWN)
 		set_lying_angle(pick(90, 270))
-		stats?.set_skill_modifier(-2, /datum/rpg_skill/prowess, SKILL_SOURCE_FLOORED)
+		stats?.set_skill_modifier(-2, /datum/rpg_skill/mobility, SKILL_SOURCE_FLOORED)
 
 
 /// Proc to append behavior to the condition of being floored. Called when the condition ends.
 /mob/living/proc/on_floored_end()
 	if(!resting)
 		get_up()
-		stats?.remove_skill_modifier(/datum/rpg_skill/prowess, SKILL_SOURCE_FLOORED)
+		stats?.remove_skill_modifier(/datum/rpg_skill/mobility, SKILL_SOURCE_FLOORED)
 
 /// Proc to append behavior to the condition of being handsblocked. Called when the condition starts.
 /mob/living/proc/on_handsblocked_start()

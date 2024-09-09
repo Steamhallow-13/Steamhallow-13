@@ -153,9 +153,9 @@
 		hud_used.action_intent.update_appearance()
 
 	if(combat_mode)
-		stats?.set_skill_modifier(4, /datum/rpg_skill/strength, SKILL_SOURCE_COMBAT_MODE) // Hefty boost for switching into.
+		stats?.set_skill_modifier(4, /datum/rpg_skill/force, SKILL_SOURCE_COMBAT_MODE) // Hefty boost for switching into.
 	else
-		stats?.remove_skill_modifier(/datum/rpg_skill/strength, SKILL_SOURCE_COMBAT_MODE)
+		stats?.remove_skill_modifier(/datum/rpg_skill/force, SKILL_SOURCE_COMBAT_MODE)
 
 	if(silent || !(client?.prefs.read_preference(/datum/preference/toggle/sound_combatmode)))
 		return
@@ -381,7 +381,7 @@
 	if(user == src) // Why are you hitting yourself? Why are you hitting yourself? Wh-
 		potential_requirement = 3
 
-	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/swinging, defender = src, defender_skill_path = /datum/rpg_skill/prowess)
+	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/force, defender = src, defender_skill_path = /datum/rpg_skill/mobility)
 
 	switch(attack_roll.outcome)
 
@@ -699,7 +699,7 @@
 		var/mob/living/carbon/human/human_target = target
 		human_target.w_uniform?.add_fingerprint(src)
 
-	var/datum/roll_result/roll = stat_roll(10, /datum/rpg_skill/prowess) // STEAMHALLOW TODO - defenders should roll on a durability skill here
+	var/datum/roll_result/roll = stat_roll(10, /datum/rpg_skill/force) // STEAMHALLOW TODO - defenders should roll on a durability skill here
 
 	switch(roll.outcome)
 

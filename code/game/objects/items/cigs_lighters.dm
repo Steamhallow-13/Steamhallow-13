@@ -984,7 +984,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		)
 		return
 
-	var/datum/roll_result/result = user.stat_roll(9, /datum/rpg_skill/grip)
+	var/datum/roll_result/result = user.stat_roll(9, /datum/rpg_skill/handicraft)
 	switch(result.outcome)
 		if(FAILURE, CRIT_FAILURE)
 			var/hitzone = user.held_index_to_dir(user.active_hand_index) == "r" ? BODY_ZONE_PRECISE_R_HAND : BODY_ZONE_PRECISE_L_HAND

@@ -4,7 +4,7 @@
 
 	// Avoid all randomness in tests
 	ADD_TRAIT(puncher, TRAIT_PERFECT_ATTACKER, INNATE_TRAIT)
-	puncher.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/swinging, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
+	puncher.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/force, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 
 	puncher.set_combat_mode(TRUE)
 	victim.attack_hand(puncher, list(RIGHT_CLICK = FALSE))
@@ -81,7 +81,7 @@
 
 	// Attacker --> Victim --> Empty space --> Wall
 	attacker.forceMove(run_loc_floor_bottom_left)
-	attacker.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/prowess, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
+	attacker.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/force, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 	victim.forceMove(locate(run_loc_floor_bottom_left.x + 1, run_loc_floor_bottom_left.y, run_loc_floor_bottom_left.z))
 	dense_object.forceMove(locate(run_loc_floor_bottom_left.x + 3, run_loc_floor_bottom_left.y, run_loc_floor_bottom_left.z))
 
