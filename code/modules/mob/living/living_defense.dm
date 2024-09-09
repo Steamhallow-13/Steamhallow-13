@@ -376,7 +376,36 @@
 
 	var/armor_block = run_armor_check(user.zone_selected, MELEE, armour_penetration = user.armour_penetration)
 
-	to_chat(user, span_danger("You [user.attack_verb_simple] [src]!"))
+	// Handle rolling here.
+	var/potential_requirement = 9
+	if(user == src) // Why are you hitting yourself? Why are you hitting yourself? Wh-
+		potential_requirement = 3
+
+	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/swinging, defender = src, defender_skill_path = /datum/rpg_skill/prowess)
+
+	switch(attack_roll.outcome)
+
+		if(CRIT_SUCCESS)
+			damage *= 1.1
+		if(FAILURE)
+			user.adjustStaminaLoss(rand(5,10))
+			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
+			visible_message(span_danger("[user]'s attempt to [user.attack_verb_simple] [src] misses!"), \
+							span_danger("You avoid [user]'s [user.attack_verb_simple]!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, user)
+			to_chat(user, attack_roll.create_tooltip("Your [user.attack_verb_simple] misses [src]!"))
+			log_combat(user, src, "attempted to attack")
+			return FALSE
+		if(CRIT_FAILURE)
+			user.Stun(2 SECONDS)
+			user.adjustStaminaLoss(rand(10,15))
+			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
+			visible_message(span_danger("[user]'s completely whiffs their attempt to [user.attack_verb_simple] [src]; stalling them!"), \
+							span_danger("[user]'s [user.attack_verb_simple] completely whiffs you; stalling themselves!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, user)
+			to_chat(user, attack_roll.create_tooltip("Your [user.attack_verb_simple] completely misses [src]; stalling you!"))
+			log_combat(user, src, "attempted to attack")
+			return FALSE
+
+	to_chat(user, attack_roll.create_tooltip("You [user.attack_verb_simple] [src]!"))
 	log_combat(user, src, "attacked")
 	var/damage_done = apply_damage(
 		damage = damage,
