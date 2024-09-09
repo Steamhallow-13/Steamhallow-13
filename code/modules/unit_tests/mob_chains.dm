@@ -22,6 +22,7 @@
 		segment.combat_mode = TRUE
 		segment.melee_damage_lower = expected_damage
 		segment.melee_damage_upper = expected_damage
+		segment.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/swinging, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 
 	var/mob/living/victim = allocate(/mob/living/basic/pet/dog)
 	centipede_head.ClickOn(victim)
