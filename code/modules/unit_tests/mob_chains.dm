@@ -12,7 +12,7 @@
 		segments += new_segment
 		centipede_tail = new_segment
 
-	var/test_damage = 15
+	var/test_damage = 16.5 // 15 damage multiplied by 1.1 via skill crit
 	centipede_head.apply_damage(test_damage, BRUTE)
 	TEST_ASSERT_EQUAL(centipede_head.bruteloss, 0, "Centipede head took damage which should have been passed to its tail.")
 	TEST_ASSERT_EQUAL(centipede_tail.bruteloss, test_damage, "Centipede tail did not take damage which should have originated from its head.")
