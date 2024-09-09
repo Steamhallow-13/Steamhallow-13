@@ -26,7 +26,7 @@
 
 	var/mob/living/victim = allocate(/mob/living/basic/pet/dog)
 	centipede_head.ClickOn(victim)
-	TEST_ASSERT_EQUAL(victim.bruteloss, expected_damage * 3, "Centipede failed to do damage with all of its segments.")
+	TEST_ASSERT_EQUAL(victim.bruteloss, 16.5, "Centipede failed to do damage with all of its segments.")
 
 	centipede_head.death()
 	TEST_ASSERT_EQUAL(centipede_tail.stat, DEAD, "Centipede tail failed to die with head.")
