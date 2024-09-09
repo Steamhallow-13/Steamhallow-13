@@ -26,13 +26,42 @@
 	if(check_block(user, damage, "[user]'s punch", UNARMED_ATTACK, 0, BRUTE))
 		return
 	user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
+	// Handle rolling here. Unarmed rolls on basic mobs are handled seperately from melee rolls & unarmed rolls on humans; because techdebt is funny. See _species.dm
+	var/potential_requirement = 9
+	if(user == src) // Drones, holoparasites; edgecases ala them
+		potential_requirement = 3
+
+	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/swinging, defender = src, defender_skill_path = /datum/rpg_skill/prowess)
+
+	switch(attack_roll.outcome)
+
+		if(CRIT_SUCCESS)
+			damage *= 1.1
+		if(FAILURE)
+			user.adjustStaminaLoss(rand(5,10))
+			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
+			visible_message(span_danger("[user]'s attempt to [attack_verb_simple] [src] misses!"), \
+							span_danger("You avoid [user]'s [attack_verb_simple]!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, user)
+			to_chat(user, attack_roll.create_tooltip("Your [attack_verb_simple] misses [src]!"))
+			log_combat(user, src, "attempted to punch")
+			return TRUE
+		if(CRIT_FAILURE)
+			user.Knockdown(1 SECONDS)
+			user.adjustStaminaLoss(rand(10,15))
+			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
+			visible_message(span_danger("[user]'s completely whiffs their attempt to [attack_verb_simple] [src], sending them to the ground!"), \
+							span_danger("[user]'s [attack_verb_simple] completely whiffs you, sending them tumbling!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, user)
+			to_chat(user, attack_roll.create_tooltip("Your [attack_verb_simple] completely misses [src]; tumbling you over in the process!"))
+			log_combat(user, src, "attempted to punch")
+			return TRUE
+
 	visible_message(
 		span_danger("[user] [response_harm_continuous] [src]!"),
 		span_userdanger("[user] [response_harm_continuous] you!"),
 		vision_distance = COMBAT_MESSAGE_RANGE,
 		ignored_mobs = user,
 	)
-	to_chat(user, span_danger("You [response_harm_simple] [src]!"))
+	to_chat(user, attack_roll.create_tooltip("You [response_harm_simple] [src]!"))
 	playsound(loc, attacked_sound, 25, TRUE, -1)
 	apply_damage(damage)
 	log_combat(user, src, "attacked")
