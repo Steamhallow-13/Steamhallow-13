@@ -13,6 +13,7 @@
 	faction += "[REF(src)]"
 	GLOB.mob_living_list += src
 	stats = new
+	stats.owner = src
 	SSpoints_of_interest.make_point_of_interest(src)
 	update_fov()
 	gravity_setup()
