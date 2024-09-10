@@ -661,6 +661,7 @@
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "rends")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "rend")
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 	var/summon_cooldown = 0
 	var/list/mob/dead/observer/spirits
 

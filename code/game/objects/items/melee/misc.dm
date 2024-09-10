@@ -75,6 +75,7 @@
 	custom_materials = list(/datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT)
 	wound_bonus = 10
 	bare_wound_bonus = 25
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 
 /obj/item/melee/sabre/Initialize(mapload)
 	. = ..()
@@ -187,6 +188,7 @@
 	custom_materials = null
 	wound_bonus = 5
 	bare_wound_bonus = 15
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 
 /obj/item/melee/sabre/Initialize(mapload)
 	. = ..()
@@ -226,6 +228,7 @@
 	attack_verb_simple = list("slash", "sting", "prickle", "poke")
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	block_sound = 'sound/weapons/parry.ogg'
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 
 /obj/item/melee/beesword/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
 	if(attack_type == PROJECTILE_ATTACK || attack_type == LEAP_ATTACK)
@@ -256,6 +259,7 @@
 	armour_penetration = 1000
 	force_string = "INFINITE"
 	item_flags = NEEDS_PERMIT|NO_BLOOD_ON_ITEM
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 	var/obj/machinery/power/supermatter_crystal/shard
 	var/balanced = 1
 

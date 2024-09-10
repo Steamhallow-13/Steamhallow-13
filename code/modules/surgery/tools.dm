@@ -220,6 +220,7 @@
 	toolspeed = 1
 	wound_bonus = 10
 	bare_wound_bonus = 15
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 	/// How this looks when placed in a surgical tray
 	var/surgical_tray_overlay = "scalpel_normal"
 
@@ -272,6 +273,7 @@
 	toolspeed = 1
 	wound_bonus = 15
 	bare_wound_bonus = 10
+	relevant_melee_skill = /datum/rpg_skill/cleaving
 	/// How this looks when placed in a surgical tray
 	var/surgical_tray_overlay = "saw_normal"
 

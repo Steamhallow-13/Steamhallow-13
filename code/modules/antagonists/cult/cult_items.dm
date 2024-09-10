@@ -77,6 +77,7 @@ Striking a noncultist, however, will tear their flesh."}
 	block_sound = 'sound/weapons/parry.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "rends")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "rend")
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 	/// If TRUE, it can be used at will by anyone, non-cultists included
 	var/free_use = FALSE
 

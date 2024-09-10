@@ -791,6 +791,7 @@
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices")
 	attack_verb_simple = list("attack", "slash", "stab", "slice")
 	hitsound = 'sound/weapons/bladeslice.ogg'
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 
 /*
  * Snap pops

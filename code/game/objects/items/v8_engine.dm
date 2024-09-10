@@ -57,6 +57,7 @@
 	throw_range = 5
 	throw_speed = 1
 	hitsound = 'sound/items/car_engine_start.ogg'
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 	/// The number of charges the house edge has accrued through 2-handed hits, to charge a more powerful charge attack.
 	var/fire_charges = 0
 	///Sound played when wielded.
