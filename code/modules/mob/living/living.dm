@@ -1221,7 +1221,7 @@
 		if(!can_bypass_roll)
 			if((body_position == LYING_DOWN || HAS_TRAIT(src, TRAIT_GRABWEAKNESS) || get_timed_status_effect_duration(/datum/status_effect/staggered)) && pulledby.grab_state < GRAB_KILL) //If prone, add disadvantage
 				altered_grab_modifier -= 3
-			var/datum/roll_result/resist_roll = stat_roll(requirement = 15 skill_path = /datum/rpg_skill/force, modifier = altered_grab_modifier, defender = pulledby, defender_skill_path = /datum/rpg_skill/grappling)
+			var/datum/roll_result/resist_roll = stat_roll(requirement = 15, skill_path = /datum/rpg_skill/force, modifier = altered_grab_modifier, defender = pulledby, defender_skill_path = /datum/rpg_skill/grappling)
 			switch(resist_roll.outcome)
 				if(CRIT_SUCCESS) // Flawless Escape; standard SS13 grab resist
 					visible_message(span_danger("[src] effortlessly breaks free of [pulledby]'s grip!"), ignored_mobs = list(pulledby, src))
