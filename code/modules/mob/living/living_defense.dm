@@ -377,7 +377,7 @@
 	var/armor_block = run_armor_check(user.zone_selected, MELEE, armour_penetration = user.armour_penetration)
 
 	// Handle rolling here.
-	var/potential_requirement = 9
+	var/potential_requirement = 13
 	if(user == src) // Why are you hitting yourself? Why are you hitting yourself? Wh-
 		potential_requirement = 3
 
@@ -699,7 +699,7 @@
 		var/mob/living/carbon/human/human_target = target
 		human_target.w_uniform?.add_fingerprint(src)
 
-	var/datum/roll_result/roll = stat_roll(10, /datum/rpg_skill/force) // STEAMHALLOW TODO - defenders should roll on a durability skill here
+	var/datum/roll_result/roll = stat_roll(14, /datum/rpg_skill/force) // STEAMHALLOW TODO - defenders should roll on a durability skill here
 
 	switch(roll.outcome)
 

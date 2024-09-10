@@ -27,7 +27,7 @@
 		return
 	user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
 	// Handle rolling here. Unarmed rolls on basic mobs are handled seperately from melee rolls & unarmed rolls on humans; because techdebt is funny. See _species.dm
-	var/potential_requirement = 9
+	var/potential_requirement = 13
 	if(user == src) // Drones, holoparasites; edgecases ala them
 		potential_requirement = 3
 

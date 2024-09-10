@@ -900,7 +900,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		log_combat(user, target, "attempted to punch")
 
 	// Handle rolling here. Unarmed rolls on humans are handled seperately from melee rolls & unarmed rolls on basic mobs; because techdebt is funny. See basic_defense.dm
-	var/potential_requirement = 9
+	var/potential_requirement = 14
 	if(user == target)
 		potential_requirement = 3
 	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/force, modifier = hit_modifier, defender = target, defender_skill_path = /datum/rpg_skill/mobility)
