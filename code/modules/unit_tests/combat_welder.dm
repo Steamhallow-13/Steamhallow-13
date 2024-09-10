@@ -7,6 +7,7 @@
 
 	tider.put_in_active_hand(weapon, forced = TRUE)
 	tider.set_combat_mode(TRUE)
+	tider.stats.set_skill_modifier(INFINITY, /obj/item/weldingtool::relevant_melee_skill, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 	weapon.attack_self(tider)
 	weapon.melee_attack_chain(tider, victim)
 

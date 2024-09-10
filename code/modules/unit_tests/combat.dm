@@ -18,6 +18,7 @@
 
 	tider.put_in_active_hand(toolbox, forced = TRUE)
 	tider.set_combat_mode(TRUE)
+	tider.stats.set_skill_modifier(INFINITY, /obj/item/storage/toolbox::relevant_melee_skill, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 	victim.attackby(toolbox, tider)
 
 	TEST_ASSERT(victim.getBruteLoss() > 0, "Victim took no brute damage after being hit by a toolbox")
