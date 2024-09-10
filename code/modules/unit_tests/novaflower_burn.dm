@@ -10,7 +10,7 @@
 	TEST_ASSERT(weapon.force > 0, "[weapon] spawned with zero force.")
 
 	// Keep this around for comparison later. We compensate for critrolls here
-	var/initial_force = weapon.force *= 1.1
+	var/initial_force = (weapon.force *= 1.1)
 	// Start by having the novaflower equipped to an attacker's hands
 	// They are not wearing botany gloves (have plant protection), so they should take damage = the flower's force.
 	weapon.attack_hand(botanist)
