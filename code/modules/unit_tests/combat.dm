@@ -30,6 +30,7 @@
 
 	attacker.put_in_active_hand(welding_tool, forced = TRUE)
 	attacker.set_combat_mode(TRUE)
+	attacker.stats.set_skill_modifier(INFINITY, /obj/item/weldingtool::relevant_melee_skill, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 
 	welding_tool.attack_self(attacker) // Turn it on
 	victim.attackby(welding_tool, attacker)

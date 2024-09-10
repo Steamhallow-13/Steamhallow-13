@@ -5,6 +5,7 @@
 	var/mob/living/carbon/human/botanist = allocate(/mob/living/carbon/human/consistent)
 	var/mob/living/carbon/human/victim = allocate(/mob/living/carbon/human/consistent)
 	var/obj/item/grown/novaflower/weapon = allocate(/obj/item/grown/novaflower)
+	botanist.stats.set_skill_modifier(INFINITY, /obj/item/grown/novaflower::relevant_melee_skill, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 
 	TEST_ASSERT(weapon.force > 0, "[weapon] spawned with zero force.")
 
