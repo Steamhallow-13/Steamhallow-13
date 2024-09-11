@@ -977,20 +977,28 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(gloves.max_heat_protection_temperature)
 			hand_protected = (gloves.max_heat_protection_temperature > 360)
 
-	if(hand_protected || prob(75))
+	if(hand_protected)
 		user.visible_message(
 			span_notice("After a few attempts, [user] manages to light [src]."),
 			span_notice("After a few attempts, you manage to light [src].")
 		)
 		return
 
-	var/hitzone = user.held_index_to_dir(user.active_hand_index) == "r" ? BODY_ZONE_PRECISE_R_HAND : BODY_ZONE_PRECISE_L_HAND
-	user.apply_damage(5, BURN, hitzone)
-	user.visible_message(
-		span_warning("After a few attempts, [user] manages to light [src] - however, [user.p_they()] burn[user.p_s()] [user.p_their()] finger in the process."),
-		span_warning("You burn yourself while lighting the lighter!")
-	)
-	user.add_mood_event("burnt_thumb", /datum/mood_event/burnt_thumb)
+	var/datum/roll_result/result = user.stat_roll(9, /datum/rpg_skill/handicraft)
+	switch(result.outcome)
+		if(FAILURE, CRIT_FAILURE)
+			var/hitzone = user.held_index_to_dir(user.active_hand_index) == "r" ? BODY_ZONE_PRECISE_R_HAND : BODY_ZONE_PRECISE_L_HAND
+			user.apply_damage(5, BURN, hitzone)
+			to_chat(user, result.create_tooltip("Your eagerness to ignite [src] in a stylish fashion has shrouded your care. Your finger is bathed in the flame for a brief moment."))
+			user.visible_message(
+				span_warning("After a few attempts, [user] manages to light [src] - however, [user.p_they()] burn[user.p_s()] [user.p_their()] finger in the process."), \
+				ignored_mobs = list(user)
+			)
+			user.add_mood_event("burnt_thumb", /datum/mood_event/burnt_thumb)
+
+		if(SUCCESS, CRIT_SUCCESS)
+			to_chat(user, result.create_tooltip("After a few attempts, you manage to light [src]."))
+	user.visible_message(span_notice("After a few attempts, [user] manages to light [src]."), ignored_mobs = list(user))
 
 
 /obj/item/lighter/attack(mob/living/carbon/M, mob/living/carbon/user)

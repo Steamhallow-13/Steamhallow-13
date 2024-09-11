@@ -294,7 +294,15 @@
 		targeting = get_random_valid_zone(targeting, zone_hit_chance)
 	var/targeting_human_readable = parse_zone_with_bodypart(targeting)
 
-	send_item_attack_message(attacking_item, user, targeting_human_readable, targeting)
+	// Rolling here is handled a little bit different in order to conform to attackchain
+	// Force weapons need to be balanced around combat mode making them otherwise the meta; so..
+	var/potential_modifier = 0
+	if(attacking_item.relevant_melee_skill == /datum/rpg_skill/force)
+		potential_modifier -= 4
+
+	var/datum/roll_result/roll = user.stat_roll(requirement = 10, skill_path = attacking_item.relevant_melee_skill, modifier = potential_modifier, defender = src, defender_skill_path = /datum/rpg_skill/mobility)
+
+	send_item_attack_message(attacking_item, user, targeting_human_readable, targeting, roll)
 
 	var/armor_block = min(run_armor_check(
 			def_zone = targeting,
@@ -326,6 +334,17 @@
 	if(ishuman(src) || client) // istype(src) is kinda bad, but it's to avoid spamming the blackbox
 		SSblackbox.record_feedback("nested tally", "item_used_for_combat", 1, list("[attacking_item.force]", "[attacking_item.type]"))
 		SSblackbox.record_feedback("tally", "zone_targeted", 1, targeting_human_readable)
+
+	switch(roll.outcome)
+		if(CRIT_SUCCESS)
+			damage *= 1.1
+		if(FAILURE)
+			user.adjustStaminaLoss(rand(5,10))
+			return TRUE
+		if(CRIT_FAILURE)
+			user.Knockdown(1 SECONDS)
+			user.adjustStaminaLoss(rand(10,15))
+			return TRUE
 
 	var/damage_done = apply_damage(
 		damage = damage,
@@ -456,26 +475,53 @@
 		else
 			return clamp(w_class * 6, 10, 100) // Multiply the item's weight class by 6, then clamp the value between 10 and 100
 
-/mob/living/proc/send_item_attack_message(obj/item/I, mob/living/user, hit_area, def_zone)
+/mob/living/proc/send_item_attack_message(obj/item/I, mob/living/user, hit_area, def_zone, datum/roll_result/our_roll)
 	if(!I.force && !length(I.attack_verb_simple) && !length(I.attack_verb_continuous))
 		return
 	var/message_verb_continuous = length(I.attack_verb_continuous) ? "[pick(I.attack_verb_continuous)]" : "attacks"
 	var/message_verb_simple = length(I.attack_verb_simple) ? "[pick(I.attack_verb_simple)]" : "attack"
 	var/message_hit_area = get_hit_area_message(hit_area)
 
-	var/attack_message_spectator = "[src] [message_verb_continuous][message_hit_area] with [I]!"
-	var/attack_message_victim = "Something [message_verb_continuous] you[message_hit_area] with [I]!"
-	var/attack_message_attacker = "You [message_verb_simple] [src][message_hit_area] with [I]!"
+	var/attack_message_spectator
+	var/attack_message_victim
+	var/attack_message_attacker
+
+	/// If you can't see your attacker; you can't understand it! Or something. Giygas code
+	var/atom_user = "Something"
 	if(user in viewers(src, null))
-		attack_message_spectator = "[user] [message_verb_continuous] [src][message_hit_area] with [I]!"
-		attack_message_victim = "[user] [message_verb_continuous] you[message_hit_area] with [I]!"
-	if(user == src)
-		attack_message_victim = "You [message_verb_simple] yourself[message_hit_area] with [I]."
+		atom_user = user
+
+	switch(our_roll.outcome)
+		if(CRIT_SUCCESS)
+			attack_message_spectator = "[src] deftly [message_verb_continuous][message_hit_area] with [I]!"
+			attack_message_victim = "[atom_user] deftly [message_verb_continuous] you[message_hit_area] with [I]!"
+			attack_message_attacker = "You deftly [message_verb_simple] [src][message_hit_area] with [I]!"
+			if(user == src)
+				attack_message_victim = "You deftly [message_verb_simple] yourself[message_hit_area] with [I]."
+		if(SUCCESS)
+			attack_message_spectator = "[src] [message_verb_continuous][message_hit_area] with [I]!"
+			attack_message_victim = "[atom_user] [message_verb_continuous] you[message_hit_area] with [I]!"
+			attack_message_attacker = "You [message_verb_simple] [src][message_hit_area] with [I]!"
+			if(user == src)
+				attack_message_victim = "You [message_verb_simple] yourself[message_hit_area] with [I]."
+		if(FAILURE)
+			attack_message_spectator = "[src] tries to [message_verb_simple][message_hit_area] with [I], but misses!"
+			attack_message_victim = "[atom_user] tries to [message_verb_simple] you[message_hit_area] with [I], but misses!"
+			attack_message_attacker = "You try to [message_verb_simple] [src][message_hit_area] with [I], but miss!"
+			if(user == src)
+				attack_message_victim = "You try to [message_verb_simple] yourself[message_hit_area] with [I], but miss!"
+		if(CRIT_FAILURE)
+			attack_message_spectator = "[src] tries to [message_verb_simple][message_hit_area] with [I], but wildly misses!"
+			attack_message_victim = "[atom_user] tries to [message_verb_simple] you[message_hit_area] with [I], but wildly misses!"
+			attack_message_attacker = "You try to [message_verb_simple] [src][message_hit_area] with [I], but wildly miss!"
+			if(user == src)
+				attack_message_victim = "You try to [message_verb_simple] yourself[message_hit_area] with [I], but wildly miss!"
+
 	visible_message(span_danger("[attack_message_spectator]"),\
 		span_userdanger("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user)
 	if(is_blind())
 		to_chat(src, span_danger("Someone hits you[message_hit_area]!"))
-	to_chat(user, span_danger("[attack_message_attacker]"))
+	to_chat(user, our_roll.create_tooltip("[attack_message_attacker]"))
 	return 1
 
 /// Overridable proc so subtypes can have unique targetted strike zone messages, return a string.

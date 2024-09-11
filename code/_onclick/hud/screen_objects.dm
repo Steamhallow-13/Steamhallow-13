@@ -921,3 +921,64 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/splash)
 #undef HUNGER_STATE_FINE
 #undef HUNGER_STATE_HUNGRY
 #undef HUNGER_STATE_STARVING
+
+/atom/movable/screen/eye_intent
+	name = "eye intent"
+	icon = 'icons/hud/screen_midnight.dmi'
+	icon_state = "eye"
+
+/atom/movable/screen/eye_intent/Click(location,control,params)
+	var/_y = text2num(params2list(params)["icon-y"])
+
+	hud.mymob.playsound_local(hud.mymob, 'sound/items/click.ogg', 100)
+	if(isliving(hud?.mymob))
+		var/mob/living/L = hud.mymob
+		if(L.eyesclosed)
+			L.eyesclosed = FALSE
+			L.cure_blind("eyelids")
+
+	if(_y>=29 || _y<=4)
+		if(isliving(hud.mymob))
+			var/mob/living/L = hud.mymob
+			L.eyesclosed = TRUE
+			L.become_blind("eyelids")
+	else
+		toggle(usr)
+
+	update_appearance()
+
+
+/atom/movable/screen/eye_intent/update_icon_state()
+	icon_state = "eye"
+	if(!hud || !hud.mymob || !isliving(hud.mymob))
+		return
+	var/mob/living/user = hud?.mymob
+	if(user.eyesclosed)
+		icon_state = "eye_closed"
+	else if(user.fixedeye)
+		icon_state = "eye_fixed"
+	return ..()
+
+/atom/movable/screen/eye_intent/update_overlays()
+	. = ..()
+	var/mob/living/carbon/human/human = hud.mymob
+	if(!istype(human))
+		return
+	var/mutable_appearance/iris = mutable_appearance(src.icon, "oeye")
+	switch(icon_state)
+		if("eye_closed")
+			iris.icon_state = "oeye_closed"
+		if("eye_fixed")
+			iris.icon_state = "oeye_fixed"
+		else
+			iris.icon_state = "oeye"
+	var/obj/item/organ/internal/eyes/our_eyes = human.get_organ_slot(ORGAN_SLOT_EYES)
+	if(!istype(our_eyes))
+		return
+	iris.color = our_eyes.eye_color_left
+	. += iris
+
+/atom/movable/screen/eye_intent/proc/toggle(mob/user)
+	if(isobserver(user))
+		return
+	user.toggle_eye_intent(user)

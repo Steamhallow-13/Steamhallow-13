@@ -54,6 +54,7 @@
 /datum/addiction/alcohol/withdrawal_stage_1_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
 	affected_carbon.set_jitter_if_lower(10 SECONDS * seconds_per_tick)
+	affected_carbon.stats?.set_skill_modifier(-2, /datum/rpg_skill/grappling, SKILL_SOURCE_ALCHOHOL_WITHDRAWL)
 
 /datum/addiction/alcohol/withdrawal_stage_2_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
@@ -66,6 +67,10 @@
 	affected_carbon.set_hallucinations_if_lower(10 SECONDS)
 	if(SPT_PROB(4, seconds_per_tick) && !HAS_TRAIT(affected_carbon, TRAIT_ANTICONVULSANT))
 		affected_carbon.apply_status_effect(/datum/status_effect/seizure)
+
+/datum/addiction/alcohol/end_withdrawal(mob/living/carbon/affected_carbon)
+	. = ..()
+	affected_carbon.stats?.remove_skill_modifier(/datum/rpg_skill/grappling, SKILL_SOURCE_ALCHOHOL_WITHDRAWL)
 
 /datum/addiction/hallucinogens
 	name = "hallucinogen"

@@ -14,6 +14,7 @@
 	stealthy_audio = TRUE
 	w_class = WEIGHT_CLASS_SMALL
 	item_flags = NO_BLOOD_ON_ITEM
+	relevant_melee_skill = /datum/rpg_skill/blademastery
 
 	/// The color of this energy based sword, for use in editing the icon_state.
 	var/sword_color_icon
@@ -148,6 +149,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	obj_flags = CONDUCTS_ELECTRICITY
 	light_color = LIGHT_COLOR_LIGHT_CYAN
+	relevant_melee_skill = /datum/rpg_skill/cleaving
 
 	active_force = 150
 	active_throwforce = 30
@@ -235,6 +237,7 @@
 	light_color = LIGHT_COLOR_LIGHT_CYAN
 	tool_behaviour = TOOL_SAW
 	toolspeed = 0.7 // Faster than a normal saw.
+	relevant_melee_skill = /datum/rpg_skill/cleaving
 
 	active_force = 30
 	sword_color_icon = null // Stops icon from breaking when turned on.

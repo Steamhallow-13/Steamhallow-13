@@ -12,7 +12,7 @@
 		segments += new_segment
 		centipede_tail = new_segment
 
-	var/test_damage = 15
+	var/test_damage = 16.5 // 15 damage multiplied by 1.1 via skill crit
 	centipede_head.apply_damage(test_damage, BRUTE)
 	TEST_ASSERT_EQUAL(centipede_head.bruteloss, 0, "Centipede head took damage which should have been passed to its tail.")
 	TEST_ASSERT_EQUAL(centipede_tail.bruteloss, test_damage, "Centipede tail did not take damage which should have originated from its head.")
@@ -22,10 +22,11 @@
 		segment.combat_mode = TRUE
 		segment.melee_damage_lower = expected_damage
 		segment.melee_damage_upper = expected_damage
+		segment.stats.set_skill_modifier(INFINITY, /datum/rpg_skill/force, SKILL_SOURCE_UNIT_TEST) // GUARANTEED to crit succeed
 
 	var/mob/living/victim = allocate(/mob/living/basic/pet/dog)
 	centipede_head.ClickOn(victim)
-	TEST_ASSERT_EQUAL(victim.bruteloss, expected_damage * 3, "Centipede failed to do damage with all of its segments.")
+	TEST_ASSERT_EQUAL(victim.bruteloss, 16.5, "Centipede failed to do damage with all of its segments.")
 
 	centipede_head.death()
 	TEST_ASSERT_EQUAL(centipede_tail.stat, DEAD, "Centipede tail failed to die with head.")

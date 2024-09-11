@@ -240,6 +240,9 @@
 	/// Do we apply a click cooldown when resisting this object if it is restraining them?
 	var/resist_cooldown = CLICK_CD_BREAKOUT
 
+	/// What's our relevant melee skill?
+	var/relevant_melee_skill = /datum/rpg_skill/force
+
 /obj/item/Initialize(mapload)
 	if(attack_verb_continuous)
 		attack_verb_continuous = string_list(attack_verb_continuous)

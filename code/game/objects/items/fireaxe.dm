@@ -23,6 +23,7 @@
 	resistance_flags = FIRE_PROOF
 	wound_bonus = -15
 	bare_wound_bonus = 20
+	relevant_melee_skill = /datum/rpg_skill/cleaving
 	/// How much damage to do unwielded
 	var/force_unwielded = 5
 	/// How much damage to do wielded

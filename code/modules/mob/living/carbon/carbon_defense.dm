@@ -84,7 +84,7 @@
 		return TRUE
 	return ..()
 
-/mob/living/carbon/send_item_attack_message(obj/item/I, mob/living/user, hit_area, def_zone)
+/mob/living/carbon/send_item_attack_message(obj/item/I, mob/living/user, hit_area, def_zone, datum/roll_result/our_roll)
 	if(!I.force && !length(I.attack_verb_simple) && !length(I.attack_verb_continuous))
 		return
 	var/obj/item/bodypart/hit_bodypart = get_bodypart(def_zone)
@@ -121,18 +121,48 @@
 	var/message_hit_area = ""
 	if(hit_area)
 		message_hit_area = " in the [hit_area]"
-	var/attack_message_spectator = "[src] [message_verb_continuous][message_hit_area] with [I][extra_wound_details]!"
-	var/attack_message_victim = "You're [message_verb_continuous][message_hit_area] with [I][extra_wound_details]!"
-	var/attack_message_attacker = "You [message_verb_simple] [src][message_hit_area] with [I][extra_wound_details]!"
+	var/attack_message_spectator
+	var/attack_message_victim
+	var/attack_message_attacker
+
+	/// If you can't see your attacker; you can't understand it! Or something. Giygas code
+	var/atom_user = "Something"
 	if(user in viewers(src, null))
-		attack_message_spectator = "[user] [message_verb_continuous] [src][message_hit_area] with [I][extra_wound_details]!"
-		attack_message_victim = "[user] [message_verb_continuous] you[message_hit_area] with [I][extra_wound_details]!"
-	if(user == src)
-		attack_message_victim = "You [message_verb_simple] yourself[message_hit_area] with [I][extra_wound_details]!"
-	visible_message(span_danger("[attack_message_spectator]"),\
-		span_userdanger("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user)
+		atom_user = user
+
+	switch(our_roll.outcome)
+		if(CRIT_SUCCESS)
+			attack_message_spectator = "[user] deftly [message_verb_continuous] [src][message_hit_area] with [I][extra_wound_details]!"
+			attack_message_victim = "[atom_user] skillfully [message_verb_continuous] you[message_hit_area] with [I][extra_wound_details]!"
+			attack_message_attacker = "You masterfully [message_verb_simple] [src][message_hit_area] with [I][extra_wound_details]!"
+			if(user == src)
+				attack_message_victim = "You deftly [message_verb_simple] yourself[message_hit_area] with [I][extra_wound_details]!"
+		if(SUCCESS)
+			attack_message_spectator = "[user] [message_verb_continuous] [src][message_hit_area] with [I][extra_wound_details]!"
+			attack_message_victim = "[atom_user] [message_verb_continuous] you[message_hit_area] with [I][extra_wound_details]!"
+			attack_message_attacker = "You [message_verb_simple] [src][message_hit_area] with [I][extra_wound_details]!"
+			if(user == src)
+				attack_message_victim = "You [message_verb_simple] yourself[message_hit_area] with [I][extra_wound_details]!"
+		if(FAILURE)
+			attack_message_spectator = "[user] tries to [message_verb_simple] [src][message_hit_area] with [I], missing!"
+			attack_message_victim = "You dodge [atom_user]'s attempt to [message_verb_simple] you[message_hit_area] with [I]!"
+			attack_message_attacker = "You try to [message_verb_simple] [src][message_hit_area] with [I], missing!"
+			if(user == src)
+				attack_message_victim = "You try to [message_verb_simple] yourself[message_hit_area] with [I], but miss!" // lol
+		if(CRIT_FAILURE)
+			attack_message_spectator = "[user] tries to [message_verb_simple] [src][message_hit_area] with [I], wildly missing their mark!"
+			attack_message_victim = "You deftly dodge [atom_user]'s attempt to [message_verb_simple] you[message_hit_area] with [I]!"
+			attack_message_attacker = "You try to [message_verb_simple] [src][message_hit_area] with [I], completely missing and sending you over!"
+			if(user == src)
+				attack_message_victim = "You try to [message_verb_simple] yourself[message_hit_area] with [I], but wildly miss!" // lmao
+	// If you aren't attacking yourself; to_chat the roll. Otherwise roll it into visible message
 	if(user != src)
-		to_chat(user, span_danger("[attack_message_attacker]"))
+		visible_message(span_danger("[attack_message_spectator]"),\
+			span_userdanger("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user)
+		to_chat(user, our_roll.create_tooltip("[attack_message_attacker]"))
+	else
+		visible_message(span_danger("[attack_message_spectator]"),\
+			our_roll.create_tooltip("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user)
 	return TRUE
 
 

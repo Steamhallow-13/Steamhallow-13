@@ -98,11 +98,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
-"bU" = (
-/obj/machinery/door/airlock/glass,
-/obj/structure/cable,
-/turf/open/floor/iron,
-/area/station/service/abandoned_gambling_den)
 "cb" = (
 /obj/machinery/door/airlock,
 /turf/open/floor/plating,
@@ -604,7 +599,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "iZ" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
@@ -677,7 +672,6 @@
 /area/station/maintenance/aft)
 "jI" = (
 /obj/effect/turf_decal/stripes/corner,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/service/abandoned_gambling_den)
 "jN" = (
@@ -907,6 +901,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
+"oj" = (
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "on" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -982,7 +980,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/service/abandoned_gambling_den)
 "px" = (
@@ -1438,6 +1435,7 @@
 "vX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light/directional/north,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "vZ" = (
@@ -2830,7 +2828,7 @@
 /turf/closed/wall/r_wall,
 /area/station/service/abandoned_gambling_den)
 "PG" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
+/obj/machinery/atmospherics/pipe/layer_manifold/supply{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
@@ -31628,8 +31626,8 @@ xt
 aq
 DJ
 fv
-bU
-AS
+UB
+Pz
 uL
 uL
 uL
@@ -32397,8 +32395,8 @@ xt
 xt
 xt
 vP
-Iw
-jE
+wh
+oj
 Yv
 AS
 Wk
@@ -32911,7 +32909,7 @@ tb
 xt
 xt
 vP
-Iw
+wh
 Iw
 SS
 hB
@@ -33168,7 +33166,7 @@ Oz
 vP
 aq
 aq
-Iw
+wh
 jE
 kT
 Pz
@@ -33425,7 +33423,7 @@ jE
 jE
 Ns
 jE
-Iw
+wh
 jE
 UB
 Pz
@@ -33682,7 +33680,7 @@ wh
 wh
 wh
 Nv
-Iw
+wh
 jE
 UB
 Pz

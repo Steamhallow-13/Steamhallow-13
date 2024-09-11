@@ -23,6 +23,7 @@
 	armor_type = /datum/armor/item_spear
 	wound_bonus = -15
 	bare_wound_bonus = 15
+	relevant_melee_skill = /datum/rpg_skill/polearms
 	/// For explosive spears, what we cry out when we use this to bap someone
 	var/war_cry = "AAAAARGH!!!"
 	/// The icon prefix for this flavor of spear

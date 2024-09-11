@@ -74,3 +74,18 @@
 	slot_type = ITEM_SLOT_RPOCKET
 	slot_item_name = "right pocket"
 	keybind_signal = COMSIG_KB_HUMAN_RPOCKETEQUIP_DOWN
+
+/datum/keybinding/human/fixeye
+	hotkey_keys = list("F")
+	name = "fix_eye"
+	full_name = "Fixed Eye"
+	description = "Focus in a direction."
+	keybind_signal = COMSIG_KB_MOB_FIXED_EYE
+
+/datum/keybinding/human/fixeye/down(client/user)
+	. = ..()
+	if(.)
+		return
+	var/mob/living/carbon/human/H = user.mob
+	H.toggle_eye_intent(H)
+	return TRUE

@@ -73,6 +73,16 @@
 
 	// Doesn't show the base notes for items that have the override notes variable set to true
 	if(!source.override_notes)
+		// Read out the relevant melee skill
+		switch(source.relevant_melee_skill)
+			if(/datum/rpg_skill/blademastery)
+				readout += "Wielding it would rely on your [span_warning(/datum/rpg_skill/blademastery::name)] skill."
+			if(/datum/rpg_skill/cleaving)
+				readout += "Wielding it would rely on your [span_warning(/datum/rpg_skill/cleaving::name)] skill."
+			if(/datum/rpg_skill/force)
+				readout += "Wielding it would rely on your [span_warning(/datum/rpg_skill/force::name)] skill."
+			if(/datum/rpg_skill/polearms)
+				readout += "Wielding it would rely on your [span_warning(/datum/rpg_skill/polearms::name)] skill."
 		// Make sure not to divide by 0 on accident
 		if(source.force > 0)
 			readout += "It takes about [span_warning("[HITS_TO_CRIT(source.force)] melee hit\s")] to take down an enemy."

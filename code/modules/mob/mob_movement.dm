@@ -577,3 +577,15 @@
 	if(new_turf && (istype(new_turf, /turf/cordon/secret) || is_secret_level(new_turf.z)) && !client?.holder)
 		return
 	return ..()
+
+/mob/proc/toggle_eye_intent(mob/user) //clicking the fixeye button either makes you fixeye or clears your target
+	if(fixedeye)
+		fixedeye = FALSE
+		set_dir_on_move = TRUE
+	else
+		fixedeye = TRUE
+		set_dir_on_move = FALSE
+	if(hud_used?.static_inventory)
+		for(var/atom/movable/screen/eye_intent/selector in hud_used.static_inventory)
+			selector.update_appearance()
+	playsound_local(src, 'sound/items/click.ogg', 100)

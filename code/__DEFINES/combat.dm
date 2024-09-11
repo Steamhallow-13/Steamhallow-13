@@ -121,9 +121,6 @@ DEFINE_BITFIELD(status_flags, list(
 #define GRAB_NECK 2
 #define GRAB_KILL 3
 
-//Grab breakout odds
-#define BASE_GRAB_RESIST_CHANCE 60 //base chance for whether or not you can escape from a grab
-
 //slowdown when in softcrit. Note that crawling slowdown will also apply at the same time!
 #define SOFTCRIT_ADD_SLOWDOWN 2
 //slowdown when crawling
@@ -174,10 +171,6 @@ DEFINE_BITFIELD(status_flags, list(
 //Shove disarming item list
 GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 	/obj/item/gun)))
-
-//The define for base unarmed miss chance
-#define UNARMED_MISS_CHANCE_BASE 20
-#define UNARMED_MISS_CHANCE_MAX 80
 
 //Combat object defines
 /// The minimum value of an item's throw_speed for it to embed (Unless it has embedded_ignore_throwspeed_threshold set to 1)

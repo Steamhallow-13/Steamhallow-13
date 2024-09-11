@@ -17,10 +17,14 @@
 
 /datum/status_effect/confusion/on_apply()
 	RegisterSignal(owner, COMSIG_MOB_CLIENT_PRE_MOVE, PROC_REF(on_move))
+	owner.stats?.set_skill_modifier(-1, /datum/rpg_skill/mobility, SKILL_SOURCE_CONFUSION)
+	owner.stats?.set_stat_modifier(-1, /datum/rpg_stat/coherency, SKILL_SOURCE_CONFUSION)
 	return TRUE
 
 /datum/status_effect/confusion/on_remove()
 	UnregisterSignal(owner, COMSIG_MOB_CLIENT_PRE_MOVE)
+	owner.stats?.remove_skill_modifier(/datum/rpg_skill/mobility, SKILL_SOURCE_CONFUSION)
+	owner.stats?.remove_stat_modifier(/datum/rpg_stat/coherency, SKILL_SOURCE_CONFUSION)
 
 /// Signal proc for [COMSIG_MOB_CLIENT_PRE_MOVE]. We have a chance to mix up our movement pre-move with confusion.
 /datum/status_effect/confusion/proc/on_move(datum/source, list/move_args)

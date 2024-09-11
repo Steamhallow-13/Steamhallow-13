@@ -887,20 +887,45 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	var/obj/item/bodypart/affecting = target.get_bodypart(target.get_random_valid_zone(user.zone_selected))
 
-	var/miss_chance = 100//calculate the odds that a punch misses entirely. considers stamina and brute damage of the puncher. punches miss by default to prevent weird cases
+	var/hit_modifier = 0
 	if(attacking_bodypart.unarmed_damage_low)
-		if((target.body_position == LYING_DOWN) || HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER) || staggered || user_drunkenness && HAS_TRAIT(user, TRAIT_DRUNKEN_BRAWLER)) //kicks and attacks against staggered targets never miss (provided your species deals more than 0 damage). Drunken brawlers while drunk also don't miss
-			miss_chance = 0
-		else
-			miss_chance = clamp(UNARMED_MISS_CHANCE_BASE - limb_accuracy + (user.getFireLoss()*0.5 + user.getBruteLoss()*0.5), 0, UNARMED_MISS_CHANCE_MAX) //Limb miss chance + various damage. capped at 80 so there is at least a chance to land a hit.
+		if((target.body_position == LYING_DOWN) || HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER) || staggered || user_drunkenness && HAS_TRAIT(user, TRAIT_DRUNKEN_BRAWLER))
+			hit_modifier += 1
 
-	if(!damage || !affecting || prob(miss_chance))//future-proofing for species that have 0 damage/weird cases where no zone is targeted
+	if(!damage || !affecting) // Future-proofing measure; in case something got this far that really shouldn't have
 		playsound(target.loc, attacking_bodypart.unarmed_miss_sound, 25, TRUE, -1)
 		target.visible_message(span_danger("[user]'s [atk_verb] misses [target]!"), \
 						span_danger("You avoid [user]'s [atk_verb]!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, user)
 		to_chat(user, span_warning("Your [atk_verb] misses [target]!"))
 		log_combat(user, target, "attempted to punch")
-		return FALSE
+
+	// Handle rolling here. Unarmed rolls on humans are handled seperately from melee rolls & unarmed rolls on basic mobs; because techdebt is funny. See basic_defense.dm
+	var/potential_requirement = 14
+	if(user == target)
+		potential_requirement = 3
+	var/datum/roll_result/attack_roll = user.stat_roll(requirement = potential_requirement, skill_path = /datum/rpg_skill/force, modifier = hit_modifier, defender = target, defender_skill_path = /datum/rpg_skill/mobility)
+
+	switch(attack_roll.outcome)
+
+		if(CRIT_SUCCESS)
+			damage *= 1.1
+		if(FAILURE)
+			user.adjustStaminaLoss(rand(5,10))
+			playsound(target.loc, attacking_bodypart.unarmed_miss_sound, 25, TRUE, -1)
+			target.visible_message(span_danger("[user]'s [atk_verb] misses [target]!"), \
+							span_danger("You avoid [user]'s [atk_verb]!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, user)
+			to_chat(user, attack_roll.create_tooltip("Your [atk_verb] misses [target]!"))
+			log_combat(user, target, "attempted to punch")
+			return FALSE
+		if(CRIT_FAILURE)
+			user.Knockdown(1 SECONDS)
+			user.adjustStaminaLoss(rand(10,15))
+			playsound(target.loc, attacking_bodypart.unarmed_miss_sound, 25, TRUE, -1)
+			target.visible_message(span_danger("[user]'s [atk_verb] completely misses [target]!"), \
+							span_danger("[user]'s [atk_verb] completely whiffs you!"), span_hear("You hear a swoosh!"), COMBAT_MESSAGE_RANGE, user)
+			to_chat(user, attack_roll.create_tooltip("Your [atk_verb] completely whiffs [target]!"))
+			log_combat(user, target, "attempted to punch")
+			return FALSE
 
 	var/armor_block = target.run_armor_check(affecting, MELEE)
 
@@ -924,7 +949,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		atk_verb = attacking_bodypart.grappled_attack_verb
 	target.visible_message(span_danger("[user] [atk_verb]ed [target]!"), \
 					span_userdanger("You're [atk_verb]ed by [user]!"), span_hear("You hear a sickening sound of flesh hitting flesh!"), COMBAT_MESSAGE_RANGE, user)
-	to_chat(user, span_danger("You [atk_verb] [target]!"))
+	to_chat(user, attack_roll.create_tooltip("You [atk_verb] [target]!"))
 
 	target.lastattacker = user.real_name
 	target.lastattackerckey = user.ckey
