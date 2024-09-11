@@ -1,0 +1,9 @@
+author: "Kapu1178 for Daedalus Dock, unit0016"
+delete-after: True
+changes:
+  - rscadd: "Combat has been overhauled to a diceroll system."
+  - rscadd: "Rotation locking has been added to the game; accessible via the F key."
+  - rscadd: "Skills, Stats, and Dicerolls - ThreeD6 has been ported from Daedalus Dock."
+  - config: "Movement speed has been toned down dramatically."
+  - config: "Humans no longer need surnames."
+  - config: "FOV has been globally enabled for all mobs."
