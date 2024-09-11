@@ -86,6 +86,12 @@
 	using.screen_loc = ui_movi
 	static_inventory += using
 
+	using = new /atom/movable/screen/eye_intent(null, src)
+	using.icon = ui_style
+	using.icon_state = "eye"
+	using.screen_loc = ui_eye
+	static_inventory += using
+
 	using = new /atom/movable/screen/drop(null, src)
 	using.icon = ui_style
 	using.screen_loc = ui_drop_throw

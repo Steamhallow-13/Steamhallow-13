@@ -551,6 +551,8 @@
 
 /// How far away you can be to make eye contact with someone while examining
 #define EYE_CONTACT_RANGE 5
+/// How long does it take for your eye state to be reverted if it was forced?
+#define EYE_FIXED_REVERT_TIME (1 SECONDS)
 
 
 #define SILENCE_RANGED_MESSAGE (1<<0)

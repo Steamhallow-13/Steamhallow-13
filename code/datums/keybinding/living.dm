@@ -76,7 +76,7 @@
 	return TRUE
 
 /datum/keybinding/living/toggle_combat_mode
-	hotkey_keys = list("F")
+	hotkey_keys = list("C")
 	name = "toggle_combat_mode"
 	full_name = "Toggle Combat Mode"
 	description = "Toggles combat mode. Like Help/Harm but cooler."
@@ -119,7 +119,7 @@
 	user_mob.set_combat_mode(FALSE, silent = FALSE)
 
 /datum/keybinding/living/toggle_move_intent
-	hotkey_keys = list("C")
+	hotkey_keys = list("V")
 	name = "toggle_move_intent"
 	full_name = "Hold to toggle move intent"
 	description = "Held down to cycle to the other move intent, release to cycle back"

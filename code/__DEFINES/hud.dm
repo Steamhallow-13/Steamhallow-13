@@ -72,6 +72,7 @@
 #define ui_acti "EAST-3:24,SOUTH:5"
 #define ui_combat_toggle "EAST-3:24,SOUTH:5"
 #define ui_zonesel "EAST-1:28,SOUTH:5"
+#define ui_eye "EAST-1:28,SOUTH+1:40"
 #define ui_acti_alt "EAST-1:28,SOUTH:5" //alternative intent switcher for when the interface is hidden (F12)
 #define ui_crafting "EAST-4:22,SOUTH:5"
 #define ui_building "EAST-4:22,SOUTH:21"
