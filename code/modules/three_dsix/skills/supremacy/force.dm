@@ -7,5 +7,5 @@
 
 /datum/rpg_skill/force/get(mob/living/user)
 	. = ..()
-	if(user.incapacitated())
+	if(user.incapacitated)
 		. -= 10 // dome'd

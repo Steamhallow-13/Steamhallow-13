@@ -127,7 +127,6 @@
 #define span_spiderbreacher(str) ("<span class='spiderbreacher'>" + str + "</span>")
 #define span_spiderbroodmother(str) ("<span class='spiderbroodmother'>" + str + "</span>")
 #define span_spiderscout(str) ("<span class='spiderscout'>" + str + "</span>")
-#define span_spiderbreacher(str) ("<span class='spiderbreacher'>" + str + "</span>")
 #define span_statsbad(str) ("<span class='statsBad'>" + str + "</span>")
 #define span_statsgood(str) ("<span class='statsGood'>" + str + "</span>")
 #define span_subheader_announcement_text(str) ("<span class='subheader_announcement_text'>" + str + "</span>")
