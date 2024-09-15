@@ -125,7 +125,7 @@
 	icon_state = "hacker"
 	removable = FALSE
 	incompatible_modules = list(/obj/item/mod/module/hacker)
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	/// Whether or not the communication console hack was used to summon another antagonist.
 	var/communication_console_hack_success = FALSE
 	/// How many times the module has been used to force open doors.
@@ -166,7 +166,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 2
 	incompatible_modules = list(/obj/item/mod/module/weapon_recall)
 	cooldown_time = 0.5 SECONDS
-	required_slots = list(ITEM_SLOT_GLOVES, ITEM_SLOT_BACK|ITEM_SLOT_BELT)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND, ITEM_SLOT_BACK|ITEM_SLOT_BELT)
 	/// The item linked to the module that will get recalled.
 	var/obj/item/linked_weapon
 	/// The accepted typepath we can link to.
@@ -308,7 +308,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 6
 	incompatible_modules = list(/obj/item/mod/module/energy_net)
 	cooldown_time = 5 SECONDS
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	/// List of all energy nets this module made.
 	var/list/energy_nets = list()
 

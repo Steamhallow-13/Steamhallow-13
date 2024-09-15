@@ -632,7 +632,7 @@
 	// Check and wash stuff that can be covered
 	var/obscured = check_obscured_slots()
 
-	if(!(obscured & ITEM_SLOT_ICLOTHING) && w_uniform?.wash(clean_types))
+	if(!(obscured & ITEM_SLOT_I_TORSOWEAR) && w_uniform?.wash(clean_types))
 		update_worn_undersuit()
 		. = TRUE
 

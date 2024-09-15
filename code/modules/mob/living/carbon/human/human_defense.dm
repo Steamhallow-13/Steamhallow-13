@@ -771,7 +771,7 @@
 		burning_items += head
 
 	//CHEST//
-	if(w_uniform && !(obscured & ITEM_SLOT_ICLOTHING))
+	if(w_uniform && !(obscured & ITEM_SLOT_I_TORSOWEAR))
 		burning_items += w_uniform
 	if(wear_suit)
 		burning_items += wear_suit

@@ -273,7 +273,6 @@
 #include "strippable.dm"
 #include "stuns.dm"
 #include "subsystem_init.dm"
-#include "suit_storage_icons.dm"
 #include "surgeries.dm"
 #include "tail_wag.dm"
 #include "teleporters.dm"

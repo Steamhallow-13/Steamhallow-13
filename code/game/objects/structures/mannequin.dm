@@ -36,8 +36,8 @@
 		ITEM_SLOT_BACK,
 		ITEM_SLOT_BELT,
 		ITEM_SLOT_ID,
-		ITEM_SLOT_ICLOTHING,
-		ITEM_SLOT_OCLOTHING,
+		ITEM_SLOT_I_TORSOWEAR,
+		ITEM_SLOT_O_TORSOWEAR,
 		ITEM_SLOT_GLOVES,
 		ITEM_SLOT_FEET,
 	)
@@ -142,13 +142,13 @@
 			if(ITEM_SLOT_ID)
 				default_layer = ID_LAYER
 				default_icon = 'icons/mob/clothing/id.dmi'
-			if(ITEM_SLOT_ICLOTHING)
+			if(ITEM_SLOT_I_TORSOWEAR)
 				default_layer = UNIFORM_LAYER
 				default_icon = DEFAULT_UNIFORM_FILE
 				if(body_type == FEMALE && istype(worn_item, /obj/item/clothing/under))
 					var/obj/item/clothing/under/worn_jumpsuit = worn_item
 					female_icon = worn_jumpsuit.female_sprite_flags
-			if(ITEM_SLOT_OCLOTHING)
+			if(ITEM_SLOT_O_TORSOWEAR)
 				default_layer = SUIT_LAYER
 				default_icon = DEFAULT_SUIT_FILE
 			if(ITEM_SLOT_GLOVES)
@@ -279,11 +279,11 @@ GLOBAL_LIST_INIT(strippable_mannequin_items, create_strippable_list(list(
 
 /datum/strippable_item/mannequin_slot/uniform
 	key = STRIPPABLE_ITEM_JUMPSUIT
-	item_slot = ITEM_SLOT_ICLOTHING
+	item_slot = ITEM_SLOT_I_TORSOWEAR
 
 /datum/strippable_item/mannequin_slot/suit
 	key = STRIPPABLE_ITEM_SUIT
-	item_slot = ITEM_SLOT_OCLOTHING
+	item_slot = ITEM_SLOT_O_TORSOWEAR
 
 /datum/strippable_item/mannequin_slot/gloves
 	key = STRIPPABLE_ITEM_GLOVES

@@ -17,7 +17,7 @@
 	light_on = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 	obj_flags = CONDUCTS_ELECTRICITY
-	slot_flags = ITEM_SLOT_NECK
+	slot_flags = ITEM_SLOT_O_NECK
 	custom_materials = list(/datum/material/iron =SMALL_MATERIAL_AMOUNT*0.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT*1.5)
 	custom_price = PAYCHECK_CREW * 2
 	var/flash_enabled = TRUE

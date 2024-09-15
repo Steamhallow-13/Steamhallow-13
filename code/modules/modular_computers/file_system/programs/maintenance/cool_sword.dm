@@ -36,7 +36,7 @@
 /datum/computer_file/program/maintenance/cool_sword/proc/host_equipped(datum/source, mob/user, slot)
 	SIGNAL_HANDLER
 
-	if(slot & ITEM_SLOT_ID)
+	if(slot & ITEM_SLOT_BELT)
 		user.client?.mouse_override_icon = sword_icon
 		RegisterSignal(user, COMSIG_MOB_LOGIN, PROC_REF(update_mouse), override = TRUE)
 		RegisterSignal(user, COMSIG_MOB_LOGOUT, PROC_REF(stop_mouse), override = TRUE)

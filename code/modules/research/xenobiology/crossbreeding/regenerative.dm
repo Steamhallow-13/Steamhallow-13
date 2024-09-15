@@ -98,8 +98,8 @@ Regenerative extracts:
 /obj/item/slimecross/regenerative/darkpurple/core_effect(mob/living/target, mob/user)
 	var/equipped = 0
 	equipped += target.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/purple(null), ITEM_SLOT_FEET)
-	equipped += target.equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple(null), ITEM_SLOT_ICLOTHING)
-	equipped += target.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/purple(null), ITEM_SLOT_GLOVES)
+	equipped += target.equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple(null), ITEM_SLOT_I_TORSOWEAR)
+	equipped += target.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/purple(null), ITEM_SLOT_L_HAND)
 	equipped += target.equip_to_slot_or_del(new /obj/item/clothing/head/soft/purple(null), ITEM_SLOT_HEAD)
 	if(equipped > 0)
 		target.visible_message(span_notice("The milky goo congeals into clothing!"))
@@ -113,9 +113,9 @@ Regenerative extracts:
 		return
 	var/mob/living/carbon/human/H = target
 	var/fireproofed = FALSE
-	if(H.get_item_by_slot(ITEM_SLOT_OCLOTHING))
+	if(H.get_item_by_slot(ITEM_SLOT_O_TORSOWEAR))
 		fireproofed = TRUE
-		var/obj/item/clothing/C = H.get_item_by_slot(ITEM_SLOT_OCLOTHING)
+		var/obj/item/clothing/C = H.get_item_by_slot(ITEM_SLOT_O_TORSOWEAR)
 		fireproof(C)
 	if(H.get_item_by_slot(ITEM_SLOT_HEAD))
 		fireproofed = TRUE

@@ -11,7 +11,7 @@
 	greyscale_config_inhand_right = /datum/greyscale_config/gloves_inhand_right
 	siemens_coefficient = 0.5
 	body_parts_covered = HANDS
-	slot_flags = ITEM_SLOT_GLOVES
+	slot_flags = ITEM_SLOT_L_HAND | ITEM_SLOT_R_HAND
 	equip_sound = 'sound/items/equip/glove_equip.ogg'
 	drop_sound = 'sound/items/handling/glove_drop.ogg'
 	pickup_sound = 'sound/items/handling/glove_pick_up.ogg'

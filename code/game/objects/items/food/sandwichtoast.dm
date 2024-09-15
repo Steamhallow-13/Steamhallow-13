@@ -284,7 +284,7 @@
 */
 /obj/item/food/sandwich/death/proc/check_liked(mob/living/carbon/human/consumer)
 	// Closest thing to a mullet we have
-	if(consumer.hairstyle == "Gelled Back" && istype(consumer.get_item_by_slot(ITEM_SLOT_ICLOTHING), /obj/item/clothing/under/rank/civilian/cookjorts))
+	if(consumer.hairstyle == "Gelled Back" && istype(consumer.get_item_by_slot(ITEM_SLOT_I_TORSOWEAR), /obj/item/clothing/under/rank/civilian/cookjorts))
 		return FOOD_LIKED
 	return FOOD_ALLERGIC
 

@@ -183,7 +183,7 @@
 
 /obj/item/clothing/neck/link_scryer/equipped(mob/living/user, slot)
 	. = ..()
-	if(slot != ITEM_SLOT_NECK)
+	if(slot != ITEM_SLOT_O_NECK)
 		mod_link?.end_call()
 
 /obj/item/clothing/neck/link_scryer/dropped(mob/living/user)

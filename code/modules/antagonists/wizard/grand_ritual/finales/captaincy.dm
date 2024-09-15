@@ -85,7 +85,7 @@
 	var/obj/item/belt = invoker.get_item_by_slot(ITEM_SLOT_BELT)
 	belt?.moveToNullspace()
 
-	var/obj/pants = invoker.get_item_by_slot(ITEM_SLOT_ICLOTHING)
+	var/obj/pants = invoker.get_item_by_slot(ITEM_SLOT_I_TORSOWEAR)
 	QDEL_NULL(pants)
 	invoker.equipOutfit(/datum/outfit/job/wizard_captain)
 	// And put everything back!

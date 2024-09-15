@@ -136,13 +136,13 @@
 	if(!iscarbon(user))
 		return NONE
 	var/mob/living/carbon/char = user
-	if((char.get_item_by_slot(ITEM_SLOT_NECK) == src) || (char.get_item_by_slot(ITEM_SLOT_OCLOTHING) == src))
+	if((char.get_item_by_slot(ITEM_SLOT_NECK) == src) || (char.get_item_by_slot(ITEM_SLOT_O_TORSOWEAR) == src))
 		to_chat(user, span_warning("You can't adjust [src] while wearing it!"))
 		return CLICK_ACTION_BLOCKING
 	if(!user.is_holding(src))
 		to_chat(user, span_warning("You must be holding [src] in order to adjust it!"))
 		return CLICK_ACTION_BLOCKING
-	if(slot_flags & ITEM_SLOT_OCLOTHING)
+	if(slot_flags & ITEM_SLOT_O_TORSOWEAR)
 		slot_flags = ITEM_SLOT_NECK
 		cold_protection = null
 		heat_protection = null
@@ -317,7 +317,7 @@
 
 /obj/item/clothing/suit/hooded/cloak/godslayer/equipped(mob/user, slot)
 	. = ..()
-	if(slot & ITEM_SLOT_OCLOTHING)
+	if(slot & ITEM_SLOT_O_TORSOWEAR)
 		RegisterSignal(user, COMSIG_MOB_STATCHANGE, PROC_REF(resurrect))
 		return
 	UnregisterSignal(user, COMSIG_MOB_STATCHANGE)

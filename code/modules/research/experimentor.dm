@@ -859,31 +859,14 @@
 
 	var/mob/living/carbon/human/humerus = carbonius
 	// uniform
-	var/obj/item/clothing/under/costume/disguise_uniform = roll_costume(ITEM_SLOT_ICLOTHING)
+	var/obj/item/clothing/under/costume/disguise_uniform = roll_costume(ITEM_SLOT_I_TORSOWEAR)
 	humerus.dropItemToGround(humerus.w_uniform)
-	humerus.equip_to_slot_or_del(disguise_uniform, ITEM_SLOT_ICLOTHING)
+	humerus.equip_to_slot_or_del(disguise_uniform, ITEM_SLOT_I_TORSOWEAR)
 	// suit
-	var/obj/item/clothing/suit/costume/disguise_suit = roll_costume(ITEM_SLOT_OCLOTHING)
+	var/obj/item/clothing/suit/costume/disguise_suit = roll_costume(ITEM_SLOT_O_TORSOWEAR)
 	humerus.dropItemToGround(humerus.wear_suit)
-	humerus.equip_to_slot_or_del(disguise_suit, ITEM_SLOT_OCLOTHING)
-	// id
-	var/obj/item/card/cardboard/card_id = new()
-	humerus.dropItemToGround(humerus.wear_id)
-	humerus.equip_to_slot_or_del(card_id, ITEM_SLOT_ID)
+	humerus.equip_to_slot_or_del(disguise_suit, ITEM_SLOT_O_TORSOWEAR)
 
-	// edit the card to a random job & name
-	if(!card_id)
-		return
-	card_id.scribbled_name = "[pick(GLOB.first_names)] [pick(GLOB.last_names)]"
-	card_id.details_colors = list(ready_random_color(), ready_random_color(), ready_random_color())
-	card_id.item_flags |= DROPDEL
-
-	var/datum/id_trim/random_trim = pick(subtypesof(/datum/id_trim)) // this can pick silly things
-	random_trim = new random_trim()
-	if(random_trim.trim_state && random_trim.assignment)
-		card_id.scribbled_trim = replacetext(random_trim.trim_state, "trim_", "cardboard_")
-	card_id.scribbled_assignment = random_trim.assignment
-	card_id.update_appearance()
 	REMOVE_TRAIT(user, TRAIT_NO_JUMPSUIT, REF(src))
 
 /obj/item/relic/proc/roll_costume(slot, flagcheck)

@@ -32,7 +32,7 @@
 	/// If parent is an item, this is the person currently holding/wearing the parent (or the parent if no one is holding it)
 	var/mob/living/holder
 	/// Whitelist of item slots the parent can be equipped in that make the holder slippery. If null or empty, it will always make the holder slippery.
-	var/list/slot_whitelist = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_ICLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_HEAD, ITEM_SLOT_MASK, ITEM_SLOT_BELT, ITEM_SLOT_NECK)
+	var/list/slot_whitelist = list(ITEM_SLOT_O_TORSOWEAR, ITEM_SLOT_I_TORSOWEAR, ITEM_SLOT_FEET, ITEM_SLOT_HEAD, ITEM_SLOT_MASK, ITEM_SLOT_BELT, ITEM_SLOT_I_NECK, ITEM_SLOT_O_NECK)
 	///what we give to connect_loc by default, makes slippable mobs moving over us slip
 	var/static/list/default_connections = list(
 		COMSIG_ATOM_ENTERED = PROC_REF(Slip),
@@ -57,7 +57,7 @@
  * * datum/callback/on_slip_callback - Callback to define further custom controls on when slipping is applied
  * * paralyze - length of time to paralyze the crossing mob for (Deciseconds)
  * * force_drop - should the crossing mob drop items in its hands or not
- * * slot_whitelist - flags controlling where on a mob this item can be equipped to make the parent mob slippery full list [here][ITEM_SLOT_OCLOTHING]
+ * * slot_whitelist - flags controlling where on a mob this item can be equipped to make the parent mob slippery full list [here][ITEM_SLOT_O_TORSOWEAR]
  * * datum/callback/on_slip_callback - Callback to add custom behaviours as the crossing mob is slipped
  */
 /datum/component/slippery/Initialize(

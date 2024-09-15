@@ -13,7 +13,7 @@
 	armor_type = /datum/armor/none
 	drop_sound = 'sound/items/handling/cloth_drop.ogg'
 	pickup_sound = 'sound/items/handling/cloth_pickup.ogg'
-	slot_flags = ITEM_SLOT_OCLOTHING
+	slot_flags = ITEM_SLOT_O_TORSOWEAR
 	var/blood_overlay_type = "suit"
 	limb_integrity = 0 // disabled for most exo-suits
 

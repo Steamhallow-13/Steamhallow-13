@@ -180,9 +180,9 @@
 
 	//Start with uniform,suit,backpack for additional slots
 	if(uniform)
-		EQUIP_OUTFIT_ITEM(uniform, ITEM_SLOT_ICLOTHING)
+		EQUIP_OUTFIT_ITEM(uniform, ITEM_SLOT_I_TORSOWEAR)
 	if(suit)
-		EQUIP_OUTFIT_ITEM(suit, ITEM_SLOT_OCLOTHING)
+		EQUIP_OUTFIT_ITEM(suit, ITEM_SLOT_O_TORSOWEAR)
 	if(belt)
 		EQUIP_OUTFIT_ITEM(belt, ITEM_SLOT_BELT)
 	if(gloves)

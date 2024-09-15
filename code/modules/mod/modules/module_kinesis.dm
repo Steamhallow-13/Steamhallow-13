@@ -15,7 +15,7 @@
 	overlay_state_inactive = "module_kinesis"
 	overlay_state_active = "module_kinesis_on"
 	accepted_anomalies = list(/obj/item/assembly/signaler/anomaly/grav)
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	/// Range of the knesis grab.
 	var/grab_range = 5
 	/// Time between us hitting objects with kinesis.

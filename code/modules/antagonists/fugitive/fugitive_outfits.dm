@@ -48,8 +48,8 @@
 
 	var/list/no_drops = list()
 	no_drops += equipped_on.get_item_by_slot(ITEM_SLOT_FEET)
-	no_drops += equipped_on.get_item_by_slot(ITEM_SLOT_ICLOTHING)
-	no_drops += equipped_on.get_item_by_slot(ITEM_SLOT_OCLOTHING)
+	no_drops += equipped_on.get_item_by_slot(ITEM_SLOT_I_TORSOWEAR)
+	no_drops += equipped_on.get_item_by_slot(ITEM_SLOT_O_TORSOWEAR)
 	no_drops += equipped_on.get_item_by_slot(ITEM_SLOT_HEAD)
 	no_drops += equipped_on.get_item_by_slot(ITEM_SLOT_EYES)
 	for(var/obj/item/trait_needed as anything in no_drops)

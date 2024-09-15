@@ -37,7 +37,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 5
 	incompatible_modules = list(/obj/item/mod/module/microwave_beam, /obj/item/mod/module/organizer)
 	cooldown_time = 10 SECONDS
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 
 /obj/item/mod/module/microwave_beam/on_select_use(atom/target)
 	. = ..()

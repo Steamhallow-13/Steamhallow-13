@@ -909,9 +909,9 @@
 		return
 	var/mob/owner = loc
 	var/flags = slot_flags
-	if(flags & ITEM_SLOT_OCLOTHING)
+	if(flags & ITEM_SLOT_O_TORSOWEAR)
 		owner.update_worn_oversuit()
-	if(flags & ITEM_SLOT_ICLOTHING)
+	if(flags & ITEM_SLOT_I_TORSOWEAR)
 		owner.update_worn_undersuit()
 	if(flags & ITEM_SLOT_GLOVES)
 		owner.update_worn_gloves()
@@ -1586,7 +1586,7 @@
  */
 /obj/item/proc/compare_zone_to_item_slot(zone)
 	switch(slot_flags)
-		if(ITEM_SLOT_ICLOTHING, ITEM_SLOT_OCLOTHING, ITEM_SLOT_BACK)
+		if(ITEM_SLOT_I_TORSOWEAR, ITEM_SLOT_O_TORSOWEAR, ITEM_SLOT_BACK)
 			return (zone == BODY_ZONE_CHEST)
 		if(ITEM_SLOT_BELT)
 			return (zone == BODY_ZONE_PRECISE_GROIN)

@@ -35,9 +35,9 @@
 			return gloves
 		if(ITEM_SLOT_FEET)
 			return shoes
-		if(ITEM_SLOT_OCLOTHING)
+		if(ITEM_SLOT_O_TORSOWEAR)
 			return wear_suit
-		if(ITEM_SLOT_ICLOTHING)
+		if(ITEM_SLOT_I_TORSOWEAR)
 			return w_uniform
 		if(ITEM_SLOT_LPOCKET)
 			return l_store
@@ -74,10 +74,10 @@
 		return ITEM_SLOT_FEET
 
 	if(looking_for == wear_suit)
-		return ITEM_SLOT_OCLOTHING
+		return ITEM_SLOT_O_TORSOWEAR
 
 	if(looking_for == w_uniform)
-		return ITEM_SLOT_ICLOTHING
+		return ITEM_SLOT_I_TORSOWEAR
 
 	if(looking_for == r_store)
 		return ITEM_SLOT_RPOCKET
@@ -172,7 +172,7 @@
 				return
 			shoes = equipping
 			update_worn_shoes()
-		if(ITEM_SLOT_OCLOTHING)
+		if(ITEM_SLOT_O_TORSOWEAR)
 			if(wear_suit)
 				return
 
@@ -183,7 +183,7 @@
 				stop_pulling() //can't pull if restrained
 				update_mob_action_buttons() //certain action buttons will no longer be usable.
 			update_worn_oversuit()
-		if(ITEM_SLOT_ICLOTHING)
+		if(ITEM_SLOT_I_TORSOWEAR)
 			if(w_uniform)
 				return
 			w_uniform = equipping

@@ -176,8 +176,8 @@
 
 	// Give them some duds
 	lich.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal/magic(lich), ITEM_SLOT_FEET)
-	lich.equip_to_slot_or_del(new /obj/item/clothing/under/color/black(lich), ITEM_SLOT_ICLOTHING)
-	lich.equip_to_slot_or_del(new /obj/item/clothing/suit/wizrobe/black(lich), ITEM_SLOT_OCLOTHING)
+	lich.equip_to_slot_or_del(new /obj/item/clothing/under/color/black(lich), ITEM_SLOT_I_TORSOWEAR)
+	lich.equip_to_slot_or_del(new /obj/item/clothing/suit/wizrobe/black(lich), ITEM_SLOT_O_TORSOWEAR)
 	lich.equip_to_slot_or_del(new /obj/item/clothing/head/wizard/black(lich), ITEM_SLOT_HEAD)
 
 	// Fix their name

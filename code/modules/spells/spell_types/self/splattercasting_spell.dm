@@ -38,8 +38,8 @@
 		human_cast_on.dropItemToGround(human_cast_on.w_uniform)
 		human_cast_on.dropItemToGround(human_cast_on.wear_suit)
 		human_cast_on.dropItemToGround(human_cast_on.head)
-		human_cast_on.equip_to_slot_or_del(new /obj/item/clothing/suit/wizrobe/red(human_cast_on), ITEM_SLOT_OCLOTHING)
+		human_cast_on.equip_to_slot_or_del(new /obj/item/clothing/suit/wizrobe/red(human_cast_on), ITEM_SLOT_O_TORSOWEAR)
 		human_cast_on.equip_to_slot_or_del(new /obj/item/clothing/head/wizard/red(human_cast_on), ITEM_SLOT_HEAD)
-		human_cast_on.equip_to_slot_or_del(new /obj/item/clothing/under/color/red(human_cast_on), ITEM_SLOT_ICLOTHING)
+		human_cast_on.equip_to_slot_or_del(new /obj/item/clothing/under/color/red(human_cast_on), ITEM_SLOT_I_TORSOWEAR)
 
 	qdel(src)

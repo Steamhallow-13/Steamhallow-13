@@ -416,7 +416,7 @@
 	while(count > 0 && length(valid_turfs) > 0)
 		count--
 		var/mob/living/carbon/human/species/monkey/monke = new(pick_n_take(valid_turfs))
-		monke.equip_to_slot_or_del(new /obj/item/clothing/under/suit/waiter(monke), ITEM_SLOT_ICLOTHING)
+		monke.equip_to_slot_or_del(new /obj/item/clothing/under/suit/waiter(monke), ITEM_SLOT_I_TORSOWEAR)
 		var/instrument_path = pick(subtypesof(/obj/item/instrument))
 		var/obj/item/instrument/instrument = new instrument_path()
 		monke.put_in_hands(instrument)

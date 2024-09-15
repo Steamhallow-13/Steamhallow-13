@@ -48,15 +48,6 @@
 	slot_item_name = "backpack"
 	keybind_signal = COMSIG_KB_HUMAN_BAGEQUIP_DOWN
 
-/datum/keybinding/human/quick_equip_belt/quick_equip_suit_storage
-	hotkey_keys = list("ShiftQ")
-	name = "quick_equip_suit_storage"
-	full_name = "Quick equip suit storage slot"
-	description = "Put held thing in suit storage slot item or take out most recent thing from suit storage slot item"
-	slot_type = ITEM_SLOT_SUITSTORE
-	slot_item_name = "suit storage slot item"
-	keybind_signal = COMSIG_KB_HUMAN_SUITEQUIP_DOWN
-
 /datum/keybinding/human/quick_equip_belt/quick_equip_lpocket
 	hotkey_keys = list("Ctrl1")
 	name = "quick_equip_lpocket"

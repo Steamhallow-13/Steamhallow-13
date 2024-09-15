@@ -8,7 +8,7 @@
 	complexity = 2
 	use_energy_cost = DEFAULT_CHARGE_DRAIN
 	incompatible_modules = list(/obj/item/mod/module/magnetic_harness)
-	required_slots = list(ITEM_SLOT_OCLOTHING)
+	required_slots = list(ITEM_SLOT_O_TORSOWEAR)
 	/// Time before we activate the magnet.
 	var/magnet_delay = 0.8 SECONDS
 	/// The typecache of all guns we allow.
@@ -22,7 +22,7 @@
 		guns_typecache = typecacheof(list(/obj/item/gun/ballistic, /obj/item/gun/energy, /obj/item/gun/grenadelauncher, /obj/item/gun/chem, /obj/item/gun/syringe))
 
 /obj/item/mod/module/magnetic_harness/on_install()
-	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_OCLOTHING)
+	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_O_TORSOWEAR)
 	if(!istype(suit))
 		return
 	already_allowed_guns = guns_typecache & suit.allowed
@@ -31,7 +31,7 @@
 /obj/item/mod/module/magnetic_harness/on_uninstall(deleting = FALSE)
 	if(deleting)
 		return
-	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_OCLOTHING)
+	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_O_TORSOWEAR)
 	if(!istype(suit))
 		return
 	suit.allowed -= (guns_typecache - already_allowed_guns)
@@ -54,7 +54,7 @@
 /obj/item/mod/module/magnetic_harness/proc/pick_up_item(obj/item/item)
 	if(!isturf(item.loc) || !item.Adjacent(mod.wearer))
 		return
-	if(!mod.wearer.equip_to_slot_if_possible(item, ITEM_SLOT_SUITSTORE, qdel_on_fail = FALSE, disable_warning = TRUE))
+	if(!mod.wearer.equip_to_slot_if_possible(item, ITEM_SLOT_BACK, qdel_on_fail = FALSE, disable_warning = TRUE))
 		return
 	playsound(src, 'sound/items/modsuit/magnetic_harness.ogg', 50, TRUE)
 	balloon_alert(mod.wearer, "[item] reattached")
@@ -72,7 +72,7 @@
 	cooldown_time = 5 SECONDS
 	overlay_state_inactive = "module_pepper"
 	overlay_state_use = "module_pepper_used"
-	required_slots = list(ITEM_SLOT_OCLOTHING)
+	required_slots = list(ITEM_SLOT_O_TORSOWEAR)
 
 /obj/item/mod/module/pepper_shoulders/on_suit_activation()
 	RegisterSignal(mod.wearer, COMSIG_LIVING_CHECK_BLOCK, PROC_REF(on_check_block))
@@ -112,7 +112,7 @@
 	incompatible_modules = list(/obj/item/mod/module/holster)
 	cooldown_time = 0.5 SECONDS
 	allow_flags = MODULE_ALLOW_INACTIVE
-	required_slots = list(ITEM_SLOT_OCLOTHING|ITEM_SLOT_GLOVES|ITEM_SLOT_FEET)
+	required_slots = list(ITEM_SLOT_O_TORSOWEAR|ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND|ITEM_SLOT_FEET)
 	/// Gun we have holstered.
 	var/obj/item/gun/holstered
 
@@ -480,7 +480,7 @@
 	module_type = MODULE_PASSIVE
 	complexity = 3
 	incompatible_modules = list(/obj/item/mod/module/shooting_assistant)
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	var/selected_mode = SHOOTING_ASSISTANT_OFF
 	///Association list, the assoc values are the balloon alerts shown to the user when the mode is set.
 	var/static/list/available_modes = list(
@@ -580,7 +580,7 @@
 	icon_state = "bulwark"
 	complexity = 3
 	incompatible_modules = list(/obj/item/mod/module/shove_blocker)
-	required_slots = list(ITEM_SLOT_OCLOTHING)
+	required_slots = list(ITEM_SLOT_O_TORSOWEAR)
 
 /obj/item/mod/module/shove_blocker/on_suit_activation()
 	mod.wearer.add_traits(list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED, TRAIT_NO_STAGGER, TRAIT_NO_THROW_HITPUSH), MOD_TRAIT)
@@ -599,7 +599,7 @@
 	desc = "Enhanced gauntlent grip pads that help with placing individuals in restraints more quickly. Doesn't look like they'll come off."
 	removable = FALSE
 	complexity = 0
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 
 /obj/item/mod/module/quick_cuff/on_suit_activation()
 	. = ..()

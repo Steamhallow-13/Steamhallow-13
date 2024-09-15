@@ -397,7 +397,7 @@
 	var/t_is = p_are()
 
 	//uniform
-	if(w_uniform && !(obscured & ITEM_SLOT_ICLOTHING) && !(w_uniform.item_flags & EXAMINE_SKIP))
+	if(w_uniform && !(obscured & ITEM_SLOT_I_TORSOWEAR) && !(w_uniform.item_flags & EXAMINE_SKIP))
 		//accessory
 		var/accessory_message = ""
 		if(istype(w_uniform, /obj/item/clothing/under))

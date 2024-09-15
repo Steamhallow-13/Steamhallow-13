@@ -659,32 +659,62 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 		slot_strings += "back"
 	if(slot_flags & ITEM_SLOT_MASK)
 		slot_strings += "mask"
-	if(slot_flags & ITEM_SLOT_NECK)
-		slot_strings += "neck"
+	if(slot_flags & ITEM_SLOT_MAW)
+		slot_strings += "maw"
+	if(slot_flags & ITEM_SLOT_I_LEGWEAR)
+		slot_strings += "inner legwear"
+	if(slot_flags & ITEM_SLOT_O_LEGWEAR)
+		slot_strings += "outer legwear"
+	if(slot_flags & ITEM_SLOT_I_NECK)
+		slot_strings += "inner neck"
+	if(slot_flags & ITEM_SLOT_O_NECK)
+		slot_strings += "outer neck"
+	if(slot_flags & ITEM_SLOT_L_HAND)
+		slot_strings += "left hand"
+	if(slot_flags & ITEM_SLOT_L_HAND_THUMB)
+		slot_strings += "left thumb"
+	if(slot_flags & ITEM_SLOT_L_HAND_INDEX)
+		slot_strings += "left index finger"
+	if(slot_flags & ITEM_SLOT_L_HAND_MIDDLE)
+		slot_strings += "left middle finger"
+	if(slot_flags & ITEM_SLOT_L_HAND_RING)
+		slot_strings += "left ring finger"
+	if(slot_flags & ITEM_SLOT_L_HAND_PINKY)
+		slot_strings += "left pinky finger"
+	if(slot_flags & ITEM_SLOT_R_HAND)
+		slot_strings += "right hand"
+	if(slot_flags & ITEM_SLOT_R_HAND_THUMB)
+		slot_strings += "right thumb"
+	if(slot_flags & ITEM_SLOT_R_HAND_INDEX)
+		slot_strings += "right index finger"
+	if(slot_flags & ITEM_SLOT_R_HAND_MIDDLE)
+		slot_strings += "right middle finger"
+	if(slot_flags & ITEM_SLOT_R_HAND_RING)
+		slot_strings += "right ring finger"
+	if(slot_flags & ITEM_SLOT_R_HAND_PINKY)
+		slot_strings += "right pinky finger"
 	if(slot_flags & ITEM_SLOT_HANDCUFFED)
 		slot_strings += "handcuff"
 	if(slot_flags & ITEM_SLOT_LEGCUFFED)
 		slot_strings += "legcuff"
 	if(slot_flags & ITEM_SLOT_BELT)
 		slot_strings += "belt"
-	if(slot_flags & ITEM_SLOT_ID)
-		slot_strings += "id"
 	if(slot_flags & ITEM_SLOT_EARS)
 		slot_strings += "ear"
+	if(slot_flags & ITEM_SLOT_EARS_LEFT)
+		slot_strings += "left ear"
+	if(slot_flags & ITEM_SLOT_EARS_RIGHT)
+		slot_strings += "right ear"
 	if(slot_flags & ITEM_SLOT_EYES)
 		slot_strings += "glasses"
-	if(slot_flags & ITEM_SLOT_GLOVES)
-		slot_strings += "glove"
 	if(slot_flags & ITEM_SLOT_HEAD)
 		slot_strings += "head"
 	if(slot_flags & ITEM_SLOT_FEET)
 		slot_strings += "shoe"
-	if(slot_flags & ITEM_SLOT_OCLOTHING)
+	if(slot_flags & ITEM_SLOT_O_TORSOWEAR)
 		slot_strings += "oversuit"
-	if(slot_flags & ITEM_SLOT_ICLOTHING)
+	if(slot_flags & ITEM_SLOT_I_TORSOWEAR)
 		slot_strings += "undersuit"
-	if(slot_flags & ITEM_SLOT_SUITSTORE)
-		slot_strings += "suit storage"
 	if(slot_flags & (ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET))
 		slot_strings += "pocket"
 	if(slot_flags & ITEM_SLOT_HANDS)
@@ -693,6 +723,22 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 		slot_strings += "dextrous storage"
 	if(slot_flags & ITEM_SLOT_BACKPACK)
 		slot_strings += "backpack"
+	if(slot_flags & ITEM_SLOT_CHEST)
+		slot_strings += "chest"
+	if(slot_flags & ITEM_SLOT_GROIN)
+		slot_strings += "groin"
+	if(slot_flags & ITEM_SLOT_VAGINA)
+		slot_strings += "vagina"
+	if(slot_flags & ITEM_SLOT_DICK)
+		slot_strings += "dick"
+	if(slot_flags & ITEM_SLOT_ANUS)
+		slot_strings += "anus"
+	if(slot_flags & ITEM_SLOT_TAIL)
+		slot_strings += "tail"
+	if(slot_flags & ITEM_SLOT_L_HIP)
+		slot_strings += "left hip"
+	if(slot_flags & ITEM_SLOT_R_HIP)
+		slot_strings += "right hip"
 	if(slot_flags & ITEM_SLOT_BELTPACK)
 		slot_strings += "belt" // ?
 	return slot_strings

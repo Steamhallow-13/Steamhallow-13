@@ -20,7 +20,7 @@
 	if(hidden_slots & HIDEGLOVES)
 		obscured |= ITEM_SLOT_GLOVES
 	if(hidden_slots & HIDEJUMPSUIT)
-		obscured |= ITEM_SLOT_ICLOTHING
+		obscured |= ITEM_SLOT_I_TORSOWEAR
 	if(hidden_slots & HIDESHOES)
 		obscured |= ITEM_SLOT_FEET
 	if(hidden_slots & HIDESUITSTORAGE)
@@ -74,8 +74,8 @@
 /// Returns items which are currently visible on the mob
 /mob/living/carbon/proc/get_visible_items()
 	var/static/list/visible_slots = list(
-		ITEM_SLOT_OCLOTHING,
-		ITEM_SLOT_ICLOTHING,
+		ITEM_SLOT_O_TORSOWEAR,
+		ITEM_SLOT_I_TORSOWEAR,
 		ITEM_SLOT_GLOVES,
 		ITEM_SLOT_EYES,
 		ITEM_SLOT_EARS,

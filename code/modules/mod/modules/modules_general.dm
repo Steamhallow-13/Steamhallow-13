@@ -29,7 +29,7 @@
 	modstorage.set_real_location(src)
 	modstorage.allow_big_nesting = big_nesting
 	atom_storage.locked = STORAGE_NOT_LOCKED
-	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_OCLOTHING)
+	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_O_TORSOWEAR)
 	if(istype(suit))
 		RegisterSignal(suit, COMSIG_ITEM_PRE_UNEQUIP, PROC_REF(on_suit_unequip))
 
@@ -38,7 +38,7 @@
 	QDEL_NULL(mod.atom_storage)
 	if(!deleting)
 		atom_storage.remove_all(mod.drop_location())
-	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_OCLOTHING)
+	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_O_TORSOWEAR)
 	if(istype(suit))
 		UnregisterSignal(suit, COMSIG_ITEM_PRE_UNEQUIP)
 
@@ -463,7 +463,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 2
 	incompatible_modules = list(/obj/item/mod/module/dispenser)
 	cooldown_time = 5 SECONDS
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	/// Path we dispense.
 	var/dispense_type = /obj/item/food/burger/plain
 	/// Time it takes for us to dispense.
@@ -764,7 +764,7 @@
 	complexity = 1
 	idle_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
 	incompatible_modules = list(/obj/item/mod/module/signlang_radio)
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 
 /obj/item/mod/module/signlang_radio/on_suit_activation()
 	ADD_TRAIT(mod.wearer, TRAIT_CAN_SIGN_ON_COMMS, MOD_TRAIT)
@@ -963,7 +963,7 @@
 	complexity = 1
 	overlay_state_inactive = "fishing_glove"
 	incompatible_modules = (/obj/item/mod/module/fishing_glove)
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	var/obj/item/fishing_rod/equipped
 
 /obj/item/mod/module/fishing_glove/Initialize(mapload)
@@ -1010,19 +1010,19 @@
 /obj/item/mod/module/fishing_glove/Exited(atom/movable/gone)
 	if(gone == equipped)
 		equipped = null
-		var/obj/item/gloves = mod?.get_part_from_slot(ITEM_SLOT_GLOVES)
+		var/obj/item/gloves = mod?.get_part_from_slot(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 		if(gloves && !QDELETED(mod))
 			qdel(gloves.GetComponent(/datum/component/profound_fisher))
 
 /obj/item/mod/module/fishing_glove/on_suit_activation()
 	if(!equipped)
 		return
-	var/obj/item/gloves = mod.get_part_from_slot(ITEM_SLOT_GLOVES)
+	var/obj/item/gloves = mod.get_part_from_slot(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	if(gloves)
 		gloves.AddComponent(/datum/component/profound_fisher, equipped)
 
 /obj/item/mod/module/fishing_glove/on_suit_deactivation(deleting = FALSE)
-	var/obj/item/gloves = mod.get_part_from_slot(ITEM_SLOT_GLOVES)
+	var/obj/item/gloves = mod.get_part_from_slot(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	if(gloves && !deleting)
 		qdel(gloves.GetComponent(/datum/component/profound_fisher))
 

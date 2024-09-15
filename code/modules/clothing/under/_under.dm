@@ -5,7 +5,7 @@
 	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	slot_flags = ITEM_SLOT_ICLOTHING
+	slot_flags = ITEM_SLOT_I_TORSOWEAR
 	interaction_flags_click = NEED_DEXTERITY
 	armor_type = /datum/armor/clothing_under
 	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
@@ -56,7 +56,7 @@
 		//make the sensor mode favor higher levels, except coords.
 		sensor_mode = pick(SENSOR_VITALS, SENSOR_VITALS, SENSOR_VITALS, SENSOR_LIVING, SENSOR_LIVING, SENSOR_COORDS, SENSOR_COORDS, SENSOR_OFF)
 	register_context()
-	AddElement(/datum/element/update_icon_updates_onmob, flags = ITEM_SLOT_ICLOTHING|ITEM_SLOT_OCLOTHING|ITEM_SLOT_NECK, body = TRUE)
+	AddElement(/datum/element/update_icon_updates_onmob, flags = ITEM_SLOT_I_TORSOWEAR|ITEM_SLOT_O_TORSOWEAR|ITEM_SLOT_NECK, body = TRUE)
 
 /obj/item/clothing/under/setup_reskinning()
 	if(!check_setup_reskinning())
@@ -144,7 +144,7 @@
 
 /obj/item/clothing/under/equipped(mob/living/user, slot)
 	..()
-	if((slot & ITEM_SLOT_ICLOTHING) && freshly_laundered)
+	if((slot & ITEM_SLOT_I_TORSOWEAR) && freshly_laundered)
 		freshly_laundered = FALSE
 		user.add_mood_event("fresh_laundry", /datum/mood_event/fresh_laundry)
 

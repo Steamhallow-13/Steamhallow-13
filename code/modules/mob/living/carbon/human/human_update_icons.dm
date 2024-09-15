@@ -82,7 +82,7 @@ There are several things that need to be remembered:
 	remove_overlay(UNIFORM_LAYER)
 
 	if(client && hud_used)
-		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_ICLOTHING) + 1]
+		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_I_TORSOWEAR) + 1]
 		inv.update_icon()
 
 	if(istype(w_uniform, /obj/item/clothing/under))
@@ -92,7 +92,7 @@ There are several things that need to be remembered:
 		if(update_obscured)
 			update_obscured_slots(uniform.flags_inv)
 
-		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_ICLOTHING)
+		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_I_TORSOWEAR)
 			return
 
 		var/target_overlay = uniform.icon_state
@@ -418,7 +418,7 @@ There are several things that need to be remembered:
 	remove_overlay(SUIT_LAYER)
 
 	if(client && hud_used)
-		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_OCLOTHING) + 1]
+		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_O_TORSOWEAR) + 1]
 		inv.update_icon()
 
 	if(wear_suit)

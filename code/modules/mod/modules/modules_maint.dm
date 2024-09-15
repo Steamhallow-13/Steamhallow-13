@@ -149,7 +149,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 5
 	incompatible_modules = list(/obj/item/mod/module/tanner)
 	cooldown_time = 30 SECONDS
-	required_slots = list(ITEM_SLOT_OCLOTHING|ITEM_SLOT_ICLOTHING)
+	required_slots = list(ITEM_SLOT_O_TORSOWEAR|ITEM_SLOT_I_TORSOWEAR)
 
 /obj/item/mod/module/tanner/on_use()
 	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 50, TRUE)
@@ -195,7 +195,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 0.5
 	incompatible_modules = list(/obj/item/mod/module/paper_dispenser)
 	cooldown_time = 5 SECONDS
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 	/// The total number of sheets created by this MOD. The more sheets, them more likely they set on fire.
 	var/num_sheets_dispensed = 0
 
@@ -238,7 +238,7 @@
 	device = /obj/item/stamp/mod
 	incompatible_modules = list(/obj/item/mod/module/stamp)
 	cooldown_time = 0.5 SECONDS
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 
 /obj/item/stamp/mod
 	name = "MOD electronic stamp"

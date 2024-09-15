@@ -31,7 +31,7 @@
 	. = ..()
 	if(!ishuman(user))
 		return
-	if(slot & ITEM_SLOT_GLOVES)
+	if(slot & ITEM_SLOT_L_HAND || slot & ITEM_SLOT_R_HAND)
 		var/mob/living/carbon/human/H = user
 		tackler = H.AddComponent(/datum/component/tackler, stamina_cost=tackle_stam_cost, base_knockdown = base_knockdown, range = tackle_range, speed = tackle_speed, skill_mod = skill_mod, min_distance = min_distance)
 
@@ -40,7 +40,7 @@
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/H = user
-	if(H.get_item_by_slot(ITEM_SLOT_GLOVES) == src)
+	if(H.get_item_by_slot(ITEM_SLOT_L_HAND) == src || H.get_item_by_slot(ITEM_SLOT_R_HAND) == src)
 		QDEL_NULL(tackler)
 
 /obj/item/clothing/gloves/tackler/dolphin

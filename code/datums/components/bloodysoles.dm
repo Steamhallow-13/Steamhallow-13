@@ -51,14 +51,14 @@
 	return wielder.check_obscured_slots(TRUE) & equipped_slot || is_under_feet_covered()
 
 /**
- * Returns true if the parent item is worn in the ITEM_SLOT_ICLOTHING slot and the
+ * Returns true if the parent item is worn in the ITEM_SLOT_I_TORSOWEAR slot and the
  * wielder is wearing something on their shoes.
  *
  * Allows for jumpsuits to cover feet without getting all bloodied when their wearer
  * is wearing shoes.
  */
 /datum/component/bloodysoles/proc/is_under_feet_covered()
-	if(!(equipped_slot & ITEM_SLOT_ICLOTHING))
+	if(!(equipped_slot & ITEM_SLOT_I_TORSOWEAR))
 		return FALSE
 
 	return !isnull(wielder.shoes)

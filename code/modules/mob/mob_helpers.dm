@@ -460,9 +460,9 @@
 			return /obj/item/clothing/head
 		if(ITEM_SLOT_FEET)
 			return /obj/item/clothing/shoes
-		if(ITEM_SLOT_OCLOTHING)
+		if(ITEM_SLOT_O_TORSOWEAR)
 			return /obj/item/clothing/suit
-		if(ITEM_SLOT_ICLOTHING)
+		if(ITEM_SLOT_I_TORSOWEAR)
 			return /obj/item/clothing/under
 		if(ITEM_SLOT_LPOCKET)
 			return /obj/item

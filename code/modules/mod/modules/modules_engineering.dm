@@ -91,7 +91,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN
 	incompatible_modules = list(/obj/item/mod/module/tether)
 	cooldown_time = 1.5 SECONDS
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 
 /obj/item/mod/module/tether/used()
 	if(mod.wearer.has_gravity(get_turf(src)))
@@ -193,7 +193,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 2
 	incompatible_modules = list(/obj/item/mod/module/constructor, /obj/item/mod/module/quick_carry)
 	cooldown_time = 11 SECONDS
-	required_slots = list(ITEM_SLOT_GLOVES)
+	required_slots = list(ITEM_SLOT_L_HAND|ITEM_SLOT_R_HAND)
 
 /obj/item/mod/module/constructor/on_suit_activation()
 	ADD_TRAIT(mod.wearer, TRAIT_QUICK_BUILD, MOD_TRAIT)

@@ -828,15 +828,6 @@ SUBSYSTEM_DEF(job)
 		to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
 		new_captain.add_mob_memory(/datum/memory/key/captains_spare_code, safe_code = SSid_access.spare_id_safe_code)
 
-	// Force-give their ID card bridge access.
-	var/obj/item/id_slot = new_captain.get_item_by_slot(ITEM_SLOT_ID)
-	if(id_slot)
-		var/obj/item/card/id/id_card = id_slot.GetID()
-		if(!(ACCESS_COMMAND in id_card.access))
-			id_card.add_wildcards(list(ACCESS_COMMAND), mode=FORCE_ADD_ALL)
-
-	assigned_captain = TRUE
-
 /// Send a drop pod containing a piece of paper with the spare ID safe code to loc
 /datum/controller/subsystem/job/proc/send_spare_id_safe_code(loc)
 	new /obj/effect/pod_landingzone(loc, /obj/structure/closet/supplypod/centcompod, new /obj/item/folder/biscuit/confidential/emergency_spare_id_safe_code())

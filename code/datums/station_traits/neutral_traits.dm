@@ -483,7 +483,7 @@
 		spawned.equip_to_slot_if_possible(boxie, ITEM_SLOT_BACKPACK, indirect_action = TRUE)
 		if(ishuman(spawned))
 			var/obj/item/clothing/suit/costume/wellworn_shirt/skub/shirt = new(spawned.loc)
-			if(!spawned.equip_to_slot_if_possible(shirt, ITEM_SLOT_OCLOTHING, indirect_action = TRUE))
+			if(!spawned.equip_to_slot_if_possible(shirt, ITEM_SLOT_O_TORSOWEAR, indirect_action = TRUE))
 				shirt.forceMove(boxie)
 		return
 
@@ -492,7 +492,7 @@
 	if(!ishuman(spawned))
 		return
 	var/obj/item/clothing/suit/costume/wellworn_shirt/skub/anti/shirt = new(spawned.loc)
-	if(!spawned.equip_to_slot_if_possible(shirt, ITEM_SLOT_OCLOTHING, indirect_action = TRUE))
+	if(!spawned.equip_to_slot_if_possible(shirt, ITEM_SLOT_O_TORSOWEAR, indirect_action = TRUE))
 		shirt.forceMove(boxie)
 
 /// A box containing a skub, for easier carry because skub is a bulky item.

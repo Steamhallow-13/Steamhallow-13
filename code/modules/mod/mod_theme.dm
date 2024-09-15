@@ -115,7 +115,7 @@
 		if(!ispath(path))
 			continue
 		var/obj/item/mod_part = new path(mod)
-		if(mod_part.slot_flags == ITEM_SLOT_OCLOTHING && isclothing(mod_part))
+		if(mod_part.slot_flags == ITEM_SLOT_O_TORSOWEAR && isclothing(mod_part))
 			var/obj/item/clothing/chestplate = mod_part
 			chestplate.allowed |= allowed_suit_storage
 		var/datum/mod_part/part_datum = new()

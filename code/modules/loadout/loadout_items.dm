@@ -266,7 +266,7 @@ GLOBAL_LIST_INIT(all_loadout_categories, init_loadout_categories())
 				if(isclothing(equipped_item.loc))
 					var/obj/item/clothing/under/attached_to = equipped_item.loc
 					attached_to.update_accessory_overlay()
-					update_flag |= (ITEM_SLOT_OCLOTHING|ITEM_SLOT_ICLOTHING)
+					update_flag |= (ITEM_SLOT_O_TORSOWEAR|ITEM_SLOT_I_TORSOWEAR)
 			else
 				update_flag |= equipped_item.slot_flags
 

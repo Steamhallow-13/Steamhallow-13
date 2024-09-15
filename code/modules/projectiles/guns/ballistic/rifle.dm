@@ -207,7 +207,7 @@
 	semi_auto = FALSE
 	internal_magazine = TRUE
 	can_modify_ammo = FALSE
-	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
+	slot_flags = ITEM_SLOT_BACK
 	bolt_wording = "bowstring"
 	magazine_wording = "rod"
 	cartridge_wording = "rod"

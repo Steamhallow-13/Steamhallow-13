@@ -301,7 +301,7 @@
 	cooldown_time = 2.5 SECONDS
 	overlay_state_inactive = "module_flamethrower"
 	overlay_state_active = "module_flamethrower_on"
-	required_slots = list(ITEM_SLOT_OCLOTHING|ITEM_SLOT_ICLOTHING)
+	required_slots = list(ITEM_SLOT_O_TORSOWEAR|ITEM_SLOT_I_TORSOWEAR)
 
 /obj/item/mod/module/flamethrower/on_select_use(atom/target)
 	. = ..()
@@ -505,7 +505,7 @@
 	removable = FALSE
 	idle_power_cost = DEFAULT_CHARGE_DRAIN * 0
 	incompatible_modules = list(/obj/item/mod/module/infiltrator, /obj/item/mod/module/armor_booster, /obj/item/mod/module/welding, /obj/item/mod/module/headprotector)
-	required_slots = list(ITEM_SLOT_FEET, ITEM_SLOT_HEAD, ITEM_SLOT_OCLOTHING)
+	required_slots = list(ITEM_SLOT_FEET, ITEM_SLOT_HEAD, ITEM_SLOT_O_TORSOWEAR)
 	/// List of traits added when the suit is activated
 	var/list/traits_to_add = list(TRAIT_SILENT_FOOTSTEPS, TRAIT_UNKNOWN, TRAIT_HEAD_INJURY_BLOCKED)
 

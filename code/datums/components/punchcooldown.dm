@@ -3,7 +3,7 @@
 	signals = list(COMSIG_LIVING_UNARMED_ATTACK, COMSIG_LIVING_SLAP_MOB)
 	mobtype = /mob/living/carbon
 	proctype = PROC_REF(reducecooldown)
-	valid_slots = list(ITEM_SLOT_GLOVES)
+	valid_slots = list(ITEM_SLOT_L_HAND | ITEM_SLOT_R_HAND)
 	///The warcry this generates
 	var/warcry = "AT"
 

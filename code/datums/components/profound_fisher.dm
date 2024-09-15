@@ -22,7 +22,7 @@
 		gloves.flags_1 |= HAS_CONTEXTUAL_SCREENTIPS_1
 		RegisterSignal(gloves, COMSIG_ATOM_REQUESTING_CONTEXT_FROM_ITEM, PROC_REF(on_requesting_context_from_item))
 		var/mob/living/wearer = gloves.loc
-		if(istype(wearer) && wearer.get_item_by_slot(ITEM_SLOT_GLOVES) == gloves)
+		if(istype(wearer) && wearer.get_item_by_slot(ITEM_SLOT_L_HAND) == gloves || wearer.get_item_by_slot(ITEM_SLOT_R_HAND) == gloves)
 			RegisterSignal(wearer, COMSIG_LIVING_UNARMED_ATTACK, PROC_REF(on_unarmed_attack))
 
 /datum/component/profound_fisher/proc/on_requesting_context_from_item(datum/source, list/context, obj/item/held_item, mob/living/user)
@@ -48,7 +48,7 @@
 
 /datum/component/profound_fisher/proc/on_equip(obj/item/source, atom/equipper, slot)
 	SIGNAL_HANDLER
-	if(slot != ITEM_SLOT_GLOVES)
+	if(slot != ITEM_SLOT_L_HAND || ITEM_SLOT_R_HAND)
 		return
 	RegisterSignal(equipper, COMSIG_LIVING_UNARMED_ATTACK, PROC_REF(on_unarmed_attack))
 

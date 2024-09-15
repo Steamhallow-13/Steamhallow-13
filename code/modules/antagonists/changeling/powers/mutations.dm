@@ -157,7 +157,7 @@
 	..()
 	if(!isnull(suit_type))
 		user.dropItemToGround(user.wear_suit)
-		user.equip_to_slot_if_possible(new suit_type(user), ITEM_SLOT_OCLOTHING, 1, 1, 1)
+		user.equip_to_slot_if_possible(new suit_type(user), ITEM_SLOT_O_TORSOWEAR, 1, 1, 1)
 	if(!isnull(helmet_type))
 		user.dropItemToGround(user.head)
 		user.equip_to_slot_if_possible(new helmet_type(user), ITEM_SLOT_HEAD, 1, 1, 1)

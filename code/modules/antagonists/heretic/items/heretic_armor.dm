@@ -101,7 +101,7 @@
 
 /obj/item/clothing/suit/hooded/cultrobes/void/equipped(mob/user, slot)
 	. = ..()
-	if(slot & ITEM_SLOT_OCLOTHING)
+	if(slot & ITEM_SLOT_O_TORSOWEAR)
 		RegisterSignal(user, COMSIG_MOB_EQUIPPED_ITEM, PROC_REF(hide_item))
 		RegisterSignal(user, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(show_item))
 

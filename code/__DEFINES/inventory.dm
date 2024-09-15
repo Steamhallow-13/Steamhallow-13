@@ -23,71 +23,162 @@
 #define STORAGE_VIEW_DEPTH 2
 
 //ITEM INVENTORY SLOT BITMASKS
-/// Suit slot (armors, costumes, space suits, etc.)
-#define ITEM_SLOT_OCLOTHING (1<<0)
-/// Jumpsuit slot
-#define ITEM_SLOT_ICLOTHING (1<<1)
-/// Glove slot
-#define ITEM_SLOT_GLOVES (1<<2)
-/// Glasses slot
-#define ITEM_SLOT_EYES (1<<3)
-/// Ear slot (radios, earmuffs)
-#define ITEM_SLOT_EARS (1<<4)
-/// Mask slot
-#define ITEM_SLOT_MASK (1<<5)
-/// Head slot (helmets, hats, etc.)
-#define ITEM_SLOT_HEAD (1<<6)
-/// Shoe slot
-#define ITEM_SLOT_FEET (1<<7)
-/// ID slot
-#define ITEM_SLOT_ID (1<<8)
-/// Belt slot
-#define ITEM_SLOT_BELT (1<<9)
-/// Back slot
-#define ITEM_SLOT_BACK (1<<10)
 /// Dextrous simplemob "hands" (used for Drones and Dextrous Guardians)
-#define ITEM_SLOT_DEX_STORAGE (1<<11)
-/// Neck slot (ties, bedsheets, scarves)
-#define ITEM_SLOT_NECK (1<<12)
-/// A character's hand slots
-#define ITEM_SLOT_HANDS (1<<13)
-/// Inside of a character's backpack
-#define ITEM_SLOT_BACKPACK (1<<14)
-/// Suit Storage slot
-#define ITEM_SLOT_SUITSTORE (1<<15)
-/// Left Pocket slot
-#define ITEM_SLOT_LPOCKET (1<<16)
-/// Right Pocket slot
-#define ITEM_SLOT_RPOCKET (1<<17)
+#define ITEM_SLOT_DEX_STORAGE (1<<0)
+
 /// Handcuff slot
-#define ITEM_SLOT_HANDCUFFED (1<<18)
+#define ITEM_SLOT_HANDCUFFED (1<<1)
 /// Legcuff slot (bolas, beartraps)
-#define ITEM_SLOT_LEGCUFFED (1<<19)
-/// Inside of a character's BELT.........
-#define ITEM_SLOT_BELTPACK (1<<20)
+#define ITEM_SLOT_LEGCUFFED (1<<2)
+
+/// Belt slot
+#define ITEM_SLOT_BELT (1<<3)
+/// Inside of a character's belt. This is mildly cursed but nessecary as far as I can tell
+#define ITEM_SLOT_BELTPACK (1<<4)
+
+/// Feet slot
+#define ITEM_SLOT_FEET (1<<5)
+/// Inner Legwear Slot
+#define ITEM_SLOT_I_LEGWEAR (1<<6)
+/// Outer Legwear Slot
+#define ITEM_SLOT_O_LEGWEAR (1<<7)
+
+/// Inner Torsowear Slot
+#define ITEM_SLOT_I_TORSOWEAR (1<<8)
+/// Outer Torsowear Slot
+#define ITEM_SLOT_O_TORSOWEAR (1<<9)
+
+/// Left Hand Slot
+#define ITEM_SLOT_L_HAND (1<<10)
+/// Left Hand Thumb Slot
+#define ITEM_SLOT_L_HAND_THUMB (1<<11)
+/// Left Hand Index Slot
+#define ITEM_SLOT_L_HAND_INDEX (1<<12)
+/// Left Hand Middle Slot
+#define ITEM_SLOT_L_HAND_MIDDLE (1<<13)
+/// Left Hand Ring Slot - as in the finger
+#define ITEM_SLOT_L_HAND_RING (1<<14)
+/// Left Hand Pinky Slot
+#define ITEM_SLOT_L_HAND_PINKY (1<<15)
+
+/// Right Hand Slot
+#define ITEM_SLOT_R_HAND (1<<16)
+/// Right Hand Thumb Slot
+#define ITEM_SLOT_R_HAND_THUMB (1<<17)
+/// Right Hand Index Slot
+#define ITEM_SLOT_R_HAND_INDEX (1<<18)
+/// Right Hand Middle Slot
+#define ITEM_SLOT_R_HAND_MIDDLE (1<<19)
+/// Right Hand Ring Slot - as in the finger
+#define ITEM_SLOT_R_HAND_RING (1<<20)
+/// Right Hand Pinky Slot
+#define ITEM_SLOT_R_HAND_PINKY (1<<21)
+
+/// Ear slot (radios, earmuffs)
+#define ITEM_SLOT_EARS (1<<22)
+/// Left Ear Slot (earrings)
+#define ITEM_SLOT_EARS_LEFT (1<<23)
+/// Right Ear Slot (earrings)
+#define ITEM_SLOT_EARS_RIGHT (1<<24)
+
+/// Mask slot
+#define ITEM_SLOT_MASK (1<<25)
+/// Maw slot (Cigarettes, Lollipops and the like)
+#define ITEM_SLOT_MAW (1<<26)
+
+/// Inner Neck slot (Chokers, Thin Collars, Hidden Items)
+#define ITEM_SLOT_I_NECK (1<<27)
+/// Outer Neck slot (Thick Collars, Scarves, Etc)
+#define ITEM_SLOT_O_NECK (1<<28)
+
+/// Glasses slot
+#define ITEM_SLOT_EYES (1<<29)
+
+/// Head slot (helmets, hats, etc.)
+#define ITEM_SLOT_HEAD (1<<30)
+
+/// Chest slot
+#define ITEM_SLOT_CHEST (1<<31)
+
+/// Groin slot
+#define ITEM_SLOT_GROIN (1<<32)
+
+/// Vagina slot
+#define ITEM_SLOT_VAGINA (1<<33)
+
+/// Dick slot
+#define ITEM_SLOT_DICK (1<<34) // I'm proud of you, dick
+
+/// Anus slot
+#define ITEM_SLOT_ANUS (1<<35)
+
+/// Tail slot (Tailbags, bows)
+#define ITEM_SLOT_TAIL (1<<36)
+
+/// Left Hip slot
+#define ITEM_SLOT_L_HIP (1<<37)
+
+/// Right Hip slot
+#define ITEM_SLOT_R_HIP (1<<38)
+
+/// Back slot
+#define ITEM_SLOT_BACK (1<<39)
+
+/// Left Pocket slot
+#define ITEM_SLOT_LPOCKET (1<<40)
+/// Right Pocket slot
+#define ITEM_SLOT_RPOCKET (1<<41)
+
+/// A character's hand slots
+#define ITEM_SLOT_HANDS (1<<42)
+
+/// Inside of a character's backpack. Scuffed but also required. Technically should be next to ITEM_SLOT_BACK but i fucked up
+#define ITEM_SLOT_BACKPACK (1<<43)
 
 /// Total amount of slots
-#define SLOTS_AMT 20 // Keep this up to date!
+#define SLOTS_AMT 43 // Keep this up to date!
 
-///Inventory slots that can be blacklisted by a species from being equipped into
+///Inventory slots that can be blacklisted by a species from being equipped into.
 DEFINE_BITFIELD(no_equip_flags, list(
-	"EXOSUIT" = ITEM_SLOT_OCLOTHING,
-	"JUMPSUIT" = ITEM_SLOT_ICLOTHING,
-	"GLOVES" = ITEM_SLOT_GLOVES,
+	"OUTER LEGWEAR" = ITEM_SLOT_O_LEGWEAR,
+	"INNER LEGWEAR" = ITEM_SLOT_I_LEGWEAR,
+	"EXOSUIT" = ITEM_SLOT_O_TORSOWEAR,
+	"JUMPSUIT" = ITEM_SLOT_I_TORSOWEAR,
+	"LEFT HAND" = ITEM_SLOT_L_HAND,
+	"LEFT THUMB" = ITEM_SLOT_L_HAND_THUMB,
+	"LEFT INDEX FINGER" = ITEM_SLOT_L_HAND_INDEX,
+	"LEFT MIDDLE FINGER" = ITEM_SLOT_L_HAND_MIDDLE,
+	"LEFT RING FINGER" = ITEM_SLOT_L_HAND_RING,
+	"LEFT PINKY FINGER" = ITEM_SLOT_L_HAND_PINKY,
+	"RIGHT HAND" = ITEM_SLOT_R_HAND,
+	"RIGHT THUMB" = ITEM_SLOT_R_HAND_THUMB,
+	"RIGHT INDEX FINGER" = ITEM_SLOT_R_HAND_INDEX,
+	"RIGHT MIDDLE FINGER" = ITEM_SLOT_R_HAND_MIDDLE,
+	"RIGHT RING FINGER" = ITEM_SLOT_R_HAND_RING,
+	"RIGHT PINKY FINGER" = ITEM_SLOT_R_HAND_PINKY,
 	"GLASSES" = ITEM_SLOT_EYES,
 	"EARPIECES" = ITEM_SLOT_EARS,
+	"LEFT EAR" = ITEM_SLOT_EARS_LEFT,
+	"RIGHT EAR" = ITEM_SLOT_EARS_RIGHT,
 	"MASKS" = ITEM_SLOT_MASK,
+	"MAW" = ITEM_SLOT_MAW,
 	"HATS" = ITEM_SLOT_HEAD,
 	"SHOES" = ITEM_SLOT_FEET,
 	"BACKPACKS" = ITEM_SLOT_BACK,
-	"TIES" = ITEM_SLOT_NECK,
+	"CHEST" = ITEM_SLOT_CHEST,
+	"GROIN" = ITEM_SLOT_GROIN,
+	"TAIL" = ITEM_SLOT_TAIL,
 ))
 
 //SLOT GROUP HELPERS
 #define ITEM_SLOT_POCKETS (ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET)
 /// Slots that are physically on you
-#define ITEM_SLOT_ON_BODY (ITEM_SLOT_ICLOTHING | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_EYES | ITEM_SLOT_EARS | \
-	ITEM_SLOT_MASK | ITEM_SLOT_HEAD | ITEM_SLOT_FEET | ITEM_SLOT_ID | ITEM_SLOT_BELT | ITEM_SLOT_BACK | ITEM_SLOT_NECK )
+#define ITEM_SLOT_ON_BODY (ITEM_SLOT_I_TORSOWEAR | ITEM_SLOT_O_TORSOWEAR | ITEM_SLOT_I_LEGWEAR | ITEM_SLOT_O_LEGWEAR | \
+	 ITEM_SLOT_EYES | ITEM_SLOT_EARS | ITEM_SLOT_MASK | ITEM_SLOT_HEAD | ITEM_SLOT_FEET | ITEM_SLOT_MAW | ITEM_SLOT_BELT | \
+	 ITEM_SLOT_BACK | ITEM_SLOT_I_NECK | ITEM_SLOT_O_NECK | ITEM_SLOT_L_HAND | ITEM_SLOT_L_HAND_INDEX | ITEM_SLOT_L_HAND_MIDDLE | \
+	 ITEM_SLOT_L_HAND_RING | ITEM_SLOT_L_HAND_PINKY | ITEM_SLOT_R_HAND | ITEM_SLOT_R_HAND_THUMB | ITEM_SLOT_R_HAND_INDEX | ITEM_SLOT_R_HAND_MIDDLE | \
+	 ITEM_SLOT_R_HAND_RING | ITEM_SLOT_R_HAND_PINKY | ITEM_SLOT_EARS_LEFT | ITEM_SLOT_EARS_RIGHT | ITEM_SLOT_CHEST | ITEM_SLOT_GROIN | ITEM_SLOT_TAIL | \
+	 ITEM_SLOT_VAGINA | ITEM_SLOT_DICK | ITEM_SLOT_ANUS)
 
 //Bit flags for the flags_inv variable, which determine when a piece of clothing hides another. IE a helmet hiding glasses.
 //Make sure to update check_obscured_slots() if you add more.

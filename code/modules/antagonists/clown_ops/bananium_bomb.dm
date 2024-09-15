@@ -44,7 +44,7 @@
 	if(!clowned_on.w_uniform || clowned_on.dropItemToGround(clowned_on.w_uniform))
 		var/obj/item/clothing/clown_shirt = new /obj/item/clothing/under/rank/civilian/clown(clowned_on)
 		ADD_TRAIT(clown_shirt, TRAIT_NODROP, CLOWN_NUKE_TRAIT)
-		clowned_on.equip_to_slot_or_del(clown_shirt, ITEM_SLOT_ICLOTHING)
+		clowned_on.equip_to_slot_or_del(clown_shirt, ITEM_SLOT_I_TORSOWEAR)
 
 	if(!clowned_on.shoes || clowned_on.dropItemToGround(clowned_on.shoes))
 		var/obj/item/clothing/clown_shoes = new /obj/item/clothing/shoes/clown_shoes(clowned_on)

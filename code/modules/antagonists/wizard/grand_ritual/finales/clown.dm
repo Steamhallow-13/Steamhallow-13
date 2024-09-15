@@ -61,15 +61,15 @@
 	var/obj/item/id = victim.get_item_by_slot(ITEM_SLOT_ID)
 	var/obj/item/belt = victim.get_item_by_slot(ITEM_SLOT_BELT)
 
-	var/obj/pants = victim.get_item_by_slot(ITEM_SLOT_ICLOTHING)
+	var/obj/pants = victim.get_item_by_slot(ITEM_SLOT_I_TORSOWEAR)
 	var/obj/mask = victim.get_item_by_slot(ITEM_SLOT_MASK)
 	QDEL_NULL(pants)
 	QDEL_NULL(mask)
 	if(isplasmaman(victim))
-		victim.equip_to_slot_if_possible(new /obj/item/clothing/under/plasmaman/clown/magic(), ITEM_SLOT_ICLOTHING, disable_warning = TRUE)
+		victim.equip_to_slot_if_possible(new /obj/item/clothing/under/plasmaman/clown/magic(), ITEM_SLOT_I_TORSOWEAR, disable_warning = TRUE)
 		victim.equip_to_slot_if_possible(new /obj/item/clothing/mask/gas/clown_hat/plasmaman(), ITEM_SLOT_MASK, disable_warning = TRUE)
 	else
-		victim.equip_to_slot_if_possible(new /obj/item/clothing/under/rank/civilian/clown/magic(), ITEM_SLOT_ICLOTHING, disable_warning = TRUE)
+		victim.equip_to_slot_if_possible(new /obj/item/clothing/under/rank/civilian/clown/magic(), ITEM_SLOT_I_TORSOWEAR, disable_warning = TRUE)
 		victim.equip_to_slot_if_possible(new /obj/item/clothing/mask/gas/clown_hat(), ITEM_SLOT_MASK, disable_warning = TRUE)
 
 	var/obj/item/clothing/mask/gas/clown_hat/clown_mask = victim.get_item_by_slot(ITEM_SLOT_MASK)

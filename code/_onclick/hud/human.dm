@@ -101,7 +101,7 @@
 	inv_box = new /atom/movable/screen/inventory(null, src)
 	inv_box.name = "uniform"
 	inv_box.icon = ui_style
-	inv_box.slot_id = ITEM_SLOT_ICLOTHING
+	inv_box.slot_id = ITEM_SLOT_I_TORSOWEAR
 	inv_box.icon_state = "uniform"
 	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_iclothing
@@ -110,7 +110,7 @@
 	inv_box = new /atom/movable/screen/inventory(null, src)
 	inv_box.name = "suit"
 	inv_box.icon = ui_style
-	inv_box.slot_id = ITEM_SLOT_OCLOTHING
+	inv_box.slot_id = ITEM_SLOT_O_TORSOWEAR
 	inv_box.icon_state = "suit"
 	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_oclothing
