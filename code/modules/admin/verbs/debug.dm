@@ -147,7 +147,7 @@ ADMIN_VERB(cmd_admin_grantfullaccess, R_DEBUG, "Grant Full Access", "Grant full 
 				id.forceMove(W)
 				W.update_icon()
 		else
-			H.equip_to_slot(id, ITEM_SLOT_ID)
+			H.equip_to_slot(id, ITEM_SLOT_BELT)
 
 	else
 		tgui_alert(user,"Invalid mob")

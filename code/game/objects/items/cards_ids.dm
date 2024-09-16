@@ -55,7 +55,7 @@
 	desc = "A card used to provide ID and determine access across the station."
 	icon_state = "card_grey"
 	worn_icon_state = "nothing"
-	slot_flags = ITEM_SLOT_ID
+	slot_flags = ITEM_SLOT_BELT
 	interaction_flags_click = FORBID_TELEKINESIS_REACH
 	armor_type = /datum/armor/card_id
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -151,7 +151,7 @@
 
 /obj/item/card/id/equipped(mob/user, slot)
 	. = ..()
-	if(slot == ITEM_SLOT_ID)
+	if(slot == ITEM_SLOT_BELT)
 		RegisterSignal(user, COMSIG_MOVABLE_POINTED, PROC_REF(on_pointed))
 
 /obj/item/card/id/proc/on_pointed(mob/living/user, atom/pointed, obj/effect/temp_visual/point/point)
@@ -1799,7 +1799,7 @@
 	inhand_icon_state = "cardboard-id"
 	worn_icon_state = "nothing"
 	resistance_flags = FLAMMABLE
-	slot_flags = ITEM_SLOT_ID
+	slot_flags = ITEM_SLOT_BELT
 	///The "name" of the "owner" of this "ID"
 	var/scribbled_name
 	///The assignment written on this card.
@@ -1811,7 +1811,7 @@
 
 /obj/item/card/cardboard/equipped(mob/user, slot, initial = FALSE)
 	. = ..()
-	if(slot == ITEM_SLOT_ID)
+	if(slot == ITEM_SLOT_BELT)
 		RegisterSignal(user, COMSIG_HUMAN_GET_VISIBLE_NAME, PROC_REF(return_visible_name))
 		RegisterSignal(user, COMSIG_MOVABLE_MESSAGE_GET_NAME_PART, PROC_REF(return_message_name_part))
 

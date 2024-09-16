@@ -322,7 +322,7 @@
 	SIGNAL_HANDLER
 	var/scarf_type = pick(scarves)
 
-	spawned.equip_to_slot_or_del(new scarf_type(spawned), ITEM_SLOT_NECK, initial = FALSE)
+	spawned.equip_to_slot_or_del(new scarf_type(spawned), ITEM_SLOT_O_NECK, initial = FALSE)
 
 /datum/station_trait/wallets
 	name = "Wallets!"
@@ -339,7 +339,7 @@
 /datum/station_trait/wallets/proc/on_job_after_spawn(datum/source, datum/job/job, mob/living/living_mob, mob/M, joined_late)
 	SIGNAL_HANDLER
 
-	var/obj/item/card/id/advanced/id_card = living_mob.get_item_by_slot(ITEM_SLOT_ID)
+	var/obj/item/card/id/advanced/id_card = living_mob.get_item_by_slot(ITEM_SLOT_BELT)
 	if(!istype(id_card))
 		return
 
@@ -350,7 +350,7 @@
 	// "You've got a wallet embedded in your chest."
 	wallet.add_fingerprint(living_mob, ignoregloves = TRUE)
 
-	living_mob.equip_to_slot_if_possible(wallet, ITEM_SLOT_ID, initial=TRUE)
+	living_mob.equip_to_slot_if_possible(wallet, ITEM_SLOT_BELT, initial=TRUE)
 
 	id_card.forceMove(wallet)
 

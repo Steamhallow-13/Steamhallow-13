@@ -14,7 +14,7 @@ LINEN BINS
 	inhand_icon_state = "sheetwhite"
 	drop_sound = 'sound/items/handling/cloth_drop.ogg'
 	pickup_sound = 'sound/items/handling/cloth_pickup.ogg'
-	slot_flags = ITEM_SLOT_NECK
+	slot_flags = ITEM_SLOT_O_NECK
 	layer = BELOW_MOB_LAYER
 	throwforce = 0
 	throw_speed = 1

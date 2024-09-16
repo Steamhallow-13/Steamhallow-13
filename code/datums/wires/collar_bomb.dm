@@ -6,7 +6,7 @@
 
 /datum/wires/collar_bomb/interactable(mob/user)
 	. = ..()
-	if(user.get_item_by_slot(ITEM_SLOT_NECK) == holder)
+	if(user.get_item_by_slot(ITEM_SLOT_O_NECK) == holder)
 		return FALSE
 
 /datum/wires/collar_bomb/on_pulse(wire, mob/user)
@@ -17,7 +17,7 @@
 	if(!ishuman(collar.loc))
 		return ..()
 	var/mob/living/carbon/human/brian = collar.loc
-	if(brian.get_item_by_slot(ITEM_SLOT_NECK) != collar)
+	if(brian.get_item_by_slot(ITEM_SLOT_O_NECK) != collar)
 		return ..()
 	var/mob/living/triggerer = user
 	var/obj/item/assembly/assembly

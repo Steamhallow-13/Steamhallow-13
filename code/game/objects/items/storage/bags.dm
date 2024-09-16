@@ -583,7 +583,7 @@
 	worn_icon_state = "rebar_quiver"
 	inhand_icon_state = "rebar_quiver"
 	desc = "A oxygen tank cut in half, used for holding sharpened rods for the rebar crossbow."
-	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE|ITEM_SLOT_NECK
+	slot_flags = ITEM_SLOT_BACK
 	resistance_flags = FLAMMABLE
 
 /obj/item/storage/bag/rebar_quiver/Initialize(mapload)

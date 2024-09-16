@@ -75,7 +75,7 @@
 	if(!human_receiver.can_mutate())
 		return
 	var/datum/species/rec_species = human_receiver.dna.species
-	rec_species.update_no_equip_flags(brain_owner, rec_species.no_equip_flags | ITEM_SLOT_GLOVES)
+	rec_species.update_no_equip_flags(brain_owner, rec_species.no_equip_flags | ITEM_SLOT_L_HAND | ITEM_SLOT_R_HAND)
 	hammer = new/obj/item/goliath_infuser_hammer
 	brain_owner.put_in_hands(hammer)
 

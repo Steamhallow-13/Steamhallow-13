@@ -7,7 +7,7 @@
 	worn_icon_state = "lighter"
 	w_class = WEIGHT_CLASS_TINY
 	obj_flags = CONDUCTS_ELECTRICITY
-	slot_flags = ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_L_HIP | ITEM_SLOT_R_HIP
 	resistance_flags = FIRE_PROOF
 	grind_results = list(/datum/reagent/iron = 1, /datum/reagent/fuel = 5, /datum/reagent/fuel/oil = 5)
 	custom_price = PAYCHECK_CREW * 1.1
@@ -47,7 +47,7 @@
 	AddComponent(\
 		/datum/component/bullet_intercepting,\
 		block_chance = 0.5,\
-		active_slots = ITEM_SLOT_SUITSTORE,\
+		active_slots = list(ITEM_SLOT_L_HIP, ITEM_SLOT_R_HIP),\
 		on_intercepted = CALLBACK(src, PROC_REF(on_intercepted_bullet)),\
 	)
 	update_appearance()

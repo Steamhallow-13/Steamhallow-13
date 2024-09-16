@@ -12,7 +12,7 @@
 	name = "cryptographic sequencer"
 	icon_state = "emag"
 	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON
-	slot_flags = ITEM_SLOT_ID
+	slot_flags = ITEM_SLOT_BELT
 	worn_icon_state = "emag"
 	var/prox_check = TRUE //If the emag requires you to be in range
 	var/type_blacklist //List of types that require a specialized emag
@@ -95,7 +95,7 @@
 	icon = /obj/item/card/emag::icon
 	icon_state = /obj/item/card/emag::icon_state
 	worn_icon_state = /obj/item/card/emag::worn_icon_state
-	slot_flags = ITEM_SLOT_ID
+	slot_flags = ITEM_SLOT_BELT
 	/// Whether we are exploding
 	var/exploding = FALSE
 

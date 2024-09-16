@@ -10,7 +10,7 @@
 
 /obj/item/storage/belt/holster/equipped(mob/user, slot)
 	. = ..()
-	if(slot & (ITEM_SLOT_BELT|ITEM_SLOT_SUITSTORE))
+	if(slot & (ITEM_SLOT_BELT))
 		ADD_CLOTHING_TRAIT(user, TRAIT_GUNFLIP)
 
 /obj/item/storage/belt/holster/dropped(mob/user)

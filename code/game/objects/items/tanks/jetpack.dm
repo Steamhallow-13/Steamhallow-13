@@ -21,7 +21,7 @@
 
 /obj/item/tank/jetpack/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/update_icon_updates_onmob, ITEM_SLOT_SUITSTORE)
+	AddElement(/datum/element/update_icon_updates_onmob, ITEM_SLOT_BACK)
 	thrust_callback = CALLBACK(src, PROC_REF(allow_thrust), 0.01)
 	configure_jetpack(stabilize)
 
@@ -209,7 +209,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	volume = 90
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF //steal objective items are hard to destroy.
-	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
+	slot_flags = ITEM_SLOT_BACK
 
 /obj/item/tank/jetpack/oxygen/security
 	name = "security jetpack (oxygen)"
