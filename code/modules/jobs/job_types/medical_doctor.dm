@@ -71,4 +71,3 @@
 	uniform = /obj/item/clothing/under/rank/medical/doctor
 	mask = /obj/item/clothing/mask/breath/medical
 	r_pocket = /obj/item/flashlight/pen
-	internals_slot = ITEM_SLOT_SUITSTORE

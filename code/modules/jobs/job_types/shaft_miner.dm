@@ -73,7 +73,6 @@
 	)
 	glasses = /obj/item/clothing/glasses/meson
 	mask = /obj/item/clothing/mask/gas/explorer
-	internals_slot = ITEM_SLOT_SUITSTORE
 
 /datum/outfit/job/miner/equipped/mod
 	name = "Shaft Miner (Equipment + MODsuit)"

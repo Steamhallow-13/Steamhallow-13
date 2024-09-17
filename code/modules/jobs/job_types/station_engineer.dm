@@ -78,4 +78,3 @@
 	back = /obj/item/mod/control/pre_equipped/engineering
 	head = null
 	mask = /obj/item/clothing/mask/breath
-	internals_slot = ITEM_SLOT_SUITSTORE

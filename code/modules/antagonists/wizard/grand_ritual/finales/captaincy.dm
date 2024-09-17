@@ -74,7 +74,7 @@
  */
 /datum/grand_finale/usurp/proc/dress_candidate(mob/living/carbon/human/invoker)
 	// Won't be needing these
-	var/obj/id = invoker.get_item_by_slot(ITEM_SLOT_ID)
+	var/obj/id = invoker.get_item_by_slot(ITEM_SLOT_BELT)
 	QDEL_NULL(id)
 	var/obj/headset = invoker.get_item_by_slot(ITEM_SLOT_EARS)
 	QDEL_NULL(headset)

@@ -83,7 +83,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	AddComponent(/datum/component/anti_magic, MAGIC_RESISTANCE_HOLY)
 	AddComponent(\
 		/datum/component/bullet_intercepting,\
-		active_slots = ITEM_SLOT_SUITSTORE,\
+		active_slots = list(ITEM_SLOT_L_HIP,ITEM_SLOT_R_HIP),\
 		on_intercepted = CALLBACK(src, PROC_REF(on_intercepted_bullet)),\
 		block_charges = 1,\
 	)
@@ -170,7 +170,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 			insuls.name = "insuls"
 			insuls.desc = "A mere copy of the true insuls."
 			insuls.siemens_coefficient = 0.99999
-			user.equip_to_slot(insuls, ITEM_SLOT_GLOVES)
+			user.equip_to_slot(insuls, ITEM_SLOT_L_HAND)
 	GLOB.bible_icon_state = icon_state
 	GLOB.bible_inhand_icon_state = inhand_icon_state
 	SSblackbox.record_feedback("text", "religion_book", 1, "[choice]")

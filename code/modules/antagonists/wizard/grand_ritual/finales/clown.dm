@@ -58,7 +58,7 @@
 	// We're about to take off your pants so those are going to fall out
 	var/obj/item/pocket_L = victim.get_item_by_slot(ITEM_SLOT_LPOCKET)
 	var/obj/item/pocket_R = victim.get_item_by_slot(ITEM_SLOT_RPOCKET)
-	var/obj/item/id = victim.get_item_by_slot(ITEM_SLOT_ID)
+	var/obj/item/id = victim.get_item_by_slot(ITEM_SLOT_BELT)
 	var/obj/item/belt = victim.get_item_by_slot(ITEM_SLOT_BELT)
 
 	var/obj/pants = victim.get_item_by_slot(ITEM_SLOT_I_TORSOWEAR)
@@ -81,6 +81,6 @@
 
 	equip_to_slot_then_hands(victim, ITEM_SLOT_LPOCKET, pocket_L)
 	equip_to_slot_then_hands(victim, ITEM_SLOT_RPOCKET, pocket_R)
-	equip_to_slot_then_hands(victim, ITEM_SLOT_ID, id)
+	equip_to_slot_then_hands(victim, ITEM_SLOT_BELT, id)
 	equip_to_slot_then_hands(victim, ITEM_SLOT_BELT, belt)
 	victim.internal = internal

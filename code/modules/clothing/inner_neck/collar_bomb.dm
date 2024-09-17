@@ -34,7 +34,7 @@
 
 /obj/item/clothing/inner_neck/collar_bomb/examine(mob/user)
 	. = ..()
-	if(user.get_item_by_slot(ITEM_SLOT_NECK) == src)
+	if(user.get_item_by_slot(ITEM_SLOT_I_NECK) == src)
 		return
 	. += span_tinynotice("It has a [EXAMINE_HINT("wire")] panel that could be interacted with...")
 
@@ -46,7 +46,7 @@
 
 /obj/item/clothing/inner_neck/collar_bomb/equipped(mob/user, slot, initial = FALSE)
 	. = ..()
-	if(slot == ITEM_SLOT_NECK)
+	if(slot == ITEM_SLOT_I_NECK)
 		ADD_TRAIT(src, TRAIT_NODROP, INNATE_TRAIT)
 
 /obj/item/clothing/inner_neck/collar_bomb/dropped(mob/user, silent = FALSE)
@@ -68,7 +68,7 @@
 		active = FALSE
 		return
 	var/mob/living/carbon/human/brian = loc
-	if(brian.get_item_by_slot(ITEM_SLOT_NECK) != src)
+	if(brian.get_item_by_slot(ITEM_SLOT_I_NECK) != src)
 		balloon_alert_to_viewers("dud...")
 		active = FALSE
 		return
@@ -108,7 +108,7 @@
 	if(!ishuman(collar.loc))
 		return
 	var/mob/living/carbon/human/brian = collar.loc
-	if(brian.get_item_by_slot(ITEM_SLOT_NECK) == collar)
+	if(brian.get_item_by_slot(ITEM_SLOT_I_NECK) == collar)
 		brian.investigate_log("has has their [collar] triggered by [user] via yellow button.", INVESTIGATE_DEATHS)
 
 

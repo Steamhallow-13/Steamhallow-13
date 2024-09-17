@@ -111,7 +111,7 @@
 
 /obj/item/clothing/suit/hooded/cultrobes/void/proc/hide_item(datum/source, obj/item/item, slot)
 	SIGNAL_HANDLER
-	if(slot & ITEM_SLOT_SUITSTORE)
+	if(slot & ITEM_SLOT_L_HIP) // this is kinda arbitrary but heretics won't. exist. i don't think
 		ADD_TRAIT(item, TRAIT_NO_STRIP, REF(src)) // i'd use examine hide but its a flag and yeah
 
 /obj/item/clothing/suit/hooded/cultrobes/void/proc/show_item(datum/source, obj/item/item, slot)

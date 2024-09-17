@@ -8,10 +8,10 @@
 	var/has_card = FALSE
 	///Which slots to apply TRAIT_NODROP to the items in
 	var/list/nodrop_slots = list(
-		ITEM_SLOT_O_TORSOWEAR, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET,
+		ITEM_SLOT_O_TORSOWEAR, ITEM_SLOT_L_HAND, ITEM_SLOT_R_HAND, ITEM_SLOT_FEET,
 		ITEM_SLOT_I_TORSOWEAR, ITEM_SLOT_EARS, ITEM_SLOT_BELT,
-		ITEM_SLOT_MASK, ITEM_SLOT_EYES, ITEM_SLOT_ID,
-		ITEM_SLOT_HEAD, ITEM_SLOT_BACK, ITEM_SLOT_NECK,
+		ITEM_SLOT_MASK, ITEM_SLOT_EYES,
+		ITEM_SLOT_HEAD, ITEM_SLOT_BACK, ITEM_SLOT_I_NECK,
 	)
 	//Chance for the wearer to have their height increased. This is repeated three times for maximum height.
 	var/taller_chance = 50

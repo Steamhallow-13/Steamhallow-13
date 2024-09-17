@@ -19,7 +19,7 @@
 /obj/item/clothing/gloves/cargo_gauntlet/proc/on_glove_equip(datum/source, mob/equipper, slot)
 	SIGNAL_HANDLER
 
-	if(!(slot & ITEM_SLOT_GLOVES))
+	if(!(slot & ITEM_SLOT_L_HAND))
 		return
 
 	var/datum/component/strong_pull/pull_component = pull_component_weakref?.resolve()
@@ -168,7 +168,7 @@
 
 /obj/item/clothing/gloves/fishing/equipped(mob/user, slot)
 	. = ..()
-	if(slot == ITEM_SLOT_GLOVES)
+	if(slot == ITEM_SLOT_L_HAND)
 		RegisterSignal(user, SIGNAL_ADDTRAIT(TRAIT_ACTIVELY_FISHING), PROC_REF(begin_workout))
 
 /obj/item/clothing/gloves/fishing/dropped(mob/user)

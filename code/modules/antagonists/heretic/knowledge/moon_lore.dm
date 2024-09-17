@@ -244,7 +244,7 @@
 		lunatic.set_master(user.mind, user)
 		var/obj/item/clothing/inner_neck/heretic_focus/moon_amulet/amulet = new(crewmate_turf)
 		var/static/list/slots = list(
-			"neck" = ITEM_SLOT_NECK,
+			"neck" = ITEM_SLOT_I_NECK,
 			"hands" = ITEM_SLOT_HANDS,
 			"backpack" = ITEM_SLOT_BACKPACK,
 			"right pocket" = ITEM_SLOT_RPOCKET,

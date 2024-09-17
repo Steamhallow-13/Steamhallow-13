@@ -25,7 +25,7 @@
 	if(up)
 		. += "Use in-hand to untie it to wear as a mask!"
 		return
-	if(slot_flags & ITEM_SLOT_NECK)
+	if(slot_flags & ITEM_SLOT_I_NECK)
 		. += "Alt-click to untie it to wear as a mask!"
 	else
 		. += "Use in-hand to tie it up to wear as a hat!"
@@ -35,7 +35,7 @@
 	adjust_visor(user)
 
 /obj/item/clothing/mask/bandana/adjust_visor(mob/living/user)
-	if(slot_flags & ITEM_SLOT_NECK)
+	if(slot_flags & ITEM_SLOT_I_NECK)
 		to_chat(user, span_warning("You must undo [src] in order to push it into a hat!"))
 		return FALSE
 	return ..()
@@ -53,7 +53,7 @@
 
 	var/mob/living/carbon/char = user
 	var/matrix/widen = matrix()
-	if((char.get_item_by_slot(ITEM_SLOT_NECK) == src) || (char.get_item_by_slot(ITEM_SLOT_MASK) == src) || (char.get_item_by_slot(ITEM_SLOT_HEAD) == src))
+	if((char.get_item_by_slot(ITEM_SLOT_I_NECK) == src) || (char.get_item_by_slot(ITEM_SLOT_MASK) == src) || (char.get_item_by_slot(ITEM_SLOT_HEAD) == src))
 		to_chat(user, span_warning("You can't tie [src] while wearing it!"))
 		return CLICK_ACTION_BLOCKING
 	else if(slot_flags & ITEM_SLOT_HEAD)
@@ -65,7 +65,7 @@
 
 	if(slot_flags & ITEM_SLOT_MASK)
 		undyeable = TRUE
-		slot_flags = ITEM_SLOT_NECK
+		slot_flags = ITEM_SLOT_I_NECK
 		worn_y_offset = -3
 		widen.Scale(1.25, 1)
 		transform = widen

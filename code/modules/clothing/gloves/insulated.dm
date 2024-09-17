@@ -44,7 +44,7 @@
 		return NONE
 	var/mob/living/carbon/C = interacting_with
 	var/mob/living/carbon/U = user
-	var/success = C.equip_to_slot_if_possible(new /obj/item/clothing/gloves/color/yellow/sprayon, ITEM_SLOT_GLOVES, qdel_on_fail = TRUE, disable_warning = TRUE)
+	var/success = C.equip_to_slot_if_possible(new /obj/item/clothing/gloves/color/yellow/sprayon, ITEM_SLOT_L_HAND, qdel_on_fail = TRUE, disable_warning = TRUE)
 	if(success)
 		if(C == user)
 			C.visible_message(span_notice("[U] sprays their hands with glittery rubber!"))

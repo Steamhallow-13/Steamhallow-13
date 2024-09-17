@@ -120,7 +120,7 @@
 
 /obj/item/clothing/inner_neck/eldritch_amulet/equipped(mob/user, slot)
 	. = ..()
-	if(!(slot & ITEM_SLOT_NECK))
+	if(!(slot & ITEM_SLOT_I_NECK))
 		return
 	if(!ishuman(user) || !IS_HERETIC_OR_MONSTER(user))
 		return

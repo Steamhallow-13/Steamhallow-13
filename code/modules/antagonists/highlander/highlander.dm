@@ -69,7 +69,7 @@
 	ADD_TRAIT(W, TRAIT_NODROP, HIGHLANDER_TRAIT)
 	W.update_label()
 	W.update_icon()
-	H.equip_to_slot_or_del(W, ITEM_SLOT_ID)
+	H.equip_to_slot_or_del(W, ITEM_SLOT_BELT)
 
 	sword = new(H)
 	if(!GLOB.highlander_controller)

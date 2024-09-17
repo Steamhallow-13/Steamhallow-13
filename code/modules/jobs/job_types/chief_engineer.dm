@@ -95,4 +95,3 @@
 	head = null
 	mask = /obj/item/clothing/mask/breath
 	shoes = /obj/item/clothing/shoes/magboots/advance
-	internals_slot = ITEM_SLOT_SUITSTORE

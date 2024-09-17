@@ -26,7 +26,7 @@
 	///Do they get an ID?
 	var/has_card = TRUE
 	///Which slots to apply TRAIT_NODROP to the items in
-	var/list/nodrop_slots = list(ITEM_SLOT_O_TORSOWEAR, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_I_TORSOWEAR, ITEM_SLOT_EARS)
+	var/list/nodrop_slots = list(ITEM_SLOT_O_TORSOWEAR, ITEM_SLOT_L_HAND, ITEM_SLOT_R_HAND, ITEM_SLOT_FEET, ITEM_SLOT_I_TORSOWEAR, ITEM_SLOT_EARS)
 
 /datum/outfit/ctf/post_equip(mob/living/carbon/human/human_to_equip, visualsOnly=FALSE)
 	if(visualsOnly)

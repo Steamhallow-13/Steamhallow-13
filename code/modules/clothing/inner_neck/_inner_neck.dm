@@ -101,12 +101,12 @@
 		span_notice("You successfully [is_tied ? "tied" : "untied"] [src]!"),
 	)
 	update_appearance(UPDATE_ICON)
-	user.update_clothing(ITEM_SLOT_NECK)
+	user.update_clothing(ITEM_SLOT_I_NECK)
 	return CLICK_ACTION_SUCCESS
 
 /obj/item/clothing/inner_neck/tie/click_alt_secondary(mob/user)
 	alternate_worn_layer = (alternate_worn_layer == initial(alternate_worn_layer) ? NONE : initial(alternate_worn_layer))
-	user.update_clothing(ITEM_SLOT_NECK)
+	user.update_clothing(ITEM_SLOT_I_NECK)
 	balloon_alert(user, "wearing [alternate_worn_layer == initial(alternate_worn_layer) ? "below" : "above"] suits")
 
 /obj/item/clothing/inner_neck/tie/update_icon()

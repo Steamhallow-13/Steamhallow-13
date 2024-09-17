@@ -268,7 +268,6 @@
 	head = null
 	mask = /obj/item/clothing/mask/gas/sechailer
 	back = /obj/item/mod/control/pre_equipped/corporate
-	internals_slot = ITEM_SLOT_SUITSTORE
 
 /datum/outfit/ghost_cultist
 	name = "Cultist Ghost"
@@ -435,7 +434,6 @@
 	shoes = /obj/item/clothing/shoes/magboots/advance
 
 	box = /obj/item/storage/box/debugtools
-	internals_slot = ITEM_SLOT_SUITSTORE
 
 /datum/outfit/debug/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	var/obj/item/card/id/W = H.wear_id
@@ -467,7 +465,6 @@
 	shoes = /obj/item/clothing/shoes/magboots/advance
 
 	box = /obj/item/storage/box/debugtools
-	internals_slot = ITEM_SLOT_SUITSTORE
 
 /datum/outfit/admin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	var/obj/item/card/id/W = H.wear_id
