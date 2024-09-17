@@ -131,12 +131,12 @@
 	static_inventory += using
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
-	inv_box.name = "id"
+	inv_box.name = "right hip"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "id"
 	inv_box.icon_full = "template_small"
-	inv_box.screen_loc = ui_id
-	inv_box.slot_id = ITEM_SLOT_ID
+	inv_box.screen_loc = ui_id // This used to be the ID Slot. Also a few other components. Use that slot
+	inv_box.slot_id = ITEM_SLOT_R_HIP
 	static_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
@@ -149,12 +149,30 @@
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
-	inv_box.name = "neck"
+	inv_box.name = "maw"
 	inv_box.icon = ui_style
-	inv_box.icon_state = "neck"
+	inv_box.icon_state = "maw"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_maw
+	inv_box.slot_id = ITEM_SLOT_MAW
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "inner neck"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "inner_neck"
 	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_neck
-	inv_box.slot_id = ITEM_SLOT_NECK
+	inv_box.slot_id = ITEM_SLOT_I_NECK
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "outer neck"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "outer_neck"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_outer_neck
+	inv_box.slot_id = ITEM_SLOT_O_NECK
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
@@ -185,12 +203,12 @@
 	static_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
-	inv_box.name = "suit storage"
+	inv_box.name = "left hip"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "suit_storage"
 	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_sstore1
-	inv_box.slot_id = ITEM_SLOT_SUITSTORE
+	inv_box.slot_id = ITEM_SLOT_L_HIP
 	static_inventory += inv_box
 
 	using = new /atom/movable/screen/resist(null, src)
@@ -209,12 +227,111 @@
 	static_inventory += using
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
-	inv_box.name = "gloves"
+	inv_box.name = "left hand"
 	inv_box.icon = ui_style
-	inv_box.icon_state = "gloves"
+	inv_box.icon_state = "left_hand"
 	inv_box.icon_full = "template"
-	inv_box.screen_loc = ui_gloves
-	inv_box.slot_id = ITEM_SLOT_GLOVES
+	inv_box.screen_loc = ui_left_hand
+	inv_box.slot_id = ITEM_SLOT_L_HAND
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "left thumb"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "left_thumb"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_left_thumb
+	inv_box.slot_id = ITEM_SLOT_L_HAND_THUMB
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "left index finger"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "left_index"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_left_index
+	inv_box.slot_id = ITEM_SLOT_L_HAND_INDEX
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "left middle finger"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "left_middle"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_left_middle
+	inv_box.slot_id = ITEM_SLOT_L_HAND_MIDDLE
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "left ring finger"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "left_ring"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_left_ring
+	inv_box.slot_id = ITEM_SLOT_L_HAND_RING
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "left pinky finger"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "left_pinky"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_left_pinky
+	inv_box.slot_id = ITEM_SLOT_L_HAND_PINKY
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "right hand"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "right_hand"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_right_hand
+	inv_box.slot_id = ITEM_SLOT_R_HAND
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "right thumb"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "right_thumb"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_right_thumb
+	inv_box.slot_id = ITEM_SLOT_R_HAND_THUMB
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "right index finger"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "right_index"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_right_index
+	inv_box.slot_id = ITEM_SLOT_R_HAND_INDEX
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "right middle finger"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "right"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_right_middle
+	inv_box.slot_id = ITEM_SLOT_R_HAND_MIDDLE
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "right ring finger"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "right_ring"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_right_ring
+	inv_box.slot_id = ITEM_SLOT_R_HAND_RING
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "right pinky finger"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "right_pinky"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_right_pinky
+	inv_box.slot_id = ITEM_SLOT_R_HAND_PINKY
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
@@ -236,6 +353,24 @@
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "left ear"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "left_ear"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_ears_left
+	inv_box.slot_id = ITEM_SLOT_EARS_LEFT
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "right ear"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "right_ear"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_ears_right
+	inv_box.slot_id = ITEM_SLOT_EARS_RIGHT
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
 	inv_box.name = "head"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "head"
@@ -245,12 +380,75 @@
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
-	inv_box.name = "shoes"
+	inv_box.name = "feet"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "shoes"
 	inv_box.icon_full = "template"
 	inv_box.screen_loc = ui_shoes
 	inv_box.slot_id = ITEM_SLOT_FEET
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "inner legwear"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "inner_legwear"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_inner_legwear
+	inv_box.slot_id = ITEM_SLOT_I_LEGWEAR
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "outer legwear"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "outer_legwear"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_outer_legwear
+	inv_box.slot_id = ITEM_SLOT_O_LEGWEAR
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "chest"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "chest"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_chest
+	inv_box.slot_id = ITEM_SLOT_CHEST
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "groin"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "groin"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_groin
+	inv_box.slot_id = ITEM_SLOT_GROIN
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "vagina"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "vagina"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_vagina
+	inv_box.slot_id = ITEM_SLOT_VAGINA
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "dick"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "dick"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_dick
+	inv_box.slot_id = ITEM_SLOT_DICK
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "anus"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "anus"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_anus
+	inv_box.slot_id = ITEM_SLOT_ANUS
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
