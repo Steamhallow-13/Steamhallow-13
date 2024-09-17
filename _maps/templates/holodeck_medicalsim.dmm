@@ -357,7 +357,7 @@
 /area/template_noop)
 "CQ" = (
 /obj/structure/table,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/effect/turf_decal/tile/blue/opposingcorners{
 	dir = 1
 	},

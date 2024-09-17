@@ -379,7 +379,7 @@
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/obj/item/clothing/neck/petcollar,
+/obj/item/clothing/inner_neck/petcollar,
 /turf/open/floor/iron/freezer,
 /area/ruin/powered)
 "Gy" = (

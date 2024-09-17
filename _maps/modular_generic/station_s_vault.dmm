@@ -28,7 +28,7 @@
 /area/template_noop)
 "k" = (
 /obj/effect/mob_spawn/corpse/human/generic_assistant,
-/obj/item/clothing/neck/stethoscope{
+/obj/item/clothing/inner_neck/stethoscope{
 	pixel_y = 13;
 	pixel_x = 4
 	},

@@ -88,7 +88,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	shoes = /obj/item/clothing/shoes/combat
-	neck = /obj/item/clothing/neck/large_scarf/syndie
+	neck = /obj/item/clothing/inner_neck/large_scarf/syndie
 	glasses = /obj/item/clothing/glasses/cold
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset
@@ -107,7 +107,7 @@
 	uniform = /obj/item/clothing/under/rank/civilian/chaplain
 	suit = /obj/item/clothing/suit/hooded/chaplain_hoodie
 	shoes = /obj/item/clothing/shoes/laceup
-	neck = /obj/item/clothing/neck/fake_heretic_amulet
+	neck = /obj/item/clothing/inner_neck/fake_heretic_amulet
 	head = /obj/item/clothing/head/hooded/chaplain_hood
 	back = /obj/item/storage/backpack/cultpack
 

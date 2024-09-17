@@ -1843,7 +1843,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/crowbar,
 /obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /turf/open/floor/iron/white,
 /area/ruin/syndicate_lava_base/medbay)
 "ov" = (

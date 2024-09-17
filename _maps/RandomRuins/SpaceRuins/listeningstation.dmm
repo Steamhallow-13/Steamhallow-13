@@ -122,7 +122,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/item/storage/medkit/regular,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light/small/directional/north,
 /obj/effect/turf_decal/tile/blue/half/contrasted{

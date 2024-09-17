@@ -60,7 +60,7 @@
 	name = "Your Mother"
 
 	uniform = /obj/item/clothing/under/color/jumpskirt/red
-	neck = /obj/item/clothing/neck/beads
+	neck = /obj/item/clothing/inner_neck/beads
 	shoes = /obj/item/clothing/shoes/sandal
 
 /datum/outfit/yourmother/post_equip(mob/living/carbon/human/user, visualsOnly = FALSE)

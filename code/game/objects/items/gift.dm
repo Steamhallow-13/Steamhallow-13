@@ -62,7 +62,7 @@
 			/obj/item/book/manual/chef_recipes,
 			/obj/item/book/manual/wiki/barman_recipes,
 			/obj/item/clothing/head/costume/snowman,
-			/obj/item/clothing/neck/tie/horrible,
+			/obj/item/clothing/inner_neck/tie/horrible,
 			/obj/item/clothing/suit/costume/poncho,
 			/obj/item/clothing/suit/costume/poncho/green,
 			/obj/item/clothing/suit/costume/poncho/red,

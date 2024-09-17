@@ -59,7 +59,7 @@
 	name = "Mafia Detective"
 
 	uniform = /obj/item/clothing/under/rank/security/detective
-	neck = /obj/item/clothing/neck/tie/detective
+	neck = /obj/item/clothing/inner_neck/tie/detective
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	suit = /obj/item/clothing/suit/jacket/det_suit
 	gloves = /obj/item/clothing/gloves/color/black
@@ -70,7 +70,7 @@
 	name = "Mafia Psychologist"
 
 	uniform = /obj/item/clothing/under/costume/buttondown/slacks/service
-	neck = /obj/item/clothing/neck/tie/black/tied
+	neck = /obj/item/clothing/inner_neck/tie/black/tied
 	shoes = /obj/item/clothing/shoes/laceup
 
 /datum/outfit/mafia/chaplain

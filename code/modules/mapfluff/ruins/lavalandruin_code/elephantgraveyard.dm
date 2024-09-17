@@ -200,7 +200,7 @@
 		if(4)
 			new /obj/item/book/bible/booze(src)
 		if(5)
-			new /obj/item/clothing/neck/stethoscope(src)
+			new /obj/item/clothing/inner_neck/stethoscope(src)
 			new /obj/item/scalpel(src)
 			new /obj/item/hemostat(src)
 

@@ -478,7 +478,7 @@
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/neck/large_scarf/red,
+/obj/item/clothing/inner_neck/large_scarf/red,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "bT" = (
@@ -2495,7 +2495,7 @@
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/neck/scarf/christmas,
+/obj/item/clothing/inner_neck/scarf/christmas,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "nn" = (
@@ -2991,7 +2991,7 @@
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/neck/large_scarf/blue,
+/obj/item/clothing/inner_neck/large_scarf/blue,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "sI" = (
@@ -3540,7 +3540,7 @@
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/neck/scarf/zebra,
+/obj/item/clothing/inner_neck/scarf/zebra,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "ys" = (
@@ -4006,7 +4006,7 @@
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/neck/large_scarf/green,
+/obj/item/clothing/inner_neck/large_scarf/green,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
 "El" = (

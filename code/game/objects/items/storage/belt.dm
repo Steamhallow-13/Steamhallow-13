@@ -242,7 +242,7 @@
 		/obj/item/circular_saw,
 		/obj/item/clothing/glasses,
 		/obj/item/clothing/gloves,
-		/obj/item/clothing/neck/stethoscope,
+		/obj/item/clothing/inner_neck/stethoscope,
 		/obj/item/clothing/mask/breath,
 		/obj/item/clothing/mask/muzzle,
 		/obj/item/clothing/mask/surgical,

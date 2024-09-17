@@ -137,7 +137,7 @@
 /obj/item/storage/box/hero/journalist/PopulateContents()
 	new /obj/item/clothing/under/costume/buttondown/slacks(src)
 	new /obj/item/clothing/suit/toggle/suspenders(src)
-	new /obj/item/clothing/neck/tie/red(src)
+	new /obj/item/clothing/inner_neck/tie/red(src)
 	new /obj/item/clothing/head/fedora/beige/press(src)
 	new /obj/item/clothing/accessory/press_badge(src)
 	new /obj/item/clothing/suit/hazardvest/press(src)
@@ -240,4 +240,4 @@
 
 /obj/item/storage/box/collar_bomb/PopulateContents()
 	var/obj/item/collar_bomb_button/button = new(src)
-	new /obj/item/clothing/neck/collar_bomb(src, button)
+	new /obj/item/clothing/inner_neck/collar_bomb(src, button)

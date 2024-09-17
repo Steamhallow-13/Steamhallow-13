@@ -203,7 +203,7 @@ GLOBAL_LIST_INIT(heretic_start_knowledge, initialize_starting_knowledge())
 		/obj/item/organ/internal/eyes = 1,
 		/obj/item/stack/sheet/glass = 1,
 	)
-	result_atoms = list(/obj/item/clothing/neck/heretic_focus)
+	result_atoms = list(/obj/item/clothing/inner_neck/heretic_focus)
 	cost = 0
 	priority = MAX_KNOWLEDGE_PRIORITY - 2 // Not as important as making a heart or sacrificing, but important enough.
 	route = PATH_START

@@ -10,7 +10,7 @@
 		/obj/item/wisp_lantern,
 		/obj/item/organ/internal/cyberimp/arm/shard/katana,
 		/obj/item/clothing/glasses/godeye,
-		/obj/item/clothing/neck/necklace/memento_mori,
+		/obj/item/clothing/inner_neck/necklace/memento_mori,
 		/obj/item/organ/internal/heart/cursed/wizard,
 		/obj/item/clothing/suit/hooded/cloak/drake,
 		/obj/item/ship_in_a_bottle,

@@ -45,13 +45,13 @@
 /datum/element/wears_collar/proc/on_content_exit(mob/living/source, atom/moved)
 	SIGNAL_HANDLER
 
-	if(!istype(moved, /obj/item/clothing/neck/petcollar))
+	if(!istype(moved, /obj/item/clothing/inner_neck/petcollar))
 		return
 	source.fully_replace_character_name(null, source::name)
 	if(collar_icon_state)
 		source.update_appearance()
 
-/datum/element/wears_collar/proc/on_content_enter(mob/living/source, obj/item/clothing/neck/petcollar/new_collar)
+/datum/element/wears_collar/proc/on_content_enter(mob/living/source, obj/item/clothing/inner_neck/petcollar/new_collar)
 	SIGNAL_HANDLER
 
 	if(!istype(new_collar))
@@ -64,9 +64,9 @@
 /datum/element/wears_collar/proc/attach_collar(atom/source, atom/movable/attacking_item, atom/user, params)
 	SIGNAL_HANDLER
 
-	if(!istype(attacking_item, /obj/item/clothing/neck/petcollar))
+	if(!istype(attacking_item, /obj/item/clothing/inner_neck/petcollar))
 		return NONE
-	if(locate(/obj/item/clothing/neck/petcollar) in source)
+	if(locate(/obj/item/clothing/inner_neck/petcollar) in source)
 		user.balloon_alert(source, "already wearing a collar!")
 		return NONE
 	attacking_item.forceMove(source)
@@ -75,7 +75,7 @@
 /datum/element/wears_collar/proc/on_overlays_updated(mob/living/source, list/overlays)
 	SIGNAL_HANDLER
 
-	if(!locate(/obj/item/clothing/neck/petcollar) in source)
+	if(!locate(/obj/item/clothing/inner_neck/petcollar) in source)
 		return
 
 	var/icon_tag = ""

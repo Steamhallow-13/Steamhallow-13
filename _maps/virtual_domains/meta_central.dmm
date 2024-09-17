@@ -3229,7 +3229,7 @@
 /obj/effect/turf_decal/bot{
 	dir = 1
 	},
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /turf/open/floor/iron,
 /area/virtual_domain)
 "AV" = (
@@ -4496,7 +4496,7 @@
 "LN" = (
 /obj/item/kirbyplants,
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /turf/open/floor/iron,
 /area/virtual_domain)
 "LP" = (

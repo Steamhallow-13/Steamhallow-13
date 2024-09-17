@@ -129,7 +129,7 @@
 	name = "IRS Head Auditor"
 	id_trim = /datum/id_trim/syndicom/irs/auditor
 	uniform = /obj/item/clothing/under/suit/charcoal
-	neck = /obj/item/clothing/neck/tie/red/tied
+	neck = /obj/item/clothing/inner_neck/tie/red/tied
 	suit = null
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	head = null

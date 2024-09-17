@@ -1873,7 +1873,7 @@
 /area/awaymission/museum)
 "pi" = (
 /mob/living/basic/statue/mannequin{
-	held_item = /obj/item/clothing/neck/stethoscope;
+	held_item = /obj/item/clothing/inner_neck/stethoscope;
 	hat = /obj/item/clothing/head/costume/nursehat
 	},
 /obj/effect/turf_decal/tile/blue/opposingcorners,

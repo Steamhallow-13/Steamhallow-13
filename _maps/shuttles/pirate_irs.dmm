@@ -204,7 +204,7 @@
 	dir = 9
 	},
 /obj/structure/table/glass,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/item/storage/backpack/duffelbag/syndie/surgery,
 /obj/item/reagent_containers/spray/cleaner,
 /turf/open/floor/iron/dark,

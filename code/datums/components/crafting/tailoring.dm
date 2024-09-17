@@ -315,7 +315,7 @@
 
 /datum/crafting_recipe/wreath
 	name = "Watcher Wreath"
-	result = /obj/item/clothing/neck/wreath
+	result = /obj/item/clothing/inner_neck/wreath
 	time = 2 SECONDS
 	reqs = list(
 		/obj/item/stack/sheet/bone = 2,
@@ -326,7 +326,7 @@
 
 /datum/crafting_recipe/icewreath
 	name = "Icewing Wreath"
-	result = /obj/item/clothing/neck/wreath/icewing
+	result = /obj/item/clothing/inner_neck/wreath/icewing
 	time = 2 SECONDS
 	reqs = list(
 		/obj/item/stack/sheet/bone = 1,

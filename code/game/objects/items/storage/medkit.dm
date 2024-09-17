@@ -63,7 +63,7 @@
 		/obj/item/blood_filter,
 		/obj/item/shears,
 		/obj/item/geiger_counter,
-		/obj/item/clothing/neck/stethoscope,
+		/obj/item/clothing/inner_neck/stethoscope,
 		/obj/item/stamp,
 		/obj/item/clothing/glasses,
 		/obj/item/wrench/medical,

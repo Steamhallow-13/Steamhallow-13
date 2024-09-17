@@ -744,9 +744,9 @@
 /area/shuttle/escape)
 "wu" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/neck/petcollar,
-/obj/item/clothing/neck/petcollar,
-/obj/item/clothing/neck/petcollar,
+/obj/item/clothing/inner_neck/petcollar,
+/obj/item/clothing/inner_neck/petcollar,
+/obj/item/clothing/inner_neck/petcollar,
 /obj/item/pet_carrier,
 /obj/item/lazarus_injector,
 /turf/open/floor/mineral/titanium/purple,

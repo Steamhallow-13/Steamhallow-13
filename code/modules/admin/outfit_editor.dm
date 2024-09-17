@@ -151,7 +151,7 @@
 			options = typesof(/obj/item/radio/headset)
 
 		if("neck")
-			options = typesof(/obj/item/clothing/neck)
+			options = typesof(/obj/item/clothing/inner_neck)
 		if("mask")
 			options = typesof(/obj/item/clothing/mask)
 

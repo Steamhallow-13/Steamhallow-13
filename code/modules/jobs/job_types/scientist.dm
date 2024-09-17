@@ -59,11 +59,11 @@
 
 /datum/outfit/job/scientist/proc/try_giving_horrible_tie()
 	if (prob(0.4))
-		neck = /obj/item/clothing/neck/tie/horrible
+		neck = /obj/item/clothing/inner_neck/tie/horrible
 
 /datum/outfit/job/scientist/get_types_to_preload()
 	. = ..()
-	. += /obj/item/clothing/neck/tie/horrible
+	. += /obj/item/clothing/inner_neck/tie/horrible
 
 /// A version of the scientist outfit that is guaranteed to be the same every time
 /datum/outfit/job/scientist/consistent

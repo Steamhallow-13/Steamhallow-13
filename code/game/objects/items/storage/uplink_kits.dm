@@ -87,7 +87,7 @@
 			new /obj/item/clothing/gloves/latex/nitrile(src) // ~1 tc for whole outfit
 			new /obj/item/clothing/mask/gas/clown_hat(src)
 			new /obj/item/clothing/under/suit/black_really(src)
-			new /obj/item/clothing/neck/tie/red/hitman(src)
+			new /obj/item/clothing/inner_neck/tie/red/hitman(src)
 
 		if(KIT_SCREWED)
 			new /obj/item/sbeacondrop/bomb(src) // 11 tc
@@ -157,7 +157,7 @@
 			new /obj/item/clothing/gloves/latex/nitrile(src) // ~ 1 tc for outfit
 			new /obj/item/clothing/mask/gas/clown_hat(src)
 			new /obj/item/clothing/under/suit/black_really(src)
-			new /obj/item/clothing/neck/tie/red/hitman(src)
+			new /obj/item/clothing/inner_neck/tie/red/hitman(src)
 
 		if(KIT_NUKEOPS_METAGAME)
 			new /obj/item/mod/control/pre_equipped/nuclear/unrestricted(src) // 8 tc
@@ -286,7 +286,7 @@
 
 		if(KIT_DEAD_MONEY)
 			for(var/i in 1 to 4)
-				new /obj/item/clothing/neck/collar_bomb(src) // These let you remotely kill people with a signaler, though you have to get them first.
+				new /obj/item/clothing/inner_neck/collar_bomb(src) // These let you remotely kill people with a signaler, though you have to get them first.
 			new /obj/item/storage/box/syndie_kit/signaler(src)
 			new /obj/item/mod/control/pre_equipped/responsory/inquisitory/syndie(src) // basically a snowflake yet better elite modsuit, so like, 8 + 5 tc.
 			new /obj/item/card/id/advanced/chameleon(src) // 2 tc
@@ -519,7 +519,7 @@
 	new /obj/item/clothing/glasses/chameleon(src)
 	new /obj/item/clothing/head/chameleon(src)
 	new /obj/item/clothing/mask/chameleon(src)
-	new /obj/item/clothing/neck/chameleon(src)
+	new /obj/item/clothing/inner_neck/chameleon(src)
 	new /obj/item/storage/backpack/chameleon(src)
 	new /obj/item/storage/belt/chameleon(src)
 	new /obj/item/radio/headset/chameleon(src)
@@ -594,7 +594,7 @@
 	new /obj/item/clothing/glasses/chameleon/broken(src)
 	new /obj/item/clothing/head/chameleon/broken(src)
 	new /obj/item/clothing/mask/chameleon/broken(src)
-	new /obj/item/clothing/neck/chameleon/broken(src)
+	new /obj/item/clothing/inner_neck/chameleon/broken(src)
 	new /obj/item/storage/backpack/chameleon/broken(src)
 	new /obj/item/storage/belt/chameleon/broken(src)
 	new /obj/item/radio/headset/chameleon/broken(src)

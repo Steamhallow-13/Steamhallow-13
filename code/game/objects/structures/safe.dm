@@ -74,7 +74,7 @@ FLOOR SAFES
 		else
 			to_chat(user, span_warning("[attacking_item] won't fit in [src]."))
 	else
-		if(istype(attacking_item, /obj/item/clothing/neck/stethoscope))
+		if(istype(attacking_item, /obj/item/clothing/inner_neck/stethoscope))
 			attack_hand(user)
 			return
 		else
@@ -141,7 +141,7 @@ FLOOR SAFES
 		return
 
 	var/canhear = FALSE
-	if(user.is_holding_item_of_type(/obj/item/clothing/neck/stethoscope))
+	if(user.is_holding_item_of_type(/obj/item/clothing/inner_neck/stethoscope))
 		canhear = TRUE
 
 	switch(action)

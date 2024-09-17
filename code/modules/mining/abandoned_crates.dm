@@ -180,7 +180,7 @@
 		if(61 to 62)
 			for(var/i in 1 to 5)
 				new /obj/item/clothing/head/costume/kitty(src)
-				new /obj/item/clothing/neck/petcollar(src)
+				new /obj/item/clothing/inner_neck/petcollar(src)
 		if(63 to 64)
 			new /obj/item/clothing/shoes/kindle_kicks(src)
 		if(65 to 66)

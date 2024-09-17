@@ -3631,7 +3631,7 @@
 /area/awaymission/beach)
 "Ts" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/clothing/neck/necklace/dope,
+/obj/item/clothing/inner_neck/necklace/dope,
 /obj/item/clothing/suit/jacket/letterman,
 /turf/open/floor/wood,
 /area/awaymission/beach)
@@ -3658,7 +3658,7 @@
 	pixel_y = 14;
 	pixel_x = -5
 	},
-/obj/item/clothing/neck/stethoscope{
+/obj/item/clothing/inner_neck/stethoscope{
 	pixel_y = 3;
 	pixel_x = 4
 	},

@@ -33,7 +33,7 @@
 	cost = CARGO_CRATE_VALUE * 4 //Cats are worth as much as corgis.
 	contains = list(
 		/mob/living/basic/pet/cat,
-		/obj/item/clothing/neck/petcollar,
+		/obj/item/clothing/inner_neck/petcollar,
 		/obj/item/toy/cattoy,
 	)
 	crate_name = "cat crate"
@@ -61,7 +61,7 @@
 		one dog from the millions of Ian's noble bloodline. Comes with a cute collar!"
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/mob/living/basic/pet/dog/corgi,
-					/obj/item/clothing/neck/petcollar,
+					/obj/item/clothing/inner_neck/petcollar,
 				)
 	crate_name = "corgi crate"
 
@@ -126,7 +126,7 @@
 		Comes with a cute collar!"
 	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/mob/living/basic/pet/dog/corgi/exoticcorgi,
-					/obj/item/clothing/neck/petcollar,
+					/obj/item/clothing/inner_neck/petcollar,
 				)
 	crate_name = "exotic corgi crate"
 
@@ -136,7 +136,7 @@
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(
 		/mob/living/basic/pet/fox,
-		/obj/item/clothing/neck/petcollar,
+		/obj/item/clothing/inner_neck/petcollar,
 	)
 	crate_name = "fox crate"
 
@@ -175,7 +175,7 @@
 	desc = "Like a normal dog, but... squished. Contains one pug. Comes with a nice collar!"
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/mob/living/basic/pet/dog/pug,
-					/obj/item/clothing/neck/petcollar,
+					/obj/item/clothing/inner_neck/petcollar,
 				)
 	crate_name = "pug crate"
 
@@ -185,7 +185,7 @@
 		Comes with a nice collar!"
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/mob/living/basic/pet/dog/bullterrier,
-					/obj/item/clothing/neck/petcollar,
+					/obj/item/clothing/inner_neck/petcollar,
 				)
 	crate_name = "bull terrier crate"
 

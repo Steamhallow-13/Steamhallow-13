@@ -6,7 +6,7 @@
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "strand"
 	worn_icon_state = "strandcuff"
-	slot_flags = ITEM_SLOT_GLOVES
+	slot_flags = ITEM_SLOT_L_HAND | ITEM_SLOT_R_HAND
 	throwforce = 0
 	w_class = WEIGHT_CLASS_SMALL
 	gender = PLURAL
@@ -35,11 +35,11 @@
 		. += span_notice("The cuff's GPS signal is on.")
 
 /obj/item/kheiral_cuffs/item_action_slot_check(slot)
-	return (slot & ITEM_SLOT_GLOVES)
+	return (slot & ITEM_SLOT_L_HAND)
 
 /obj/item/kheiral_cuffs/equipped(mob/user, slot, initial)
 	. = ..()
-	if(!(slot & ITEM_SLOT_GLOVES))
+	if(!(slot & ITEM_SLOT_L_HAND))
 		return
 	on_wrist = TRUE
 	playsound(loc, 'sound/weapons/handcuffs.ogg', 30, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)

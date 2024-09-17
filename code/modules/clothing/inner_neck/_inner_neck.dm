@@ -1,13 +1,13 @@
-/obj/item/clothing/neck
+/obj/item/clothing/inner_neck
 	name = "necklace"
 	icon = 'icons/obj/clothing/neck.dmi'
 	body_parts_covered = NECK
-	slot_flags = ITEM_SLOT_NECK
+	slot_flags = ITEM_SLOT_I_NECK
 	interaction_flags_click = NEED_DEXTERITY
 	strip_delay = 40
 	equip_delay_other = 40
 
-/obj/item/clothing/neck/worn_overlays(mutable_appearance/standing, isinhands = FALSE)
+/obj/item/clothing/inner_neck/worn_overlays(mutable_appearance/standing, isinhands = FALSE)
 	. = ..()
 	if(isinhands)
 		return
@@ -18,7 +18,7 @@
 		if(GET_ATOM_BLOOD_DNA_LENGTH(src))
 			. += mutable_appearance('icons/effects/blood.dmi', "maskblood")
 
-/obj/item/clothing/neck/bowtie
+/obj/item/clothing/inner_neck/bowtie
 	name = "bow tie"
 	desc = "A small neosilk bowtie."
 	icon = 'icons/obj/clothing/neck.dmi'
@@ -31,7 +31,7 @@
 	greyscale_colors = "#151516ff"
 	flags_1 = IS_PLAYER_COLORABLE_1
 
-/obj/item/clothing/neck/bowtie/rainbow
+/obj/item/clothing/inner_neck/bowtie/rainbow
 	name = "rainbow bow tie"
 	desc = "An extremely large neosilk rainbow-colored bowtie."
 	icon_state = "bowtie_rainbow"
@@ -39,7 +39,7 @@
 	greyscale_config_worn = null
 	greyscale_colors = null
 
-/obj/item/clothing/neck/tie
+/obj/item/clothing/inner_neck/tie
 	name = "slick tie"
 	desc = "A neosilk tie."
 	icon = 'icons/obj/clothing/neck.dmi'
@@ -59,13 +59,13 @@
 	/// Is this tie a clip-on, meaning it does not have an untied state?
 	var/clip_on = FALSE
 
-/obj/item/clothing/neck/tie/Initialize(mapload)
+/obj/item/clothing/inner_neck/tie/Initialize(mapload)
 	. = ..()
 	if(!clip_on)
 		update_appearance(UPDATE_ICON)
 	register_context()
 
-/obj/item/clothing/neck/tie/examine(mob/user)
+/obj/item/clothing/inner_neck/tie/examine(mob/user)
 	. = ..()
 	. += span_notice("The tie can be worn above or below your suit. Alt-Right-click to toggle.")
 	if(clip_on)
@@ -75,7 +75,7 @@
 	else
 		. += span_notice("The tie can be untied with Alt-Click.")
 
-/obj/item/clothing/neck/tie/click_alt(mob/user)
+/obj/item/clothing/inner_neck/tie/click_alt(mob/user)
 	if(clip_on)
 		return NONE
 	to_chat(user, span_notice("You concentrate as you begin [is_tied ? "untying" : "tying"] [src]..."))
@@ -104,12 +104,12 @@
 	user.update_clothing(ITEM_SLOT_NECK)
 	return CLICK_ACTION_SUCCESS
 
-/obj/item/clothing/neck/tie/click_alt_secondary(mob/user)
+/obj/item/clothing/inner_neck/tie/click_alt_secondary(mob/user)
 	alternate_worn_layer = (alternate_worn_layer == initial(alternate_worn_layer) ? NONE : initial(alternate_worn_layer))
 	user.update_clothing(ITEM_SLOT_NECK)
 	balloon_alert(user, "wearing [alternate_worn_layer == initial(alternate_worn_layer) ? "below" : "above"] suits")
 
-/obj/item/clothing/neck/tie/update_icon()
+/obj/item/clothing/inner_neck/tie/update_icon()
 	. = ..()
 	if(clip_on)
 		return
@@ -125,7 +125,7 @@
 		equip_delay_other = 1 SECONDS
 		equip_delay_self = 0
 
-/obj/item/clothing/neck/tie/add_context(atom/source, list/context, obj/item/held_item, mob/user)
+/obj/item/clothing/inner_neck/tie/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
 	context[SCREENTIP_CONTEXT_ALT_RMB] = "Wear [alternate_worn_layer == initial(alternate_worn_layer) ? "above" : "below"] suit"
 	if(clip_on)
@@ -136,7 +136,7 @@
 		context[SCREENTIP_CONTEXT_ALT_LMB] = "Tie"
 	return CONTEXTUAL_SCREENTIP_SET
 
-/obj/item/clothing/neck/tie/worn_overlays(mutable_appearance/standing, isinhands)
+/obj/item/clothing/inner_neck/tie/worn_overlays(mutable_appearance/standing, isinhands)
 	. = ..()
 	var/mob/living/carbon/human/wearer = loc
 	if(!ishuman(wearer) || !wearer.w_uniform)
@@ -147,36 +147,36 @@
 	if(alternate_worn_layer)
 		. += undershirt.accessory_overlay
 
-/obj/item/clothing/neck/tie/blue
+/obj/item/clothing/inner_neck/tie/blue
 	name = "blue tie"
 	icon_state = "tie_greyscale_untied"
 	greyscale_colors = "#5275b6ff"
 
-/obj/item/clothing/neck/tie/red
+/obj/item/clothing/inner_neck/tie/red
 	name = "red tie"
 	icon_state = "tie_greyscale_untied"
 	greyscale_colors = "#c23838ff"
 
-/obj/item/clothing/neck/tie/red/tied
+/obj/item/clothing/inner_neck/tie/red/tied
 	is_tied = TRUE
 
-/obj/item/clothing/neck/tie/red/hitman
+/obj/item/clothing/inner_neck/tie/red/hitman
 	desc = "This is a $47,000 custom-tailored Référence Du Tueur À Gages tie. The clot is from neosilkworms raised at a tie microfarm in Cookwell, from a secret pattern passed down by monk tailors since the twenty-first century!"
 	icon_state = "tie_greyscale_untied"
 	tie_timer = 1 SECONDS // You're a professional.
 
-/obj/item/clothing/neck/tie/red/hitman/tied
+/obj/item/clothing/inner_neck/tie/red/hitman/tied
 	is_tied = TRUE
 
-/obj/item/clothing/neck/tie/black
+/obj/item/clothing/inner_neck/tie/black
 	name = "black tie"
 	icon_state = "tie_greyscale_untied"
 	greyscale_colors = "#151516ff"
 
-/obj/item/clothing/neck/tie/black/tied
+/obj/item/clothing/inner_neck/tie/black/tied
 	is_tied = TRUE
 
-/obj/item/clothing/neck/tie/horrible
+/obj/item/clothing/inner_neck/tie/horrible
 	name = "horrible tie"
 	desc = "A neosilk tie. This one is disgusting."
 	icon_state = "horribletie"
@@ -185,7 +185,7 @@
 	greyscale_config_worn = null
 	greyscale_colors = null
 
-/obj/item/clothing/neck/tie/disco
+/obj/item/clothing/inner_neck/tie/disco
 	name = "horrific necktie"
 	icon_state = "eldritch_tie"
 	desc = "The necktie is adorned with a garish pattern. It's disturbingly vivid. Somehow you feel as if it would be wrong to ever take it off. It's your friend now. You will betray it if you change it for some boring scarf."
@@ -194,7 +194,7 @@
 	greyscale_config_worn = null
 	greyscale_colors = null
 
-/obj/item/clothing/neck/tie/detective
+/obj/item/clothing/inner_neck/tie/detective
 	name = "loose tie"
 	desc = "A loosely tied necktie, a perfect accessory for the over-worked detective."
 	icon_state = "detective"
@@ -203,21 +203,21 @@
 	greyscale_config_worn = null
 	greyscale_colors = null
 
-/obj/item/clothing/neck/maid
+/obj/item/clothing/inner_neck/maid
 	name = "maid neck cover"
 	desc = "A neckpiece for a maid costume, it smells faintly of disappointment."
 	icon_state = "maid_neck"
 
-/obj/item/clothing/neck/stethoscope
+/obj/item/clothing/inner_neck/stethoscope
 	name = "stethoscope"
 	desc = "An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
 	icon_state = "stethoscope"
 
-/obj/item/clothing/neck/stethoscope/suicide_act(mob/living/carbon/user)
+/obj/item/clothing/inner_neck/stethoscope/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] puts \the [src] to [user.p_their()] chest! It looks like [user.p_they()] won't hear much!"))
 	return OXYLOSS
 
-/obj/item/clothing/neck/stethoscope/attack(mob/living/target, mob/living/user)
+/obj/item/clothing/inner_neck/stethoscope/attack(mob/living/target, mob/living/user)
 	if(!ishuman(target) || !isliving(user))
 		return ..()
 	if(user.combat_mode)
@@ -338,7 +338,7 @@
 //SCARVES//
 ///////////
 
-/obj/item/clothing/neck/scarf
+/obj/item/clothing/inner_neck/scarf
 	name = "scarf"
 	icon_state = "scarf"
 	icon_preview = 'icons/obj/fluff/previews.dmi'
@@ -351,51 +351,51 @@
 	greyscale_config_worn = /datum/greyscale_config/scarf/worn
 	flags_1 = IS_PLAYER_COLORABLE_1
 
-/obj/item/clothing/neck/scarf/black
+/obj/item/clothing/inner_neck/scarf/black
 	name = "black scarf"
 	greyscale_colors = "#4A4A4B#4A4A4B"
 
-/obj/item/clothing/neck/scarf/pink
+/obj/item/clothing/inner_neck/scarf/pink
 	name = "pink scarf"
 	greyscale_colors = "#F699CD#F699CD"
 
-/obj/item/clothing/neck/scarf/red
+/obj/item/clothing/inner_neck/scarf/red
 	name = "red scarf"
 	greyscale_colors = "#D91414#D91414"
 
-/obj/item/clothing/neck/scarf/green
+/obj/item/clothing/inner_neck/scarf/green
 	name = "green scarf"
 	greyscale_colors = "#5C9E54#5C9E54"
 
-/obj/item/clothing/neck/scarf/darkblue
+/obj/item/clothing/inner_neck/scarf/darkblue
 	name = "dark blue scarf"
 	greyscale_colors = "#1E85BC#1E85BC"
 
-/obj/item/clothing/neck/scarf/purple
+/obj/item/clothing/inner_neck/scarf/purple
 	name = "purple scarf"
 	greyscale_colors = "#9557C5#9557C5"
 
-/obj/item/clothing/neck/scarf/yellow
+/obj/item/clothing/inner_neck/scarf/yellow
 	name = "yellow scarf"
 	greyscale_colors = "#E0C14F#E0C14F"
 
-/obj/item/clothing/neck/scarf/orange
+/obj/item/clothing/inner_neck/scarf/orange
 	name = "orange scarf"
 	greyscale_colors = "#C67A4B#C67A4B"
 
-/obj/item/clothing/neck/scarf/cyan
+/obj/item/clothing/inner_neck/scarf/cyan
 	name = "cyan scarf"
 	greyscale_colors = "#54A3CE#54A3CE"
 
-/obj/item/clothing/neck/scarf/zebra
+/obj/item/clothing/inner_neck/scarf/zebra
 	name = "zebra scarf"
 	greyscale_colors = "#333333#EEEEEE"
 
-/obj/item/clothing/neck/scarf/christmas
+/obj/item/clothing/inner_neck/scarf/christmas
 	name = "christmas scarf"
 	greyscale_colors = "#038000#960000"
 
-/obj/item/clothing/neck/large_scarf
+/obj/item/clothing/inner_neck/large_scarf
 	name = "large scarf"
 	icon_state = "large_scarf"
 	icon_preview = 'icons/obj/fluff/previews.dmi'
@@ -407,25 +407,25 @@
 	greyscale_config_worn = /datum/greyscale_config/scarf/worn
 	flags_1 = IS_PLAYER_COLORABLE_1
 
-/obj/item/clothing/neck/large_scarf/red
+/obj/item/clothing/inner_neck/large_scarf/red
 	name = "large red scarf"
 	greyscale_colors = "#8A2908#A06D66"
 
-/obj/item/clothing/neck/large_scarf/green
+/obj/item/clothing/inner_neck/large_scarf/green
 	name = "large green scarf"
 	greyscale_colors = "#525629#888674"
 
-/obj/item/clothing/neck/large_scarf/blue
+/obj/item/clothing/inner_neck/large_scarf/blue
 	name = "large blue scarf"
 	greyscale_colors = "#20396C#6F7F91"
 
-/obj/item/clothing/neck/large_scarf/syndie
+/obj/item/clothing/inner_neck/large_scarf/syndie
 	name = "suspicious looking striped scarf"
 	desc = "Ready to operate."
 	greyscale_colors = "#B40000#545350"
 	armor_type = /datum/armor/large_scarf_syndie
 
-/obj/item/clothing/neck/infinity_scarf
+/obj/item/clothing/inner_neck/infinity_scarf
 	name = "infinity scarf"
 	icon_state = "infinity_scarf"
 	w_class = WEIGHT_CLASS_TINY
@@ -435,7 +435,7 @@
 	greyscale_config_worn = /datum/greyscale_config/infinity_scarf/worn
 	flags_1 = IS_PLAYER_COLORABLE_1
 
-/obj/item/clothing/neck/petcollar
+/obj/item/clothing/inner_neck/petcollar
 	name = "pet collar"
 	desc = "It's for pets."
 	icon_state = "petcollar"
@@ -445,12 +445,12 @@
 	fire = 50
 	acid = 40
 
-/obj/item/clothing/neck/petcollar/mob_can_equip(mob/M, slot, disable_warning = FALSE, bypass_equip_delay_self = FALSE, ignore_equipped = FALSE, indirect_action = FALSE)
+/obj/item/clothing/inner_neck/petcollar/mob_can_equip(mob/M, slot, disable_warning = FALSE, bypass_equip_delay_self = FALSE, ignore_equipped = FALSE, indirect_action = FALSE)
 	if(!ismonkey(M))
 		return FALSE
 	return ..()
 
-/obj/item/clothing/neck/petcollar/attack_self(mob/user)
+/obj/item/clothing/inner_neck/petcollar/attack_self(mob/user)
 	tagname = sanitize_name(tgui_input_text(user, "Would you like to change the name on the tag?", "Pet Naming", "Spot", MAX_NAME_LEN))
 	name = "[initial(name)] - [tagname]"
 
@@ -458,25 +458,25 @@
 //DOPE BLING//
 //////////////
 
-/obj/item/clothing/neck/necklace/dope
+/obj/item/clothing/inner_neck/necklace/dope
 	name = "gold necklace"
 	desc = "Damn, it feels good to be a gangster."
 	icon = 'icons/obj/clothing/neck.dmi'
 	icon_state = "bling"
 
-/obj/item/clothing/neck/necklace/dope/merchant
+/obj/item/clothing/inner_neck/necklace/dope/merchant
 	desc = "Don't ask how it works, the proof is in the holochips!"
 	/// scales the amount received in case an admin wants to emulate taxes/fees.
 	var/profit_scaling = 1
 	/// toggles between sell (TRUE) and get price post-fees (FALSE)
 	var/selling = FALSE
 
-/obj/item/clothing/neck/necklace/dope/merchant/attack_self(mob/user)
+/obj/item/clothing/inner_neck/necklace/dope/merchant/attack_self(mob/user)
 	. = ..()
 	selling = !selling
 	to_chat(user, span_notice("[src] has been set to [selling ? "'Sell'" : "'Get Price'"] mode."))
 
-/obj/item/clothing/neck/necklace/dope/merchant/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+/obj/item/clothing/inner_neck/necklace/dope/merchant/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	var/datum/export_report/ex = export_item_and_contents(interacting_with, delete_unsold = selling, dry_run = !selling)
 	var/price = 0
 	for(var/x in ex.total_amount)
@@ -492,7 +492,7 @@
 
 	return ITEM_INTERACT_BLOCKING
 
-/obj/item/clothing/neck/beads
+/obj/item/clothing/inner_neck/beads
 	name = "plastic bead necklace"
 	desc = "A cheap, plastic bead necklace. Show team spirit! Collect them! Throw them away! The posibilites are endless!"
 	icon = 'icons/obj/clothing/neck.dmi'
@@ -501,11 +501,11 @@
 	custom_price = PAYCHECK_CREW * 0.2
 	custom_materials = (list(/datum/material/plastic = SMALL_MATERIAL_AMOUNT*5))
 
-/obj/item/clothing/neck/beads/Initialize(mapload)
+/obj/item/clothing/inner_neck/beads/Initialize(mapload)
 	. = ..()
 	color = color = pick("#ff0077","#d400ff","#2600ff","#00ccff","#00ff2a","#e5ff00","#ffae00","#ff0000", "#ffffff")
 
-/obj/item/clothing/neck/wreath
+/obj/item/clothing/inner_neck/wreath
 	name = "\improper Watcher Wreath"
 	desc = "An elaborate crown made from the twisted flesh and sinew of a watcher. \
 		Wearing it makes you feel like you have eyes in the back of your head."
@@ -514,12 +514,12 @@
 	alternate_worn_layer = ABOVE_BODY_FRONT_HEAD_LAYER
 	resistance_flags = FIRE_PROOF
 
-/obj/item/clothing/neck/wreath/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
+/obj/item/clothing/inner_neck/wreath/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()
 	if(!isinhands)
 		. += emissive_appearance(icon_file, "wreath_emissive", src, alpha = src.alpha)
 
-/obj/item/clothing/neck/wreath/icewing
+/obj/item/clothing/inner_neck/wreath/icewing
 	name = "\improper Icewing Wreath"
 	desc = "An elaborate crown made from the twisted flesh and sinew of an icewing watcher. \
 		Wearing it sends shivers down your spine just from being near it."

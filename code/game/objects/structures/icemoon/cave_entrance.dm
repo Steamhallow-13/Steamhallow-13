@@ -164,7 +164,7 @@ GLOBAL_LIST_INIT(ore_probability, list(
 		if(10)
 			new /obj/item/book/granter/action/spell/summonitem(loc)
 		if(11)
-			new /obj/item/clothing/neck/necklace/memento_mori(loc)
+			new /obj/item/clothing/inner_neck/necklace/memento_mori(loc)
 		if(12)
 			new /obj/item/borg/upgrade/modkit/lifesteal(loc)
 			new /obj/item/bedsheet/cult(loc)

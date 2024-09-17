@@ -129,7 +129,7 @@
 
 /datum/outfit/cryobartender
 	name = "Cryogenic Bartender"
-	neck = /obj/item/clothing/neck/bowtie
+	neck = /obj/item/clothing/inner_neck/bowtie
 	uniform = /obj/item/clothing/under/costume/buttondown/slacks/service
 	suit = /obj/item/clothing/suit/armor/vest
 	back = /obj/item/storage/backpack

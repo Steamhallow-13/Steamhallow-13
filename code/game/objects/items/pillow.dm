@@ -13,7 +13,7 @@
 	///change the description based on the pillow tag
 	var/static/tag_desc = "This one seems to have its tag removed."
 	///pillow tag is attached to it
-	var/obj/item/clothing/neck/pillow_tag/pillow_trophy
+	var/obj/item/clothing/inner_neck/pillow_tag/pillow_trophy
 	///whoever last use this pillow
 	var/last_fighter
 	///for selecting the various sprite variation, defaults to the blank white pillow
@@ -83,7 +83,7 @@
 		balloon_alert(user, "bricked!")
 		become_bricked()
 		return
-	if(istype(attacking_item, /obj/item/clothing/neck/pillow_tag))
+	if(istype(attacking_item, /obj/item/clothing/inner_neck/pillow_tag))
 		if(!pillow_trophy)
 			user.transferItemToLoc(attacking_item, src)
 			pillow_trophy = attacking_item
@@ -200,7 +200,7 @@
 	melee = 5
 	acid = 75
 
-/obj/item/clothing/neck/pillow_tag
+/obj/item/clothing/inner_neck/pillow_tag
 	name = "pillow tag"
 	desc = "A price tag for the pillow. It appears to have space to fill names in."
 	icon = 'icons/obj/bed.dmi'

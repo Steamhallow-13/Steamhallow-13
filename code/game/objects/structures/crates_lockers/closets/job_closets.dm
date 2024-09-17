@@ -19,7 +19,7 @@
 		/obj/item/clothing/suit/armor/vest/alt = 1,
 		/obj/item/circuitboard/machine/dish_drive = 1,
 		/obj/item/clothing/glasses/sunglasses/reagent = 1,
-		/obj/item/clothing/neck/petcollar = 1,
+		/obj/item/clothing/inner_neck/petcollar = 1,
 		/obj/item/storage/belt/bandolier = 1)
 	generate_items_inside(items_inside,src)
 
@@ -80,12 +80,12 @@
 	new /obj/item/clothing/under/rank/civilian/lawyer/black(src)
 	new /obj/item/clothing/under/rank/civilian/lawyer/red(src)
 	new /obj/item/clothing/under/rank/civilian/lawyer/bluesuit(src)
-	new /obj/item/clothing/neck/tie/blue(src)
+	new /obj/item/clothing/inner_neck/tie/blue(src)
 	new /obj/item/clothing/suit/toggle/lawyer(src)
 	new /obj/item/clothing/under/rank/civilian/lawyer/purpsuit(src)
 	new /obj/item/clothing/suit/toggle/lawyer/purple(src)
 	new /obj/item/clothing/under/costume/buttondown/slacks/service(src)
-	new /obj/item/clothing/neck/tie/black(src)
+	new /obj/item/clothing/inner_neck/tie/black(src)
 	new /obj/item/clothing/suit/toggle/lawyer/black(src)
 	new /obj/item/clothing/shoes/laceup(src)
 	new /obj/item/clothing/shoes/laceup(src)

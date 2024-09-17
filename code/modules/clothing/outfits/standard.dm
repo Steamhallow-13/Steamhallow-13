@@ -118,7 +118,7 @@
 
 	uniform = /obj/item/clothing/under/color/grey
 	suit = /obj/item/clothing/suit/hooded/cultrobes/eldritch
-	neck = /obj/item/clothing/neck/heretic_focus
+	neck = /obj/item/clothing/inner_neck/heretic_focus
 	r_hand = /obj/item/melee/touch_attack/mansus_fist
 	head = /obj/item/clothing/head/hooded/cult_hoodie/eldritch
 	shoes = /obj/item/clothing/shoes/sneakers/black
@@ -197,7 +197,7 @@
 	id = /obj/item/card/id/advanced/chameleon/black
 	id_trim = /datum/id_trim/reaper_assassin
 	uniform = /obj/item/clothing/under/costume/buttondown/slacks/service
-	neck = /obj/item/clothing/neck/tie/red/hitman/tied
+	neck = /obj/item/clothing/inner_neck/tie/red/hitman/tied
 	belt = /obj/item/modular_computer/pda/heads
 	ears = /obj/item/radio/headset
 	gloves = /obj/item/clothing/gloves/color/black
@@ -379,7 +379,7 @@
 	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/mobster
 	uniform = /obj/item/clothing/under/suit/black_really
-	neck = /obj/item/clothing/neck/tie/red/tied
+	neck = /obj/item/clothing/inner_neck/tie/red/tied
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black

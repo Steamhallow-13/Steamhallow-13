@@ -6463,7 +6463,7 @@
 /obj/item/reagent_containers/chem_pack{
 	pixel_y = 3
 	},
-/obj/item/clothing/neck/stethoscope{
+/obj/item/clothing/inner_neck/stethoscope{
 	pixel_y = 4
 	},
 /obj/item/reagent_containers/cup/bottle{
@@ -28219,7 +28219,7 @@
 "hrp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/hobo_squat,
-/obj/item/clothing/neck/necklace/dope{
+/obj/item/clothing/inner_neck/necklace/dope{
 	desc = "A memento, it belonged to a man's murdered father.";
 	name = "significant gold necklace"
 	},
@@ -31082,7 +31082,7 @@
 /area/station/security/interrogation)
 "idw" = (
 /obj/structure/table,
-/obj/item/clothing/neck/scarf{
+/obj/item/clothing/inner_neck/scarf{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -31317,7 +31317,7 @@
 /area/station/hallway/floor1/aft)
 "igS" = (
 /obj/structure/table,
-/obj/item/clothing/neck/tie/red,
+/obj/item/clothing/inner_neck/tie/red,
 /obj/item/clothing/under/suit/black_really/skirt,
 /obj/structure/sign/poster/official/random/directional/south,
 /obj/effect/turf_decal/tile/blue/opposingcorners{
@@ -85955,7 +85955,7 @@
 "wfy" = (
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/neck/fake_heretic_amulet,
+/obj/item/clothing/inner_neck/fake_heretic_amulet,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor1/port/aft)

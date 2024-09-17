@@ -62,7 +62,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/fedora/det_hat
 	mask = /obj/item/cigarette
-	neck = /obj/item/clothing/neck/tie/detective
+	neck = /obj/item/clothing/inner_neck/tie/detective
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	l_pocket = /obj/item/toy/crayon/white
 	r_pocket = /obj/item/lighter

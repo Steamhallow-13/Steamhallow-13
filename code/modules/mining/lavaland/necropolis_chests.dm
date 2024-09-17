@@ -71,7 +71,7 @@
 			new /obj/item/borg/upgrade/modkit/lifesteal(src)
 			new /obj/item/bedsheet/cult(src)
 		if(20)
-			new /obj/item/clothing/neck/necklace/memento_mori(src)
+			new /obj/item/clothing/inner_neck/necklace/memento_mori(src)
 		if(21)
 			new /obj/item/clothing/gloves/fingerless/punch_mitts(src)
 			new /obj/item/clothing/head/cowboy(src)

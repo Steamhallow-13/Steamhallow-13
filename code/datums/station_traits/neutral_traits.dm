@@ -309,10 +309,10 @@
 		"You all get free scarves. Don't ask why.",
 		"A shipment of scarves was delivered to the station.",
 	)
-	scarves = typesof(/obj/item/clothing/neck/scarf) + list(
-		/obj/item/clothing/neck/large_scarf/red,
-		/obj/item/clothing/neck/large_scarf/green,
-		/obj/item/clothing/neck/large_scarf/blue,
+	scarves = typesof(/obj/item/clothing/inner_neck/scarf) + list(
+		/obj/item/clothing/inner_neck/large_scarf/red,
+		/obj/item/clothing/inner_neck/large_scarf/green,
+		/obj/item/clothing/inner_neck/large_scarf/blue,
 	)
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_JOB_AFTER_SPAWN, PROC_REF(on_job_after_spawn))

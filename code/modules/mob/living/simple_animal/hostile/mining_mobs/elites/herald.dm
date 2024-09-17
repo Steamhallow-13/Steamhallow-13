@@ -41,7 +41,7 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	death_sound = 'sound/magic/demon_dies.ogg'
 	death_message = "begins to shudder as it becomes transparent..."
-	loot_drop = /obj/item/clothing/neck/cloak/herald_cloak
+	loot_drop = /obj/item/clothing/inner_neck/cloak/herald_cloak
 
 	can_talk = 1
 
@@ -259,7 +259,7 @@
 
 //Herald's loot: Cloak of the Prophet
 
-/obj/item/clothing/neck/cloak/herald_cloak
+/obj/item/clothing/inner_neck/cloak/herald_cloak
 	name = "cloak of the prophet"
 	desc = "A cloak which protects you from the heresy of the world."
 	icon = 'icons/obj/mining_zones/elite_trophies.dmi'
@@ -267,12 +267,12 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	hit_reaction_chance = 20
 
-/obj/item/clothing/neck/cloak/herald_cloak/proc/reactionshot(mob/living/carbon/owner)
+/obj/item/clothing/inner_neck/cloak/herald_cloak/proc/reactionshot(mob/living/carbon/owner)
 	var/static/list/directional_shot_angles = list(0, 45, 90, 135, 180, 225, 270, 315)
 	for(var/i in directional_shot_angles)
 		shoot_projectile(get_turf(owner), i, owner)
 
-/obj/item/clothing/neck/cloak/herald_cloak/proc/shoot_projectile(turf/marker, set_angle, mob/living/carbon/owner)
+/obj/item/clothing/inner_neck/cloak/herald_cloak/proc/shoot_projectile(turf/marker, set_angle, mob/living/carbon/owner)
 	var/turf/startloc = get_turf(owner)
 	var/obj/projectile/herald/H = null
 	H = new /obj/projectile/herald(startloc)
@@ -280,7 +280,7 @@
 	H.firer = owner
 	H.fire(set_angle)
 
-/obj/item/clothing/neck/cloak/herald_cloak/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+/obj/item/clothing/inner_neck/cloak/herald_cloak/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	. = ..()
 	if(prob(hit_reaction_chance))
 		return

@@ -445,7 +445,7 @@
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/suit/toggle/labcoat,
-/obj/item/clothing/neck/tie/horrible,
+/obj/item/clothing/inner_neck/tie/horrible,
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned)
 "rV" = (

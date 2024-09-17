@@ -40427,7 +40427,7 @@
 	pixel_y = -3
 	},
 /obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/machinery/requests_console/directional/south{
 	name = "Chief Medical Officer's Request Console";
 	department = "Chief Medical Officer's Console"
@@ -66118,7 +66118,7 @@
 "whF" = (
 /obj/structure/table/glass,
 /obj/item/storage/box/beakers,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)

@@ -10,7 +10,7 @@
 	new /obj/item/storage/backpack/satchel/cap(src)
 	new /obj/item/storage/backpack/duffelbag/captain(src)
 	new /obj/item/storage/backpack/messenger/cap(src)
-	new /obj/item/clothing/neck/petcollar(src)
+	new /obj/item/clothing/inner_neck/petcollar(src)
 	new /obj/item/pet_carrier(src)
 	new /obj/item/storage/bag/garment/captain(src)
 	new /obj/item/computer_disk/command/captain(src)
@@ -39,7 +39,7 @@
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/megaphone/command(src)
 	new /obj/item/assembly/flash/handheld(src)
-	new /obj/item/clothing/neck/petcollar(src)
+	new /obj/item/clothing/inner_neck/petcollar(src)
 	new /obj/item/pet_carrier(src)
 	new /obj/item/door_remote/civilian(src)
 	new /obj/item/circuitboard/machine/techfab/department/service(src)
@@ -247,7 +247,7 @@
 	new /obj/item/clothing/head/costume/powdered_wig (src)
 	new /obj/item/storage/briefcase(src)
 	new /obj/item/clothing/under/suit/black_really(src)
-	new /obj/item/clothing/neck/tie/red(src)
+	new /obj/item/clothing/inner_neck/tie/red(src)
 
 /obj/structure/closet/secure_closet/contraband/armory
 	anchored = TRUE

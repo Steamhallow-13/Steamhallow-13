@@ -49,14 +49,14 @@
 	include_subtypes = FALSE
 	reward = CARGO_CRATE_VALUE * 15
 	required_count = 3
-	wanted_types = list(/obj/item/clothing/neck/wreath = TRUE)
+	wanted_types = list(/obj/item/clothing/inner_neck/wreath = TRUE)
 
 /datum/bounty/item/mining/icewing_wreath
 	name = "Icewing Wreath"
 	description = "We're getting some....weird messages from Station 14's Research Director. And most of what they said was incoherent. But they apparently want an icewing wreath. Could you send them one?"
 	reward = CARGO_CRATE_VALUE * 30
 	required_count = 1
-	wanted_types = list(/obj/item/clothing/neck/wreath/icewing = TRUE)
+	wanted_types = list(/obj/item/clothing/inner_neck/wreath/icewing = TRUE)
 
 /datum/bounty/item/mining/bone_dagger
 	name = "Bone Daggers"

@@ -395,8 +395,8 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/accessory/waistcoat = 2,
 		/obj/item/clothing/head/hats/tophat = 2,
 		/obj/item/clothing/head/soft/black = 2,
-		/obj/item/clothing/neck/petcollar = 1,
-		/obj/item/clothing/neck/bowtie = 2,
+		/obj/item/clothing/inner_neck/petcollar = 1,
+		/obj/item/clothing/inner_neck/bowtie = 2,
 		/obj/item/clothing/under/costume/buttondown/slacks/service = 2,
 		/obj/item/clothing/under/costume/buttondown/skirt/service = 2,
 		/obj/item/clothing/under/rank/civilian/purple_bartender = 2,
@@ -497,7 +497,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	vend_reply = "Thank you for using the LawDrobe!"
 	products = list(
 		/obj/item/clothing/accessory/lawyers_badge = 2,
-		/obj/item/clothing/neck/tie = 3,
+		/obj/item/clothing/inner_neck/tie = 3,
 		/obj/item/clothing/under/rank/civilian/lawyer/bluesuit = 1,
 		/obj/item/clothing/under/rank/civilian/lawyer/bluesuit/skirt = 1,
 		/obj/item/clothing/suit/toggle/lawyer = 1,
@@ -682,7 +682,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/head/fedora = 2,
 		/obj/item/clothing/suit/jacket/det_suit/dark = 1,
 		/obj/item/clothing/suit/jacket/det_suit/noir = 1,
-		/obj/item/clothing/neck/tie/disco = 1,
+		/obj/item/clothing/inner_neck/tie/disco = 1,
 		/obj/item/clothing/under/rank/security/detective/disco = 1,
 		/obj/item/clothing/suit/jacket/det_suit/disco = 1,
 		/obj/item/clothing/shoes/discoshoes = 1,

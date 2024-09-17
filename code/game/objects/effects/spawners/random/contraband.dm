@@ -6,7 +6,7 @@
 		/obj/item/poster/random_contraband = 40,
 		/obj/item/food/grown/cannabis = 40,
 		/obj/item/clothing/mask/gas/syndicate = 30,
-		/obj/item/clothing/neck/necklace/dope = 30,
+		/obj/item/clothing/inner_neck/necklace/dope = 30,
 		/obj/item/food/grown/cannabis/rainbow = 20,
 		/obj/item/reagent_containers/cup/glass/bottle/absinthe = 20,
 		/obj/item/toy/cards/deck/syndicate = 20,

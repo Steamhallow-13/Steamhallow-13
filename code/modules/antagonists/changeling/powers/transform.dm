@@ -131,7 +131,7 @@
 	attack_hand(user, modifiers)
 
 /obj/item/changeling/id
-	slot_flags = ITEM_SLOT_ID
+	slot_flags = ITEM_SLOT_BELT
 	/// Cached flat icon of the ID
 	var/icon/cached_flat_icon
 	/// HUD job icon of the ID

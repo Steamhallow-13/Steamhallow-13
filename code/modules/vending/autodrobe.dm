@@ -47,7 +47,7 @@ GLOBAL_LIST_INIT(autodrobe_costumes_items, list(
 	/obj/item/clothing/glasses/eyepatch/medical = 3,
 	/obj/item/clothing/under/costume/gi = 4,
 	/obj/item/clothing/head/soft/propeller_hat = 3,
-	/obj/item/clothing/neck/bowtie/rainbow = 3,
+	/obj/item/clothing/inner_neck/bowtie/rainbow = 3,
 ))
 
 GLOBAL_LIST_INIT(autodrobe_supernatural_items, list(
@@ -101,7 +101,7 @@ GLOBAL_LIST_INIT(autodrobe_fancy_items, list(
 	/obj/item/clothing/under/costume/schoolgirl/green = 3,
 	/obj/item/clothing/under/costume/schoolgirl/orange = 3,
 	/obj/item/clothing/under/dress/skirt = 3,
-	/obj/item/clothing/neck/tie = 3,
+	/obj/item/clothing/inner_neck/tie = 3,
 	/obj/item/clothing/head/hats/tophat = 3,
 	/obj/item/clothing/under/costume/kilt = 3,
 	/obj/item/clothing/glasses/monocle = 3,
@@ -139,7 +139,7 @@ GLOBAL_LIST_INIT(autodrobe_animal_items, list(
 GLOBAL_LIST_INIT(autodrobe_service_items, list(
 	/obj/item/clothing/under/costume/buttondown/slacks/service = 3,
 	/obj/item/clothing/under/costume/buttondown/skirt/service = 3,
-	/obj/item/clothing/neck/bowtie = 6,
+	/obj/item/clothing/inner_neck/bowtie = 6,
 	/obj/item/clothing/accessory/waistcoat = 4,
 	/obj/item/clothing/under/suit/waiter = 4,
 	/obj/item/clothing/suit/apron = 3,
@@ -147,7 +147,7 @@ GLOBAL_LIST_INIT(autodrobe_service_items, list(
 	/obj/item/clothing/head/costume/maidheadband = 3,
 	/obj/item/clothing/under/costume/maid = 3,
 	/obj/item/clothing/gloves/maid = 3,
-	/obj/item/clothing/neck/maid = 3,
+	/obj/item/clothing/inner_neck/maid = 3,
 	/obj/item/clothing/under/rank/civilian/janitor/maid = 3,
 	/obj/item/clothing/accessory/maidapron = 3,
 ))

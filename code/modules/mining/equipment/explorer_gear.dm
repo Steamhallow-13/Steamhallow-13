@@ -143,7 +143,7 @@
 		to_chat(user, span_warning("You must be holding [src] in order to adjust it!"))
 		return CLICK_ACTION_BLOCKING
 	if(slot_flags & ITEM_SLOT_O_TORSOWEAR)
-		slot_flags = ITEM_SLOT_NECK
+		slot_flags = ITEM_SLOT_O_NECK
 		cold_protection = null
 		heat_protection = null
 		set_armor(/datum/armor/none)

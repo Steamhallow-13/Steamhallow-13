@@ -13,7 +13,7 @@
 		/obj/item/shard = 1,
 		/obj/item/flashlight/flare/candle = 1,
 	)
-	result_atoms = list(/obj/item/clothing/neck/eldritch_amulet)
+	result_atoms = list(/obj/item/clothing/inner_neck/eldritch_amulet)
 	cost = 1
 	route = PATH_SIDE
 	research_tree_icon_path = 'icons/obj/antags/eldritch.dmi'

@@ -66,7 +66,7 @@
 			/obj/item/clothing/suit = "SUIT",
 			/obj/item/clothing/head/helmet = "HELMET",
 			/obj/item/clothing/head = "HEAD",
-			/obj/item/clothing/neck = "NECK",
+			/obj/item/clothing/inner_neck = "NECK",
 			/obj/item/storage/backpack = "BACKPACK",
 			/obj/item/storage/belt = "BELT",
 			/obj/item/storage/pill_bottle = "PILL_BOTTLE",

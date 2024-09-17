@@ -16,7 +16,7 @@
 	id = "stethoscope"
 	build_type = AUTOLATHE | PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =HALF_SHEET_MATERIAL_AMOUNT)
-	build_path = /obj/item/clothing/neck/stethoscope
+	build_path = /obj/item/clothing/inner_neck/stethoscope
 	category = list(
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_MEDICAL,

@@ -763,7 +763,7 @@
 	head = /obj/item/clothing/head/soft/black
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_com
-	neck = /obj/item/clothing/neck/large_scarf/blue
+	neck = /obj/item/clothing/inner_neck/large_scarf/blue
 	//suit
 	id_trim = /datum/id_trim/job/bridge_assistant // half tider half command
 	id = /obj/item/card/id/advanced/chameleon
@@ -889,7 +889,7 @@
 	head = /obj/item/clothing/head/soft/rainbow
 	glasses = null
 	ears = /obj/item/radio/headset
-	neck = /obj/item/clothing/neck/petcollar
+	neck = /obj/item/clothing/inner_neck/petcollar
 	//suit
 	uniform = /obj/item/clothing/under/color/rainbow
 	l_pocket = /obj/item/toy/cattoy
@@ -968,7 +968,7 @@
 	//species_override = /datum/species/plasmaman
 
 	head = /obj/item/clothing/head/hooded/cult_hoodie/berserkerhood
-	neck = /obj/item/clothing/neck/heretic_focus/crimson_medallion
+	neck = /obj/item/clothing/inner_neck/heretic_focus/crimson_medallion
 	suit = /obj/item/clothing/suit/hooded/cultrobes/berserker
 	suit_store = /obj/item/melee/sickly_blade/cursed
 	uniform = /obj/item/clothing/under/color/red
@@ -1027,7 +1027,7 @@
 	//species_override = /datum/species/plasmaman
 
 	head = /obj/item/clothing/head/hooded/cult_hoodie/eldritch
-	neck = /obj/item/clothing/neck/heretic_focus
+	neck = /obj/item/clothing/inner_neck/heretic_focus
 	suit = /obj/item/clothing/suit/hooded/cultrobes/eldritch
 	suit_store = /obj/item/melee/sickly_blade/dark
 	uniform = /obj/item/clothing/under/color/darkgreen
@@ -1078,7 +1078,7 @@
 
 	head = /obj/item/clothing/head/helmet/chaplain/witchunter_hat
 	mask = /obj/item/clothing/mask/madness_mask
-	neck = /obj/item/clothing/neck/eldritch_amulet
+	neck = /obj/item/clothing/inner_neck/eldritch_amulet
 	suit = /obj/item/clothing/suit/hooded/cultrobes/void
 	suit_store = /obj/item/melee/sickly_blade
 	uniform = /obj/item/clothing/under/costume/gamberson/military
@@ -1095,7 +1095,7 @@
 		/obj/item/heretic_labyrinth_handbook,
 		/obj/item/heretic_labyrinth_handbook,
 		/obj/item/eldritch_potion/crucible_soul,
-		/obj/item/clothing/neck/heretic_focus/moon_amulet = 3,
+		/obj/item/clothing/inner_neck/heretic_focus/moon_amulet = 3,
 	)
 
 	knowledge_to_grant = list(

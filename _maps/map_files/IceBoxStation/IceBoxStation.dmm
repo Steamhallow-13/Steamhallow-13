@@ -29854,7 +29854,7 @@
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/effect/turf_decal/tile/blue/full,
 /turf/open/floor/iron/large,
 /area/station/medical/treatment_center)
@@ -62278,7 +62278,7 @@
 /obj/structure/table/glass,
 /obj/item/folder/white,
 /obj/item/stamp/head/cmo,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/machinery/camera/directional/north{
 	c_tag = "Chief Medical Office South";

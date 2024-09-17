@@ -1,11 +1,11 @@
 /datum/action/item_action/chameleon/change/neck
-	chameleon_type = /obj/item/clothing/neck
+	chameleon_type = /obj/item/clothing/inner_neck
 	chameleon_name = "Neck Accessory"
-	active_type = /obj/item/clothing/neck/tie/black
+	active_type = /obj/item/clothing/inner_neck/tie/black
 
 /datum/action/item_action/chameleon/change/neck/initialize_blacklist()
 	. = ..()
-	chameleon_blacklist |= typecacheof(/obj/item/clothing/neck/cloak/skill_reward)
+	chameleon_blacklist |= typecacheof(/obj/item/clothing/inner_neck/cloak/skill_reward)
 
 /datum/action/item_action/chameleon/change/stamp
 	chameleon_type = /obj/item/stamp

@@ -375,7 +375,7 @@
 	var/client/client = GLOB.directory[ckey(H.mind?.key)]
 
 	if(client?.is_veteran() && client?.prefs.read_preference(/datum/preference/toggle/playtime_reward_cloak))
-		neck = /obj/item/clothing/neck/cloak/skill_reward/playing
+		neck = /obj/item/clothing/inner_neck/cloak/skill_reward/playing
 
 /datum/outfit/job/post_equip(mob/living/carbon/human/equipped, visualsOnly = FALSE)
 	if(visualsOnly)

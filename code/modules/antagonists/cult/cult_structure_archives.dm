@@ -42,7 +42,7 @@
 		return
 	return list(CRIMSON_MEDALLION = list(
 			PREVIEW_IMAGE = image(icon = 'icons/obj/clothing/neck.dmi', icon_state = "crimson_medallion"),
-			OUTPUT_ITEMS = list(/obj/item/clothing/neck/heretic_focus/crimson_medallion),
+			OUTPUT_ITEMS = list(/obj/item/clothing/inner_neck/heretic_focus/crimson_medallion),
 			),
 	)
 

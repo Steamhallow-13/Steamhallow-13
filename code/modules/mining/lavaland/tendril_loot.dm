@@ -137,7 +137,7 @@
 	update_appearance()
 
 //Memento Mori
-/obj/item/clothing/neck/necklace/memento_mori
+/obj/item/clothing/inner_neck/necklace/memento_mori
 	name = "Memento Mori"
 	desc = "A mysterious pendant. An inscription on it says: \"Certain death tomorrow means certain life today.\""
 	icon = 'icons/obj/mining_zones/artefacts.dmi'
@@ -147,21 +147,21 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/mob/living/carbon/human/active_owner
 
-/obj/item/clothing/neck/necklace/memento_mori/item_action_slot_check(slot)
-	return (slot & ITEM_SLOT_NECK)
+/obj/item/clothing/inner_neck/necklace/memento_mori/item_action_slot_check(slot)
+	return (slot & ITEM_SLOT_I_NECK)
 
-/obj/item/clothing/neck/necklace/memento_mori/dropped(mob/user)
+/obj/item/clothing/inner_neck/necklace/memento_mori/dropped(mob/user)
 	..()
 	if(active_owner)
 		mori()
 
 //Just in case
-/obj/item/clothing/neck/necklace/memento_mori/Destroy()
+/obj/item/clothing/inner_neck/necklace/memento_mori/Destroy()
 	if(active_owner)
 		mori()
 	return ..()
 
-/obj/item/clothing/neck/necklace/memento_mori/proc/memento(mob/living/carbon/human/user)
+/obj/item/clothing/inner_neck/necklace/memento_mori/proc/memento(mob/living/carbon/human/user)
 	to_chat(user, span_warning("You feel your life being drained by the pendant..."))
 	if(do_after(user, 4 SECONDS, target = user))
 		to_chat(user, span_notice("Your lifeforce is now linked to the pendant! You feel like removing it would kill you, and yet you instinctively know that until then, you won't die."))
@@ -170,7 +170,7 @@
 		icon_state = "memento_mori_active"
 		active_owner = user
 
-/obj/item/clothing/neck/necklace/memento_mori/proc/mori()
+/obj/item/clothing/inner_neck/necklace/memento_mori/proc/mori()
 	icon_state = "memento_mori"
 	if(!active_owner)
 		return
@@ -180,7 +180,7 @@
 	to_chat(H, span_userdanger("You feel your life rapidly slipping away from you!"))
 	H.dust(TRUE, TRUE)
 
-/obj/item/clothing/neck/necklace/memento_mori/proc/check_health(mob/living/source)
+/obj/item/clothing/inner_neck/necklace/memento_mori/proc/check_health(mob/living/source)
 	SIGNAL_HANDLER
 
 	var/list/guardians = source.get_all_linked_holoparasites()
@@ -197,14 +197,14 @@
 				continue
 			regurgitate_guardian(guardian)
 
-/obj/item/clothing/neck/necklace/memento_mori/proc/consume_guardian(mob/living/basic/guardian/guardian)
+/obj/item/clothing/inner_neck/necklace/memento_mori/proc/consume_guardian(mob/living/basic/guardian/guardian)
 	new /obj/effect/temp_visual/guardian/phase/out(get_turf(guardian))
 	guardian.locked = TRUE
 	guardian.forceMove(src)
 	to_chat(guardian, span_userdanger("You have been locked away in your summoner's pendant!"))
 	guardian.playsound_local(get_turf(guardian), 'sound/magic/summonitems_generic.ogg', 50, TRUE)
 
-/obj/item/clothing/neck/necklace/memento_mori/proc/regurgitate_guardian(mob/living/basic/guardian/guardian)
+/obj/item/clothing/inner_neck/necklace/memento_mori/proc/regurgitate_guardian(mob/living/basic/guardian/guardian)
 	guardian.locked = FALSE
 	guardian.recall(forced = TRUE)
 	to_chat(guardian, span_notice("You have been returned back from your summoner's pendant!"))
@@ -216,7 +216,7 @@
 	desc = "Bind your life to the pendant."
 
 /datum/action/item_action/hands_free/memento_mori/Trigger(trigger_flags)
-	var/obj/item/clothing/neck/necklace/memento_mori/MM = target
+	var/obj/item/clothing/inner_neck/necklace/memento_mori/MM = target
 	if(!MM.active_owner)
 		if(ishuman(owner))
 			MM.memento(owner)
@@ -636,7 +636,7 @@
 
 /obj/item/clothing/gloves/gauntlets/equipped(mob/user, slot)
 	. = ..()
-	if(slot & ITEM_SLOT_GLOVES)
+	if(slot & ITEM_SLOT_L_HAND)
 		tool_behaviour = TOOL_MINING
 		RegisterSignal(user, COMSIG_LIVING_UNARMED_ATTACK, PROC_REF(rocksmash))
 		RegisterSignal(user, COMSIG_MOVABLE_BUMP, PROC_REF(rocksmash))

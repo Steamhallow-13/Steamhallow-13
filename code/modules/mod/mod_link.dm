@@ -139,7 +139,7 @@
 	SIGNAL_HANDLER
 	on_user_set_dir_generic(mod_link, newdir || SOUTH)
 
-/obj/item/clothing/neck/link_scryer
+/obj/item/clothing/outer_neck/link_scryer
 	name = "\improper MODlink scryer"
 	desc = "An intricate piece of machinery that creates a holographic video call with another MODlink-compatible device. Essentially a video necklace."
 	icon_state = "modlink"
@@ -153,7 +153,7 @@
 	/// An additional name tag for the scryer, seen as "MODlink scryer - [label]"
 	var/label
 
-/obj/item/clothing/neck/link_scryer/Initialize(mapload)
+/obj/item/clothing/outer_neck/link_scryer/Initialize(mapload)
 	. = ..()
 	mod_link = new(
 		src,
@@ -166,13 +166,13 @@
 	)
 	START_PROCESSING(SSobj, src)
 
-/obj/item/clothing/neck/link_scryer/Destroy()
+/obj/item/clothing/outer_neck/link_scryer/Destroy()
 	QDEL_NULL(cell)
 	QDEL_NULL(mod_link)
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/clothing/neck/link_scryer/examine(mob/user)
+/obj/item/clothing/outer_neck/link_scryer/examine(mob/user)
 	. = ..()
 	if(cell)
 		. += span_notice("The battery charge reads [cell.percent()]%. <b>Right-click</b> with an empty hand to remove it.")
@@ -181,16 +181,16 @@
 	. += span_notice("The MODlink ID is [mod_link.id], frequency is [mod_link.frequency || "unset"]. <b>Right-click</b> with multitool to copy/imprint frequency.")
 	. += span_notice("Use in hand to set name.")
 
-/obj/item/clothing/neck/link_scryer/equipped(mob/living/user, slot)
+/obj/item/clothing/outer_neck/link_scryer/equipped(mob/living/user, slot)
 	. = ..()
 	if(slot != ITEM_SLOT_O_NECK)
 		mod_link?.end_call()
 
-/obj/item/clothing/neck/link_scryer/dropped(mob/living/user)
+/obj/item/clothing/outer_neck/link_scryer/dropped(mob/living/user)
 	. = ..()
 	mod_link?.end_call()
 
-/obj/item/clothing/neck/link_scryer/attack_self(mob/user, modifiers)
+/obj/item/clothing/outer_neck/link_scryer/attack_self(mob/user, modifiers)
 	var/new_label = reject_bad_text(tgui_input_text(user, "Change the visible name", "Set Name", label, MAX_NAME_LEN))
 	if(!user.is_holding(src))
 		return
@@ -201,12 +201,12 @@
 	balloon_alert(user, "name set")
 	update_name()
 
-/obj/item/clothing/neck/link_scryer/process(seconds_per_tick)
+/obj/item/clothing/outer_neck/link_scryer/process(seconds_per_tick)
 	if(!mod_link.link_call)
 		return
 	cell.use(0.02 * STANDARD_CELL_RATE * seconds_per_tick, force = TRUE)
 
-/obj/item/clothing/neck/link_scryer/attackby(obj/item/attacked_by, mob/user, params)
+/obj/item/clothing/outer_neck/link_scryer/attackby(obj/item/attacked_by, mob/user, params)
 	. = ..()
 	if(cell || !istype(attacked_by, /obj/item/stock_parts/power_store/cell))
 		return
@@ -215,23 +215,23 @@
 	cell = attacked_by
 	balloon_alert(user, "installed [cell.name]")
 
-/obj/item/clothing/neck/link_scryer/update_name(updates)
+/obj/item/clothing/outer_neck/link_scryer/update_name(updates)
 	. = ..()
 	name = "[initial(name)][label ? " - [label]" : ""]"
 
-/obj/item/clothing/neck/link_scryer/Exited(atom/movable/gone, direction)
+/obj/item/clothing/outer_neck/link_scryer/Exited(atom/movable/gone, direction)
 	. = ..()
 	if(gone == cell)
 		cell = null
 
-/obj/item/clothing/neck/link_scryer/attack_hand_secondary(mob/user, list/modifiers)
+/obj/item/clothing/outer_neck/link_scryer/attack_hand_secondary(mob/user, list/modifiers)
 	if(!cell)
 		return SECONDARY_ATTACK_CONTINUE_CHAIN
 	balloon_alert(user, "removed [cell.name]")
 	user.put_in_hands(cell)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
-/obj/item/clothing/neck/link_scryer/multitool_act_secondary(mob/living/user, obj/item/multitool/tool)
+/obj/item/clothing/outer_neck/link_scryer/multitool_act_secondary(mob/living/user, obj/item/multitool/tool)
 	. = NONE
 
 	var/tool_frequency = null
@@ -261,50 +261,50 @@
 				balloon_alert(user, "frequency set")
 				. = ITEM_INTERACT_SUCCESS
 
-/obj/item/clothing/neck/link_scryer/worn_overlays(mutable_appearance/standing, isinhands)
+/obj/item/clothing/outer_neck/link_scryer/worn_overlays(mutable_appearance/standing, isinhands)
 	. = ..()
 	if(!QDELETED(mod_link.link_call))
 		. += mutable_appearance('icons/mob/clothing/neck.dmi', "modlink_active")
 
-/obj/item/clothing/neck/link_scryer/ui_action_click(mob/user)
+/obj/item/clothing/outer_neck/link_scryer/ui_action_click(mob/user)
 	if(mod_link.link_call)
 		mod_link.end_call()
 	else
 		call_link(user, mod_link)
 
-/obj/item/clothing/neck/link_scryer/proc/get_user()
+/obj/item/clothing/outer_neck/link_scryer/proc/get_user()
 	var/mob/living/carbon/user = loc
 	return istype(user) && user.wear_neck == src ? user : null
 
-/obj/item/clothing/neck/link_scryer/proc/can_call()
+/obj/item/clothing/outer_neck/link_scryer/proc/can_call()
 	var/mob/living/user = loc
 	return istype(user) && cell?.charge && user.stat < DEAD
 
-/obj/item/clothing/neck/link_scryer/proc/make_link_visual()
+/obj/item/clothing/outer_neck/link_scryer/proc/make_link_visual()
 	var/mob/living/user = mod_link.get_user_callback.Invoke()
 	user.update_worn_neck()
 	return make_link_visual_generic(mod_link, PROC_REF(on_overlay_change))
 
-/obj/item/clothing/neck/link_scryer/proc/get_link_visual(atom/movable/visuals)
+/obj/item/clothing/outer_neck/link_scryer/proc/get_link_visual(atom/movable/visuals)
 	return get_link_visual_generic(mod_link, visuals, PROC_REF(on_user_set_dir))
 
-/obj/item/clothing/neck/link_scryer/proc/delete_link_visual()
+/obj/item/clothing/outer_neck/link_scryer/proc/delete_link_visual()
 	var/mob/living/user = mod_link.get_user_callback.Invoke()
 	if(!QDELETED(user))
 		user.update_worn_neck()
 	return delete_link_visual_generic(mod_link)
 
-/obj/item/clothing/neck/link_scryer/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods, message_range)
+/obj/item/clothing/outer_neck/link_scryer/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods, message_range)
 	. = ..()
 	if(speaker != loc)
 		return
 	mod_link.visual.say(raw_message, sanitize = FALSE, message_range = 3)
 
-/obj/item/clothing/neck/link_scryer/proc/on_overlay_change(atom/source, cache_index, overlay)
+/obj/item/clothing/outer_neck/link_scryer/proc/on_overlay_change(atom/source, cache_index, overlay)
 	SIGNAL_HANDLER
 	addtimer(CALLBACK(src, PROC_REF(update_link_visual)), 1 TICKS, TIMER_UNIQUE)
 
-/obj/item/clothing/neck/link_scryer/proc/update_link_visual()
+/obj/item/clothing/outer_neck/link_scryer/proc/update_link_visual()
 	if(QDELETED(mod_link.link_call))
 		return
 	var/mob/living/user = loc
@@ -312,18 +312,18 @@
 	mod_link.visual_overlays = user.overlays - user.active_thinking_indicator
 	mod_link.visual.add_overlay(mod_link.visual_overlays)
 
-/obj/item/clothing/neck/link_scryer/proc/on_user_set_dir(atom/source, dir, newdir)
+/obj/item/clothing/outer_neck/link_scryer/proc/on_user_set_dir(atom/source, dir, newdir)
 	SIGNAL_HANDLER
 	on_user_set_dir_generic(mod_link, newdir || SOUTH)
 
-/obj/item/clothing/neck/link_scryer/loaded
+/obj/item/clothing/outer_neck/link_scryer/loaded
 	starting_frequency = "NT"
 
-/obj/item/clothing/neck/link_scryer/loaded/Initialize(mapload)
+/obj/item/clothing/outer_neck/link_scryer/loaded/Initialize(mapload)
 	. = ..()
 	cell = new /obj/item/stock_parts/power_store/cell/high(src)
 
-/obj/item/clothing/neck/link_scryer/loaded/charlie
+/obj/item/clothing/outer_neck/link_scryer/loaded/charlie
 	starting_frequency = MODLINK_FREQ_CHARLIE
 
 /// A MODlink datum, used to handle unique functions that will be used in the MODlink call.

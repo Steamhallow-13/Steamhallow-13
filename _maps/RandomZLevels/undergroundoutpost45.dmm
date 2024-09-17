@@ -6492,7 +6492,7 @@
 /obj/machinery/airalarm/directional/north,
 /obj/effect/mapping_helpers/airalarm/all_access,
 /obj/item/hand_labeler,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /turf/open/floor/iron/white/side,
 /area/awaymission/undergroundoutpost45/research)
 "Ar" = (

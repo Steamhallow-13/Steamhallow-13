@@ -88,7 +88,7 @@
 	/// List that keeps track of which items have been gifted to the heretic after a cultist was sacrificed. Used to alter drop chances to reduce dupes.
 	var/list/unlocked_heretic_items = list(
 		/obj/item/melee/sickly_blade/cursed = 0,
-		/obj/item/clothing/neck/heretic_focus/crimson_medallion = 0,
+		/obj/item/clothing/inner_neck/heretic_focus/crimson_medallion = 0,
 		/mob/living/basic/construct/harvester/heretic = 0,
 	)
 	/// Simpler version of above used to limit amount of loot that can be hoarded
@@ -779,7 +779,7 @@
 		return
 
 	var/mob/living/pawn = owner.current
-	pawn.equip_to_slot_if_possible(new /obj/item/clothing/neck/heretic_focus(get_turf(pawn)), ITEM_SLOT_NECK, TRUE, TRUE)
+	pawn.equip_to_slot_if_possible(new /obj/item/clothing/inner_neck/heretic_focus(get_turf(pawn)), ITEM_SLOT_I_NECK, TRUE, TRUE)
 	to_chat(pawn, span_hypnophrase("The Mansus has manifested you a focus."))
 
 /datum/antagonist/heretic/antag_panel_data()

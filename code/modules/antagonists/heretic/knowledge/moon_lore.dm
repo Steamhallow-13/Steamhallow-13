@@ -132,9 +132,9 @@
 	required_atoms = list(
 		/obj/item/organ/internal/heart = 1,
 		/obj/item/stack/sheet/glass = 2,
-		/obj/item/clothing/neck/tie = 1,
+		/obj/item/clothing/inner_neck/tie = 1,
 	)
-	result_atoms = list(/obj/item/clothing/neck/heretic_focus/moon_amulet)
+	result_atoms = list(/obj/item/clothing/inner_neck/heretic_focus/moon_amulet)
 	cost = 1
 	route = PATH_MOON
 	depth = 8
@@ -242,7 +242,7 @@
 			continue
 		var/datum/antagonist/lunatic/lunatic = crewmate.mind.add_antag_datum(/datum/antagonist/lunatic)
 		lunatic.set_master(user.mind, user)
-		var/obj/item/clothing/neck/heretic_focus/moon_amulet/amulet = new(crewmate_turf)
+		var/obj/item/clothing/inner_neck/heretic_focus/moon_amulet/amulet = new(crewmate_turf)
 		var/static/list/slots = list(
 			"neck" = ITEM_SLOT_NECK,
 			"hands" = ITEM_SLOT_HANDS,

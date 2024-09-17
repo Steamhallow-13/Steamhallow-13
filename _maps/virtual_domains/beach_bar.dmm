@@ -482,7 +482,7 @@
 	name = "flip-flops"
 	},
 /obj/item/clothing/glasses/sunglasses,
-/obj/item/clothing/neck/beads,
+/obj/item/clothing/inner_neck/beads,
 /turf/open/floor/wood,
 /area/virtual_domain/fullbright)
 "xR" = (
@@ -947,7 +947,7 @@
 	name = "flip-flops"
 	},
 /obj/item/clothing/glasses/sunglasses/big,
-/obj/item/clothing/neck/beads,
+/obj/item/clothing/inner_neck/beads,
 /turf/open/floor/wood,
 /area/virtual_domain/fullbright)
 "Sg" = (

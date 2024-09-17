@@ -1,7 +1,7 @@
 /datum/wires/collar_bomb
 	proper_name = "Collar Bomb"
 	randomize = TRUE // Only one wire, no need for blueprints
-	holder_type = /obj/item/clothing/neck/collar_bomb
+	holder_type = /obj/item/clothing/inner_neck/collar_bomb
 	wires = list(WIRE_ACTIVATE)
 
 /datum/wires/collar_bomb/interactable(mob/user)
@@ -10,7 +10,7 @@
 		return FALSE
 
 /datum/wires/collar_bomb/on_pulse(wire, mob/user)
-	var/obj/item/clothing/neck/collar_bomb/collar = holder
+	var/obj/item/clothing/inner_neck/collar_bomb/collar = holder
 	if(collar.active)
 		return ..()
 	collar.explosive_countdown(ticks_left = 5)

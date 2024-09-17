@@ -13,24 +13,24 @@
 
 /datum/loadout_item/neck/scarf_greyscale
 	name = "Scarf (Colorable)"
-	item_path = /obj/item/clothing/neck/scarf
+	item_path = /obj/item/clothing/inner_neck/scarf
 
 /datum/loadout_item/neck/greyscale_large
 	name = "Scarf (Large, Colorable)"
-	item_path = /obj/item/clothing/neck/large_scarf
+	item_path = /obj/item/clothing/inner_neck/large_scarf
 
 /datum/loadout_item/neck/greyscale_larger
 	name = "Scarf (Larger, Colorable)"
-	item_path = /obj/item/clothing/neck/infinity_scarf
+	item_path = /obj/item/clothing/inner_neck/infinity_scarf
 
 /datum/loadout_item/neck/necktie
 	name = "Necktie (Colorable)"
-	item_path = /obj/item/clothing/neck/tie
+	item_path = /obj/item/clothing/inner_neck/tie
 
 /datum/loadout_item/neck/necktie_disco
 	name = "Necktie (Ugly)"
-	item_path = /obj/item/clothing/neck/tie/horrible
+	item_path = /obj/item/clothing/inner_neck/tie/horrible
 
 /datum/loadout_item/neck/necktie_loose
 	name = "Necktie (Loose)"
-	item_path = /obj/item/clothing/neck/tie/detective
+	item_path = /obj/item/clothing/inner_neck/tie/detective

@@ -1188,7 +1188,7 @@
 /obj/item/clothing/suit/costume/wellworn_shirt/graphic/ian,
 /obj/item/clothing/shoes/sandal/beach,
 /obj/item/clothing/glasses/sunglasses,
-/obj/item/clothing/neck/beads,
+/obj/item/clothing/inner_neck/beads,
 /turf/open/floor/wood,
 /area/ruin/powered/beach)
 "RE" = (
@@ -1363,7 +1363,7 @@
 	name = "flip-flops"
 	},
 /obj/item/clothing/glasses/sunglasses/big,
-/obj/item/clothing/neck/beads,
+/obj/item/clothing/inner_neck/beads,
 /turf/open/floor/wood,
 /area/ruin/powered/beach)
 "WV" = (

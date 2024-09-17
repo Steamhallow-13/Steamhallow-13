@@ -7070,7 +7070,7 @@
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post/minipost)
 "Bk" = (
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/effect/turf_decal/tile/blue/opposingcorners{
 	dir = 1
 	},
@@ -9215,7 +9215,7 @@
 /area/awaymission/snowdin/cave/cavern)
 "Mg" = (
 /obj/structure/table,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/machinery/light/directional/north,
 /obj/machinery/firealarm/directional/north,
 /obj/effect/turf_decal/tile/blue/opposingcorners{

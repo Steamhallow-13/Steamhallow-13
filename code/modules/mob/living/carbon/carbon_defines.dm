@@ -30,7 +30,7 @@
 	//inventory slots
 	var/obj/item/back = null
 	var/obj/item/clothing/mask/wear_mask = null
-	var/obj/item/clothing/neck/wear_neck = null
+	var/obj/item/clothing/inner_neck/wear_neck = null
 	/// Equipped air tank. Never set this manually.
 	var/obj/item/tank/internal = null
 	/// "External" air tank. Never set this manually. Not required to stay directly equipped on the mob (i.e. could be a machine or MOD suit module).

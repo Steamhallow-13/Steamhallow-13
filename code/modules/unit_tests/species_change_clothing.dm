@@ -19,7 +19,7 @@
 	// Testing whether item-species restrictions properly blocks changing into a blacklisted species.
 	morphing_human.set_species(/datum/species/monkey)
 
-	var/obj/item/clothing/neck/petcollar/collar = new
+	var/obj/item/clothing/inner_neck/petcollar/collar = new
 	morphing_human.equip_to_slot_or_del(collar, ITEM_SLOT_NECK)
 
 	var/obj/item/equipped_collar = morphing_human.get_item_by_slot(ITEM_SLOT_NECK)

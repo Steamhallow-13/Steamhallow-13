@@ -133,7 +133,7 @@
 	name = "Syndicate Operative - Gorlex Reinforcement"
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	head = /obj/item/clothing/head/helmet/swat
-	neck = /obj/item/clothing/neck/large_scarf/syndie
+	neck = /obj/item/clothing/inner_neck/large_scarf/syndie
 	glasses = /obj/item/clothing/glasses/cold
 	faction = "the Gorlex Marauders"
 
@@ -168,7 +168,7 @@
 	suit = /obj/item/clothing/suit/toggle/labcoat/interdyne
 	head = /obj/item/clothing/head/beret/medical
 	gloves = /obj/item/clothing/gloves/latex
-	neck = /obj/item/clothing/neck/stethoscope
+	neck = /obj/item/clothing/inner_neck/stethoscope
 	glasses = /obj/item/clothing/glasses/hud/health
 	mask = /obj/item/clothing/mask/breath/medical
 	faction = "Interdyne Pharmaceutics"

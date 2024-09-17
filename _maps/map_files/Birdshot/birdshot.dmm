@@ -448,7 +448,7 @@
 /obj/item/clothing/accessory/waistcoat,
 /obj/item/clothing/suit/toggle/lawyer/black,
 /obj/item/clothing/under/suit/red,
-/obj/item/clothing/neck/tie/black,
+/obj/item/clothing/inner_neck/tie/black,
 /obj/item/clothing/under/costume/buttondown/slacks/service,
 /obj/effect/turf_decal/tile/blue/opposingcorners{
 	dir = 1
@@ -21049,7 +21049,7 @@
 /area/station/maintenance/department/engine)
 "hFd" = (
 /obj/structure/rack,
-/obj/item/clothing/neck/petcollar,
+/obj/item/clothing/inner_neck/petcollar,
 /obj/item/flashlight/flare/candle{
 	pixel_x = 10
 	},
@@ -29840,7 +29840,7 @@
 "krY" = (
 /obj/structure/table/glass,
 /obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/neck/stethoscope{
+/obj/item/clothing/inner_neck/stethoscope{
 	pixel_y = 15
 	},
 /turf/open/floor/wood/parquet,

@@ -876,7 +876,7 @@
 /obj/structure/sign/poster/contraband/free_key/directional/south,
 /obj/structure/rack,
 /obj/item/stack/medical/suture,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/item/reagent_containers/hypospray/medipen/atropine,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/syndielab)

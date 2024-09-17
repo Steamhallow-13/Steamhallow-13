@@ -279,7 +279,7 @@
 /turf/open/water/beach,
 /area/centcom/basketball)
 "Di" = (
-/obj/item/clothing/neck/necklace/dope,
+/obj/item/clothing/inner_neck/necklace/dope,
 /turf/open/misc/beach/sand,
 /area/centcom/basketball)
 "Dt" = (
@@ -317,7 +317,7 @@
 /turf/open/misc/beach/sand,
 /area/centcom/basketball)
 "FS" = (
-/obj/item/clothing/neck/beads,
+/obj/item/clothing/inner_neck/beads,
 /turf/open/misc/beach/sand,
 /area/centcom/basketball)
 "Ho" = (

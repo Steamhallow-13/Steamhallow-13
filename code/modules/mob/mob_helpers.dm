@@ -441,7 +441,7 @@
 		if(ITEM_SLOT_MASK)
 			return /obj/item/clothing/mask
 		if(ITEM_SLOT_NECK)
-			return /obj/item/clothing/neck
+			return /obj/item/clothing/inner_neck
 		if(ITEM_SLOT_HANDCUFFED)
 			return /obj/item/restraints/handcuffs
 		if(ITEM_SLOT_LEGCUFFED)

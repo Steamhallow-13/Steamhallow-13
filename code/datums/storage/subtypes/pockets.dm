@@ -216,8 +216,8 @@
 	set_holdable(list(
 		/obj/item/ammo_box/strilka310/lionhunter,
 		/obj/item/bodypart, // Bodyparts are often used in rituals. They're also often normal sized, so you can only fit one.
-		/obj/item/clothing/neck/eldritch_amulet,
-		/obj/item/clothing/neck/heretic_focus,
+		/obj/item/clothing/inner_neck/eldritch_amulet,
+		/obj/item/clothing/inner_neck/heretic_focus,
 		/obj/item/codex_cicatrix,
 		/obj/item/eldritch_potion,
 		/obj/item/food/grown/poppy, // Used to regain a Living Heart.

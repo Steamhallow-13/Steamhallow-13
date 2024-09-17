@@ -69,7 +69,7 @@
 	)
 
 	uniform = /obj/item/clothing/under/trek/command/next
-	neck = /obj/item/clothing/neck/large_scarf/blue
+	neck = /obj/item/clothing/inner_neck/large_scarf/blue
 	belt = /obj/item/storage/belt/utility/full/inducer
 	ears = /obj/item/radio/headset/headset_com
 	glasses = /obj/item/clothing/glasses/sunglasses

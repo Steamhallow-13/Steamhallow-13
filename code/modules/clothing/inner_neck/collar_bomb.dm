@@ -1,5 +1,5 @@
 ///Special neckwear that kills its wearer if triggered, by either its specific remote or assemblies.
-/obj/item/clothing/neck/collar_bomb
+/obj/item/clothing/inner_neck/collar_bomb
 	name = "collar bomb"
 	desc = "A cumbersome collar of some sort, filled with just enough explosive to rip one's head off... at least that's what it reads on the front tag."
 	icon_state = "collar_bomb"
@@ -21,39 +21,39 @@
 	bomb = 97
 	acid = 97
 
-/obj/item/clothing/neck/collar_bomb/Initialize(mapload, obj/item/collar_bomb_button/button)
+/obj/item/clothing/inner_neck/collar_bomb/Initialize(mapload, obj/item/collar_bomb_button/button)
 	. = ..()
 	src.button = button
 	button?.collar = src
 	set_wires(new /datum/wires/collar_bomb(src))
 
-/obj/item/clothing/neck/collar_bomb/Destroy()
+/obj/item/clothing/inner_neck/collar_bomb/Destroy()
 	button?.collar = null
 	button = null
 	return ..()
 
-/obj/item/clothing/neck/collar_bomb/examine(mob/user)
+/obj/item/clothing/inner_neck/collar_bomb/examine(mob/user)
 	. = ..()
 	if(user.get_item_by_slot(ITEM_SLOT_NECK) == src)
 		return
 	. += span_tinynotice("It has a [EXAMINE_HINT("wire")] panel that could be interacted with...")
 
-/obj/item/clothing/neck/collar_bomb/attackby(obj/item/item, mob/user, params)
+/obj/item/clothing/inner_neck/collar_bomb/attackby(obj/item/item, mob/user, params)
 	if(is_wire_tool(item))
 		wires.interact(user)
 	else
 		return ..()
 
-/obj/item/clothing/neck/collar_bomb/equipped(mob/user, slot, initial = FALSE)
+/obj/item/clothing/inner_neck/collar_bomb/equipped(mob/user, slot, initial = FALSE)
 	. = ..()
 	if(slot == ITEM_SLOT_NECK)
 		ADD_TRAIT(src, TRAIT_NODROP, INNATE_TRAIT)
 
-/obj/item/clothing/neck/collar_bomb/dropped(mob/user, silent = FALSE)
+/obj/item/clothing/inner_neck/collar_bomb/dropped(mob/user, silent = FALSE)
 	. = ..()
 	REMOVE_TRAIT(src, TRAIT_NODROP, INNATE_TRAIT)
 
-/obj/item/clothing/neck/collar_bomb/proc/explosive_countdown(ticks_left)
+/obj/item/clothing/inner_neck/collar_bomb/proc/explosive_countdown(ticks_left)
 	active = TRUE
 	if(ticks_left > 0)
 		playsound(src, 'sound/items/timer.ogg', 30, FALSE)
@@ -92,7 +92,7 @@
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	///The collar bomb it's associated with.
-	var/obj/item/clothing/neck/collar_bomb/collar
+	var/obj/item/clothing/inner_neck/collar_bomb/collar
 
 /obj/item/collar_bomb_button/attack_self(mob/user)
 	. = ..()

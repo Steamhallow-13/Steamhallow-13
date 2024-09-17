@@ -1399,7 +1399,7 @@
 /obj/machinery/door/window/left/directional/west{
 	name = "Medical Equipment Storage"
 	},
-/obj/item/clothing/neck/stethoscope{
+/obj/item/clothing/inner_neck/stethoscope{
 	pixel_y = 4
 	},
 /obj/item/storage/belt/medical{

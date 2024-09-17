@@ -4656,7 +4656,7 @@
 	},
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/neck/tie/black,
+/obj/item/clothing/inner_neck/tie/black,
 /turf/open/floor/plating,
 /area/station/commons/vacant_room/commissary)
 "bFP" = (
@@ -19966,7 +19966,7 @@
 /obj/structure/table/wood,
 /obj/item/clothing/under/costume/maid,
 /obj/item/clothing/head/costume/kitty,
-/obj/item/clothing/neck/petcollar,
+/obj/item/clothing/inner_neck/petcollar,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/station/maintenance/central/greater)
@@ -20292,7 +20292,7 @@
 /obj/structure/table/reinforced/rglass,
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/item/book/manual/wiki/medicine,
-/obj/item/clothing/neck/stethoscope{
+/obj/item/clothing/inner_neck/stethoscope{
 	pixel_y = 4
 	},
 /turf/open/floor/iron/white,
@@ -39230,7 +39230,7 @@
 /obj/structure/table/reinforced/rglass,
 /obj/item/clipboard,
 /obj/item/toy/figure/cmo,
-/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/inner_neck/stethoscope,
 /obj/effect/turf_decal/trimline/dark_blue/filled/line,
 /turf/open/floor/holofloor/dark,
 /area/station/command/heads_quarters/cmo)
@@ -51189,7 +51189,7 @@
 "saY" = (
 /obj/structure/table/wood,
 /obj/item/clothing/gloves/maid,
-/obj/item/clothing/neck/maid,
+/obj/item/clothing/inner_neck/maid,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/station/maintenance/central/greater)
