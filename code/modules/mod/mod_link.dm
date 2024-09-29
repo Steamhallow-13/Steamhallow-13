@@ -282,7 +282,7 @@
 
 /obj/item/clothing/outer_neck/link_scryer/proc/make_link_visual()
 	var/mob/living/user = mod_link.get_user_callback.Invoke()
-	user.update_worn_neck()
+	user.update_worn_i_neck()
 	return make_link_visual_generic(mod_link, PROC_REF(on_overlay_change))
 
 /obj/item/clothing/outer_neck/link_scryer/proc/get_link_visual(atom/movable/visuals)
@@ -291,7 +291,7 @@
 /obj/item/clothing/outer_neck/link_scryer/proc/delete_link_visual()
 	var/mob/living/user = mod_link.get_user_callback.Invoke()
 	if(!QDELETED(user))
-		user.update_worn_neck()
+		user.update_worn_i_neck()
 	return delete_link_visual_generic(mod_link)
 
 /obj/item/clothing/outer_neck/link_scryer/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods, message_range)

@@ -933,7 +933,7 @@
 	if(flags & ITEM_SLOT_BACK)
 		owner.update_worn_back()
 	if(flags & ITEM_SLOT_NECK)
-		owner.update_worn_neck()
+		owner.update_worn_i_neck()
 
 ///Returns the temperature of src. If you want to know if an item is hot use this proc.
 /obj/item/proc/get_temperature()

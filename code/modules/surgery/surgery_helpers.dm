@@ -24,7 +24,7 @@
 			eyesmouth_covered |= clothes.flags_cover
 		if(ishuman(clothed_carbon))
 			var/mob/living/carbon/human/clothed_human = clothed_carbon
-			for(var/obj/item/clothes in list(clothed_human.wear_suit, clothed_human.w_uniform, clothed_human.shoes, clothed_human.belt, clothed_human.gloves, clothed_human.glasses, clothed_human.ears))
+			for(var/obj/item/clothes in list(clothed_human.wear_suit, clothed_human.w_uniform, clothed_human.shoes, clothed_human.belt, clothed_human.left_hand, clothed_human.right_hand, clothed_human.glasses, clothed_human.ears))
 				covered_locations |= clothes.body_parts_covered
 				face_covered |= clothes.flags_inv
 				eyesmouth_covered |= clothes.flags_cover

@@ -159,7 +159,7 @@
 			if(wear_neck)
 				return
 			wear_neck = equipping
-			update_worn_neck(equipping)
+			update_worn_i_neck(equipping)
 		if(ITEM_SLOT_HANDCUFFED)
 			set_handcuffed(equipping)
 			update_handcuffed()
@@ -212,7 +212,7 @@
 	else if(I == wear_neck)
 		wear_neck = null
 		if(!QDELETED(src))
-			update_worn_neck(I)
+			update_worn_i_neck(I)
 	else if(I == handcuffed)
 		set_handcuffed(null)
 		if(buckled?.buckle_requires_restraints)

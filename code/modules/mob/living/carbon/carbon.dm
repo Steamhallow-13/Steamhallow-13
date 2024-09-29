@@ -1250,7 +1250,7 @@
 		. = TRUE
 
 	if(!(obscured & ITEM_SLOT_NECK) && wear_neck?.wash(clean_types))
-		update_worn_neck()
+		update_worn_i_neck()
 		. = TRUE
 
 	if(!(obscured & ITEM_SLOT_FEET) && shoes?.wash(clean_types))

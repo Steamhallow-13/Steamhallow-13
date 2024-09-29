@@ -63,7 +63,7 @@ There are several things that need to be remembered:
 		update_worn_back()
 		update_worn_oversuit()
 		update_pockets()
-		update_worn_neck()
+		update_worn_i_neck()
 		update_transform()
 		//mutations
 		update_mutations_overlay()
@@ -271,7 +271,7 @@ There are several things that need to be remembered:
 		overlays_standing[EARS_LAYER] = ears_overlay
 	apply_overlay(EARS_LAYER)
 
-/mob/living/carbon/human/update_worn_neck(update_obscured = TRUE)
+/mob/living/carbon/human/update_worn_i_neck(update_obscured = TRUE)
 	remove_overlay(NECK_LAYER)
 
 	if(client && hud_used && hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_NECK) + 1])

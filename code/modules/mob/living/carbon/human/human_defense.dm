@@ -420,7 +420,7 @@
 				head_clothes.acid_act(acidpwr, acid_volume)
 				update_worn_glasses()
 				update_worn_mask()
-				update_worn_neck()
+				update_worn_i_neck()
 				update_worn_head()
 			else
 				to_chat(src, span_notice("Your [head_clothes.name] protects your head and face from the acid!"))

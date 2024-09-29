@@ -34,7 +34,7 @@
 		if(OFFSET_SUIT)
 			update_worn_oversuit()
 		if(OFFSET_NECK)
-			update_worn_neck()
+			update_worn_i_neck()
 		if(OFFSET_HELD)
 			update_held_items()
 
@@ -347,7 +347,7 @@
 
 	apply_overlay(FACEMASK_LAYER)
 
-/mob/living/carbon/update_worn_neck(update_obscured = TRUE)
+/mob/living/carbon/update_worn_i_neck(update_obscured = TRUE)
 	remove_overlay(NECK_LAYER)
 
 	if(client && hud_used?.inv_slots[TOBITSHIFT(ITEM_SLOT_NECK) + 1])

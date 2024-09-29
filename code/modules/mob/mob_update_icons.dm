@@ -6,21 +6,22 @@
 	return
 
 ///Updates every item slot passed into it.
+/// STEAMHALLOW FLAG - inventory
 /mob/proc/update_clothing(slot_flags)
 	if(slot_flags & ITEM_SLOT_BACK)
 		update_worn_back()
 	if(slot_flags & ITEM_SLOT_MASK)
 		update_worn_mask()
-	if(slot_flags & ITEM_SLOT_NECK)
-		update_worn_neck()
+	if(slot_flags & ITEM_SLOT_I_NECK)
+		update_worn_i_neck()
+	if(slot_flags & ITEM_SLOT_O_NECK)
+		update_worn_o_neck()
 	if(slot_flags & ITEM_SLOT_HANDCUFFED)
 		update_worn_handcuffs()
 	if(slot_flags & ITEM_SLOT_LEGCUFFED)
 		update_worn_legcuffs()
 	if(slot_flags & ITEM_SLOT_BELT)
 		update_worn_belt()
-	if(slot_flags & ITEM_SLOT_ID)
-		update_worn_id()
 	if(slot_flags & ITEM_SLOT_EARS)
 		update_worn_ears()
 	if(slot_flags & ITEM_SLOT_EYES)
@@ -37,19 +38,17 @@
 		update_worn_oversuit()
 	if(slot_flags & ITEM_SLOT_I_TORSOWEAR)
 		update_worn_undersuit()
-	if(slot_flags & ITEM_SLOT_SUITSTORE)
-		update_suit_storage()
 	if(slot_flags & (ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET))
 		update_pockets()
 	if(slot_flags & ITEM_SLOT_HANDS)
 		update_held_items()
 
 ///Updates item slots obscured by this item (or using an override of flags to check)
+/// STEAMHALLOW FLAG - inventory
 /mob/proc/update_obscured_slots(obscured_flags)
 	if(obscured_flags & HIDEGLOVES)
-		update_worn_gloves(update_obscured = FALSE)
-	if(obscured_flags & HIDESUITSTORAGE)
-		update_suit_storage(update_obscured = FALSE)
+		update_worn_left_hand(update_obscured = FALSE)
+		update_worn_right_hand(update_obscured = FALSE)
 	if(obscured_flags & HIDEJUMPSUIT)
 		update_worn_undersuit(update_obscured = FALSE)
 	if(obscured_flags & HIDESHOES)
@@ -63,7 +62,7 @@
 	if(obscured_flags & HIDEEYES)
 		update_worn_glasses(update_obscured = FALSE)
 	if(obscured_flags & HIDENECK)
-		update_worn_neck(update_obscured = FALSE)
+		update_worn_i_neck(update_obscured = FALSE)
 	if(obscured_flags & HIDEHEADGEAR)
 		update_worn_head(update_obscured = FALSE)
 
@@ -92,8 +91,12 @@
 /mob/proc/update_worn_mask(update_obscured = FALSE)
 	return
 
-///Updates the neck overlay & HUD element.
-/mob/proc/update_worn_neck(update_obscured = FALSE)
+///Updates the inner neck overlay & HUD element.
+/mob/proc/update_worn_i_neck(update_obscured = FALSE)
+	return
+
+///Updates the outer neck overlay & HUD element.
+/mob/proc/update_worn_o_neck(update_obscured = FALSE)
 	return
 
 ///Updates the oversuit overlay & HUD element.
@@ -123,10 +126,6 @@
 /mob/proc/update_worn_glasses(update_obscured = FALSE)
 	return
 
-///Updates the id overlay & HUD element.
-/mob/proc/update_worn_id(update_obscured = FALSE)
-	return
-
 ///Updates the shoes overlay & HUD element.
 /mob/proc/update_worn_shoes(update_obscured = FALSE)
 	return
@@ -137,10 +136,6 @@
 
 ///Updates the Right hand overlay & HUD element.
 /mob/proc/update_worn_right_hand(update_obscured = FALSE)
-	return
-
-///Updates the suit storage overlay & HUD element.
-/mob/proc/update_suit_storage(update_obscured = FALSE)
 	return
 
 ///Updates the pocket overlay & HUD element.

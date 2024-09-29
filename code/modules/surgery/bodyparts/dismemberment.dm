@@ -209,10 +209,10 @@
 	if(arm_owner.hud_used)
 		var/atom/movable/screen/inventory/hand/associated_hand = arm_owner.hud_used.hand_slots["[held_index]"]
 		associated_hand?.update_appearance()
-	if(arm_owner.gloves)
-		arm_owner.dropItemToGround(arm_owner.gloves, TRUE)
+	if(arm_owner.left_hand) // STEAMHALLOW FLAG - revisit this; this should be arm dependant
+		arm_owner.dropItemToGround(arm_owner.left_hand, TRUE)
 	. = ..()
-	arm_owner.update_worn_gloves() //to remove the bloody hands overlay
+	arm_owner.update_worn_left_hand() //to remove the bloody hands overlay
 
 /obj/item/bodypart/leg/drop_limb(special, dismembered, move_to_floor = TRUE)
 	if(owner && !special)
@@ -367,7 +367,8 @@
 	if(!.)
 		return
 
-	new_arm_owner.update_worn_gloves() // To apply bloody hands overlay
+	new_arm_owner.update_worn_left_hand() // To apply bloody hands overlay
+	new_arm_owner.update_worn_right_hand() // To apply bloody hands overlay
 
 /mob/living/carbon/proc/regenerate_limbs(list/excluded_zones = list())
 	SEND_SIGNAL(src, COMSIG_CARBON_REGENERATE_LIMBS, excluded_zones)

@@ -154,7 +154,8 @@
 /obj/item/bodypart/arm/clear_ownership(mob/living/carbon/old_owner)
 	..()
 
-	old_owner.update_worn_gloves()
+	old_owner.update_worn_left_hand()
+	old_owner.update_worn_right_hand()
 
 	if(!held_index)
 		return
@@ -171,7 +172,8 @@
 /obj/item/bodypart/arm/apply_ownership(mob/living/carbon/new_owner)
 	..()
 
-	new_owner.update_worn_gloves()
+	new_owner.update_worn_left_hand()
+	new_owner.update_worn_right_hand()
 
 	if(!held_index)
 		return
