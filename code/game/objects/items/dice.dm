@@ -471,7 +471,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	head = /obj/item/clothing/head/hats/bowler
 	glasses = /obj/item/clothing/glasses/monocle
-	gloves = /obj/item/clothing/gloves/color/white
+	left_hand = /obj/item/clothing/gloves/color/white
 
 /datum/action/cooldown/spell/summon_mob
 	name = "Summon Servant"

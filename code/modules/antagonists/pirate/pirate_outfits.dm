@@ -66,7 +66,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	back = /obj/item/storage/backpack/satchel
 	glasses = /obj/item/clothing/glasses/monocle
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/collectable/tophat
 	shoes = /obj/item/clothing/shoes/laceup
 	implants = list(/obj/item/implant/explosive)
@@ -88,7 +88,7 @@
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	back = /obj/item/storage/backpack/satchel/med
 	glasses = /obj/item/clothing/glasses/hud/health/night
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/utility/surgerycap/black
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	l_pocket = /obj/item/card/emag/doorjack
@@ -142,7 +142,7 @@
 	uniform = /obj/item/clothing/under/ethereal_tunic
 	suit = /obj/item/clothing/suit/hooded/ethereal_raincoat
 	back = /obj/item/storage/backpack/satchel
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	shoes = /obj/item/clothing/shoes/bhop
 	l_pocket = /obj/item/switchblade
 
@@ -164,7 +164,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/military
 	suit_store = /obj/item/spear/military
 	back = /obj/item/storage/backpack/satchel/leather
-	gloves = /obj/item/clothing/gloves/color/brown
+	left_hand = /obj/item/clothing/gloves/color/brown
 	head = /obj/item/clothing/head/helmet/military
 	mask = /obj/item/clothing/mask/balaclava
 	shoes = /obj/item/clothing/shoes/workboots
@@ -178,7 +178,7 @@
 	suit = /obj/item/clothing/suit/armor/riot/knight/warlord
 	suit_store = null
 	back = /obj/item/fireaxe/boardingaxe
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	head = /obj/item/clothing/head/helmet/knight/warlord
 	mask = /obj/item/clothing/mask/breath
 	shoes = /obj/item/clothing/shoes/bronze

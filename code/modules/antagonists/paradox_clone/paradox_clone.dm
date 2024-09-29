@@ -79,7 +79,7 @@
 	name = "Paradox Clone (Preview only)"
 
 	uniform = /obj/item/clothing/under/rank/civilian/janitor
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/soft/purple
 
 /**

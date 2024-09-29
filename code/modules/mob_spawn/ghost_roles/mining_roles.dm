@@ -304,7 +304,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	back = /obj/item/storage/backpack
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset/syndicate/alt
 	shoes = /obj/item/clothing/shoes/combat
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol

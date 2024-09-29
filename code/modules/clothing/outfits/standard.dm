@@ -9,7 +9,7 @@
 	belt = /obj/item/gun/energy/pulse/pistol/m1911
 	ears = /obj/item/radio/headset/headset_cent/commander
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	head = /obj/item/clothing/head/helmet/space/beret
 	mask = /obj/item/cigarette/cigar/havana
 	shoes = /obj/item/clothing/shoes/combat/swat
@@ -97,7 +97,7 @@
 	back = /obj/item/storage/backpack
 	box = /obj/item/storage/box
 	ears = /obj/item/radio/headset
-	gloves = /obj/item/clothing/gloves/color/red
+	left_hand = /obj/item/clothing/gloves/color/red
 	head = /obj/item/clothing/head/helmet/redtaghelm
 	shoes = /obj/item/clothing/shoes/sneakers/red
 
@@ -106,7 +106,7 @@
 
 	uniform = /obj/item/clothing/under/color/grey
 	suit = /obj/item/clothing/suit/armor/vest
-	gloves = /obj/item/clothing/gloves/chief_engineer
+	left_hand = /obj/item/clothing/gloves/chief_engineer
 	mask = /obj/item/clothing/mask/gas
 	belt = /obj/item/storage/belt
 	l_hand = /obj/item/melee/energy/sword/saber/red
@@ -128,7 +128,7 @@
 
 	uniform = /obj/item/clothing/under/color/grey
 	back = /obj/item/storage/backpack
-	gloves = /obj/item/clothing/gloves/color/yellow
+	left_hand = /obj/item/clothing/gloves/color/yellow
 	mask = /obj/item/clothing/mask/gas
 	belt = /obj/item/storage/belt
 	l_hand = /obj/item/melee/baton/security/cattleprod
@@ -140,7 +140,7 @@
 	uniform = /obj/item/clothing/under/color/blue
 	suit = /obj/item/clothing/suit/bluetag
 	suit_store = /obj/item/gun/energy/laser/bluetag
-	gloves = /obj/item/clothing/gloves/color/blue
+	left_hand = /obj/item/clothing/gloves/color/blue
 	head = /obj/item/clothing/head/helmet/bluetaghelm
 	shoes = /obj/item/clothing/shoes/sneakers/blue
 
@@ -153,7 +153,7 @@
 	suit = /obj/item/clothing/suit/hooded/chaplain_hoodie
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/thermal/monocle
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	mask = /obj/item/clothing/mask/gas/clown_hat
 	shoes = /obj/item/clothing/shoes/clown_shoes
 	l_pocket = /obj/item/food/grown/banana
@@ -177,7 +177,7 @@
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/thermal/monocle
-	gloves = /obj/item/clothing/gloves/latex
+	left_hand = /obj/item/clothing/gloves/latex
 	head = /obj/item/clothing/head/utility/welding
 	mask = /obj/item/clothing/mask/surgical
 	l_pocket = /obj/item/knife/kitchen
@@ -200,7 +200,7 @@
 	neck = /obj/item/clothing/inner_neck/tie/red/hitman/tied
 	belt = /obj/item/modular_computer/pda/heads
 	ears = /obj/item/radio/headset
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	l_pocket = /obj/item/melee/energy/sword/saber
@@ -243,7 +243,7 @@
 	belt = /obj/item/gun/ballistic/revolver/mateba
 	ears = /obj/item/radio/headset/headset_cent/commander
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	head = /obj/item/clothing/head/hats/centhat
 	mask = /obj/item/cigarette/cigar/cohiba
 	shoes = /obj/item/clothing/shoes/combat/swat
@@ -357,7 +357,7 @@
 	belt = /obj/item/gun/ballistic/revolver/mateba
 	ears = /obj/item/radio/headset/headset_cent
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	head = /obj/item/clothing/head/costume/pirate/captain
 	shoes = /obj/item/clothing/shoes/combat
 
@@ -381,7 +381,7 @@
 	neck = /obj/item/clothing/inner_neck/tie/red/tied
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/fedora
 	shoes = /obj/item/clothing/shoes/laceup
 	l_hand = /obj/item/gun/ballistic/automatic/tommygun
@@ -429,7 +429,7 @@
 	belt = /obj/item/storage/belt/utility/chief/full
 	ears = /obj/item/radio/headset/headset_cent/commander
 	glasses = /obj/item/clothing/glasses/debug
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	mask = /obj/item/clothing/mask/gas/welding/up
 	shoes = /obj/item/clothing/shoes/magboots/advance
 
@@ -460,7 +460,7 @@
 	belt = /obj/item/storage/belt/utility/chief/full
 	ears = /obj/item/radio/headset/headset_cent/commander
 	glasses = /obj/item/clothing/glasses/debug
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	mask = /obj/item/clothing/mask/gas/welding/up
 	shoes = /obj/item/clothing/shoes/magboots/advance
 

@@ -49,7 +49,7 @@
 	suit_store = /obj/item/plant_analyzer
 	belt = /obj/item/modular_computer/pda/botanist
 	ears = /obj/item/radio/headset/headset_srv
-	gloves = /obj/item/clothing/gloves/botanic_leather
+	left_hand = /obj/item/clothing/gloves/botanic_leather
 
 	backpack = /obj/item/storage/backpack/botany
 	satchel = /obj/item/storage/backpack/satchel/hyd

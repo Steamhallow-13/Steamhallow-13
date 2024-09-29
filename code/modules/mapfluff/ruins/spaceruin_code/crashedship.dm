@@ -32,7 +32,7 @@
 	name = "Crashed Survey Ship Laborer"
 	uniform = /obj/item/clothing/under/misc/overalls
 	shoes = /obj/item/clothing/shoes/workboots
-	gloves = /obj/item/clothing/gloves/color/fyellow
+	left_hand = /obj/item/clothing/gloves/color/fyellow
 	head = /obj/item/clothing/head/utility/hardhat
 	r_pocket = /obj/item/paper/fluff/ruins/crashedship/old_diary
 	l_pocket = /obj/item/stack/spacecash/c200

@@ -50,7 +50,7 @@
 	name = "Ancient Engineer"
 	id = /obj/item/card/id/away/old/eng
 	uniform = /obj/item/clothing/under/rank/engineering/engineer
-	gloves = /obj/item/clothing/gloves/color/fyellow/old
+	left_hand = /obj/item/clothing/gloves/color/fyellow/old
 	shoes = /obj/item/clothing/shoes/workboots
 	l_pocket = /obj/item/tank/internals/emergency_oxygen
 

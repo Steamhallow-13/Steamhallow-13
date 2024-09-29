@@ -69,7 +69,7 @@
 /datum/outfit/job/engineer/gloved
 	name = "Station Engineer (Gloves)"
 
-	gloves = /obj/item/clothing/gloves/color/yellow
+	left_hand = /obj/item/clothing/gloves/color/yellow
 
 /datum/outfit/job/engineer/mod
 	name = "Station Engineer (MODsuit)"

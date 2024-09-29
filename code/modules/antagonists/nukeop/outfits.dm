@@ -3,7 +3,7 @@
 
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	back = /obj/item/storage/backpack/fireproof
 	ears = /obj/item/radio/headset/syndicate/alt
 	l_pocket = /obj/item/modular_computer/pda/nukeops
@@ -141,7 +141,7 @@
 	name = "Syndicate Operative - Cybersun Reinforcement"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/jacket/oversized
-	gloves = /obj/item/clothing/gloves/fingerless
+	left_hand = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/sunglasses
 	mask = /obj/item/cigarette/cigar
 	faction = "Cybersun Industries"
@@ -167,7 +167,7 @@
 	uniform = /obj/item/clothing/under/syndicate/scrubs
 	suit = /obj/item/clothing/suit/toggle/labcoat/interdyne
 	head = /obj/item/clothing/head/beret/medical
-	gloves = /obj/item/clothing/gloves/latex
+	left_hand = /obj/item/clothing/gloves/latex
 	neck = /obj/item/clothing/inner_neck/stethoscope
 	glasses = /obj/item/clothing/glasses/hud/health
 	mask = /obj/item/clothing/mask/breath/medical

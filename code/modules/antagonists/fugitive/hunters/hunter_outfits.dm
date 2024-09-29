@@ -4,7 +4,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/blueshirt
 	belt = /obj/item/gun/ballistic/automatic/pistol/m1911
 	head = /obj/item/clothing/head/hats/warden/police
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	left_hand = /obj/item/clothing/gloves/tackler/combat
 	shoes = /obj/item/clothing/shoes/jackboots
 	mask = /obj/item/clothing/mask/gas/sechailer/swat/spacepol
 	glasses = /obj/item/clothing/glasses/sunglasses
@@ -39,7 +39,7 @@
 	back = /obj/item/storage/backpack
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	left_hand = /obj/item/clothing/gloves/tackler/combat
 	head = /obj/item/clothing/head/helmet/alt
 	shoes = /obj/item/clothing/shoes/russian
 	l_pocket = /obj/item/ammo_box/strilka310
@@ -103,7 +103,7 @@
 	head = /obj/item/clothing/head/cowboy/bounty
 	suit = /obj/item/clothing/suit/space/hunter
 	belt = /obj/item/gun/ballistic/automatic/pistol/fire_mag
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	left_hand = /obj/item/clothing/gloves/tackler/combat
 	shoes = /obj/item/clothing/shoes/jackboots
 	mask = /obj/item/clothing/mask/gas/hunter
 	glasses = /obj/item/clothing/glasses/sunglasses/gar
@@ -131,7 +131,7 @@
 	uniform = /obj/item/clothing/under/rank/prisoner
 	back = /obj/item/storage/backpack
 	head = /obj/item/clothing/head/costume/scarecrow_hat
-	gloves = /obj/item/clothing/gloves/botanic_leather
+	left_hand = /obj/item/clothing/gloves/botanic_leather
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/jackboots
 	mask = /obj/item/clothing/mask/scarecrow
@@ -189,7 +189,7 @@
 	head = null
 	ears = /obj/item/radio/headset/psyker
 	uniform = /obj/item/clothing/under/pants/track
-	gloves = /obj/item/clothing/gloves/fingerless
+	left_hand = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/armor/vest/blueshirt
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/gore
@@ -208,7 +208,7 @@
 	ears = /obj/item/radio/headset
 	uniform = /obj/item/clothing/under/pants/jeans
 	suit = /obj/item/clothing/suit/hazardvest
-	gloves = /obj/item/clothing/gloves/fingerless
+	left_hand = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/sandal
 	l_pocket = /obj/item/restraints/handcuffs/cable/zipties
 	r_pocket = /obj/item/restraints/handcuffs/cable/zipties
@@ -222,7 +222,7 @@
 	back = /obj/item/storage/backpack/satchel/leather
 	ears = /obj/item/radio/headset/syndicate
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	shoes = /obj/item/clothing/shoes/laceup
 	belt = /obj/item/restraints/handcuffs/cable/zipties
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol

@@ -59,7 +59,7 @@
 		)
 	belt = /obj/item/modular_computer/pda/detective
 	ears = /obj/item/radio/headset/headset_sec/alt
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/fedora/det_hat
 	mask = /obj/item/cigarette
 	neck = /obj/item/clothing/inner_neck/tie/detective

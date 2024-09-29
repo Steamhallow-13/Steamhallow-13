@@ -62,8 +62,11 @@
 	/// Type path of item to go in the glasses slot
 	var/glasses = null
 
-	/// Type path of item to go in gloves slot
-	var/gloves = null
+	/// Type path of item to go in left hand slot
+	var/left_hand = null
+
+	/// Type path of item to go in right hand slot
+	var/right_hand = null
 
 	/// Type path of item to go in head slot
 	var/head = null
@@ -175,6 +178,7 @@
  *
  * If visualsOnly is true, you can omit any work that doesn't visually appear on the character sprite
  */
+/// STEAMHALLOW FLAG - IMPORTANT TO INVENTORY THING
 /datum/outfit/proc/equip(mob/living/carbon/human/user, visualsOnly = FALSE)
 	pre_equip(user, visualsOnly)
 
@@ -185,8 +189,10 @@
 		EQUIP_OUTFIT_ITEM(suit, ITEM_SLOT_O_TORSOWEAR)
 	if(belt)
 		EQUIP_OUTFIT_ITEM(belt, ITEM_SLOT_BELT)
-	if(gloves)
-		EQUIP_OUTFIT_ITEM(gloves, ITEM_SLOT_GLOVES)
+	if(left_hand)
+		EQUIP_OUTFIT_ITEM(left_hand, ITEM_SLOT_L_HAND)
+	if(right_hand)
+		EQUIP_OUTFIT_ITEM(right_hand, ITEM_SLOT_R_HAND)
 	if(shoes)
 		EQUIP_OUTFIT_ITEM(shoes, ITEM_SLOT_FEET)
 	if(head)
@@ -331,8 +337,10 @@
 		user.head.add_fingerprint(user, ignoregloves = TRUE)
 	if(user.shoes)
 		user.shoes.add_fingerprint(user, ignoregloves = TRUE)
-	if(user.gloves)
-		user.gloves.add_fingerprint(user, ignoregloves = TRUE)
+	if(user.left_hand)
+		user.left_hand.add_fingerprint(user, ignoregloves = TRUE)
+	if(user.right_hand)
+		user.right_hand.add_fingerprint(user, ignoregloves = TRUE)
 	if(user.ears)
 		user.ears.add_fingerprint(user, ignoregloves = TRUE)
 	if(user.glasses)
@@ -353,7 +361,7 @@
 
 /// Return a list of all the types that are required to disguise as this outfit type
 /datum/outfit/proc/get_chameleon_disguise_info()
-	var/list/types = list(uniform, suit, back, belt, gloves, shoes, head, mask, neck, ears, glasses, id, l_pocket, r_pocket, suit_store, r_hand, l_hand)
+	var/list/types = list(uniform, suit, back, belt, left_hand, right_hand, shoes, head, mask, neck, ears, glasses, id, l_pocket, r_pocket, suit_store, r_hand, l_hand)
 	types += chameleon_extras
 	types += skillchips
 	list_clear_nulls(types)
@@ -385,7 +393,8 @@
 	preload += belt
 	preload += ears
 	preload += glasses
-	preload += gloves
+	preload += left_hand
+	preload += right_hand
 	preload += head
 	preload += mask
 	preload += neck
@@ -412,7 +421,8 @@
 	.["suit"] = suit
 	.["back"] = back
 	.["belt"] = belt
-	.["gloves"] = gloves
+	.["left_hand"] = left_hand
+	.["right_hand"] = right_hand
 	.["shoes"] = shoes
 	.["head"] = head
 	.["mask"] = mask
@@ -440,7 +450,8 @@
 	suit = target.suit
 	back = target.back
 	belt = target.belt
-	gloves = target.gloves
+	left_hand = target.left_hand
+	right_hand = target.right_hand
 	shoes = target.shoes
 	head = target.head
 	mask = target.mask
@@ -479,7 +490,8 @@
 	suit = text2path(outfit_data["suit"])
 	back = text2path(outfit_data["back"])
 	belt = text2path(outfit_data["belt"])
-	gloves = text2path(outfit_data["gloves"])
+	left_hand = text2path(outfit_data["left_hand"])
+	right_hand = text2path(outfit_data["right_hand"])
 	shoes = text2path(outfit_data["shoes"])
 	head = text2path(outfit_data["head"])
 	mask = text2path(outfit_data["mask"])

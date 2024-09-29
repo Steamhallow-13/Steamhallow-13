@@ -57,7 +57,7 @@
 	uniform = /obj/item/clothing/under/rank/cargo/tech
 	suit = /obj/item/clothing/suit/hazardvest
 	belt = /obj/item/radio
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/soft/yellow
 	shoes = /obj/item/clothing/shoes/workboots
 	l_pocket = /obj/item/flashlight/seclite
@@ -68,7 +68,7 @@
 	uniform = /obj/item/clothing/under/rank/security/officer/grey
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	belt = /obj/item/radio
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/soft/sec
 	shoes = /obj/item/clothing/shoes/jackboots/sec
 	l_pocket = /obj/item/restraints/handcuffs
@@ -81,7 +81,7 @@
 	id = /obj/item/card/id/advanced/silver
 	uniform = /obj/item/clothing/under/rank/cargo/qm
 	belt = /obj/item/radio
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/soft/yellow
 	shoes = /obj/item/clothing/shoes/jackboots/sec
 	l_pocket = /obj/item/melee/baton/telescopic

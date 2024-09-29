@@ -45,7 +45,7 @@
 	)
 	belt = /obj/item/modular_computer/pda/shaftminer
 	ears = /obj/item/radio/headset/headset_cargo/mining
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/survival
 	r_pocket = /obj/item/storage/bag/ore //causes issues if spawned in backpack
@@ -83,7 +83,7 @@
 /datum/outfit/job/miner/equipped/combat
 	name = "Shaft Miner (Combat-Ready)"
 	glasses = /obj/item/clothing/glasses/hud/health/night/meson
-	gloves = /obj/item/clothing/gloves/bracer
+	left_hand = /obj/item/clothing/gloves/bracer
 	accessory = /obj/item/clothing/accessory/talisman
 	backpack_contents = list(
 		/obj/item/storage/box/miner_modkits = 1,

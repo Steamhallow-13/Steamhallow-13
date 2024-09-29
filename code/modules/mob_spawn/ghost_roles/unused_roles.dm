@@ -102,7 +102,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	back = /obj/item/storage/backpack
 	ears = /obj/item/radio/headset/syndicate/alt
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	shoes = /obj/item/clothing/shoes/combat
 
 	implants = list(/obj/item/implant/weapons_auth)
@@ -298,7 +298,7 @@
 	back = /obj/item/storage/backpack
 	belt = /obj/item/storage/belt/military/assault
 	ears = /obj/item/radio/headset/syndicate/alt
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	shoes = /obj/item/clothing/shoes/combat
 
 	implants = list(/obj/item/implant/weapons_auth)

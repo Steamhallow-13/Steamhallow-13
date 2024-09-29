@@ -103,7 +103,7 @@
 	belt = /obj/item/modular_computer/pda/heads/captain
 	ears = /obj/item/radio/headset/heads/captain/alt
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/captain
+	left_hand = /obj/item/clothing/gloves/captain
 	shoes = /obj/item/clothing/shoes/laceup
 	accessory = /obj/item/clothing/accessory/medal/gold/captain
 	backpack_contents = list(

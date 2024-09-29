@@ -38,7 +38,9 @@
 	var/obj/item/clothing/head = null
 
 	///only used by humans
-	var/obj/item/clothing/gloves = null
+	var/obj/item/clothing/left_hand = null
+	///only used by humans
+	var/obj/item/clothing/right_hand = null
 	///only used by humans.
 	var/obj/item/clothing/shoes/shoes = null
 	///only used by humans.

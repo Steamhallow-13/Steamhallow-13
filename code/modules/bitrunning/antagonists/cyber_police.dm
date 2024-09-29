@@ -17,7 +17,7 @@
 /datum/outfit/cyber_police
 	name = ROLE_CYBER_POLICE
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/cyber_police
 	shoes = /obj/item/clothing/shoes/laceup

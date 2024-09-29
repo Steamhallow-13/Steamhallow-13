@@ -12,7 +12,7 @@
 
 	uniform = /obj/item/clothing/under/rank/centcom/officer
 	ears = /obj/item/radio/headset/headset_cent/alt
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	mask = /obj/item/clothing/mask/gas/sechailer
 	shoes = /obj/item/clothing/shoes/combat/swat
 	var/additional_radio
@@ -73,7 +73,7 @@
 	)
 	belt = /obj/item/storage/belt/security/full
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	additional_radio = /obj/item/encryptionkey/heads/hos
 
 /datum/outfit/centcom/ert/security/alert
@@ -162,7 +162,7 @@
 	belt = /obj/item/gun/energy/e_gun
 	ears = /obj/item/radio/headset/headset_cent
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	l_pocket = /obj/item/pen
 	r_pocket = /obj/item/modular_computer/pda/heads
@@ -302,7 +302,7 @@
 	belt = /obj/item/melee/baton
 	ears = /obj/item/radio/headset/headset_cent
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	l_pocket = /obj/item/ammo_box/strilka310
 	r_pocket = /obj/item/ammo_box/strilka310
@@ -443,7 +443,7 @@
 	belt = /obj/item/gun/ballistic/revolver/mateba
 	ears = /obj/item/radio/headset/headset_cent/alt
 	glasses = /obj/item/clothing/glasses/hud/toggle/thermal
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	shoes = /obj/item/clothing/shoes/combat/swat
 	l_pocket = /obj/item/melee/energy/sword/saber
@@ -553,7 +553,7 @@
 	head = /obj/item/clothing/head/cowboy/black
 	uniform = /obj/item/clothing/under/rank/centcom/military
 	shoes = /obj/item/clothing/shoes/cowboy
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	back = /obj/item/storage/backpack/satchel/leather
 	box = /obj/item/storage/box/survival
 	l_pocket = /obj/item/switchblade

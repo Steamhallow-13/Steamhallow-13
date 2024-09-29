@@ -131,7 +131,7 @@
 
 /datum/outfit/consumed_miner
 	name = "Legion-Consumed Miner"
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	mask = /obj/item/clothing/mask/gas/explorer
 	shoes = /obj/item/clothing/shoes/workboots/mining
 
@@ -202,7 +202,7 @@
 		head = /obj/item/clothing/head/helmet/gladiator
 	else
 		suit = /obj/item/clothing/suit/armor/bone
-		gloves = /obj/item/clothing/gloves/bracer
+		left_hand = /obj/item/clothing/gloves/bracer
 		head = /obj/item/clothing/head/helmet/skull
 	if(prob(5))
 		back = pick_weight(list(
@@ -327,7 +327,7 @@
 	name = "Legion-Consumed Dame"
 	uniform = /obj/item/clothing/under/costume/maid
 	suit = /obj/item/clothing/suit/armor/riot/knight
-	gloves = /obj/item/clothing/gloves/color/white
+	left_hand = /obj/item/clothing/gloves/color/white
 	head = /obj/item/clothing/head/helmet/knight
 	mask = /obj/item/clothing/mask/breath
 	shoes = /obj/item/clothing/shoes/laceup

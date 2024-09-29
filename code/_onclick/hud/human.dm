@@ -530,6 +530,7 @@
 			else
 				inv.alpha = initial(inv.alpha)
 
+/// STEAMHALLOW FLAG - IMPORTANT TO INVENTORY THING
 /datum/hud/human/hidden_inventory_update(mob/viewer)
 	if(!mymob)
 		return
@@ -541,9 +542,12 @@
 		if(H.shoes)
 			H.shoes.screen_loc = ui_shoes
 			screenmob.client.screen += H.shoes
-		if(H.gloves)
-			H.gloves.screen_loc = ui_gloves
-			screenmob.client.screen += H.gloves
+		if(H.left_hand)
+			H.left_hand.screen_loc = ui_left_hand
+			screenmob.client.screen += H.left_hand
+		if(H.right_hand)
+			H.left_hand.screen_loc = ui_right_hand
+			screenmob.client.screen += H.right_hand
 		if(H.ears)
 			H.ears.screen_loc = ui_ears
 			screenmob.client.screen += H.ears
@@ -568,8 +572,10 @@
 	else
 		if(H.shoes)
 			screenmob.client.screen -= H.shoes
-		if(H.gloves)
-			screenmob.client.screen -= H.gloves
+		if(H.left_hand)
+			screenmob.client.screen -= H.left_hand
+		if(H.right_hand)
+			screenmob.client.screen -= H.right_hand
 		if(H.ears)
 			screenmob.client.screen -= H.ears
 		if(H.glasses)

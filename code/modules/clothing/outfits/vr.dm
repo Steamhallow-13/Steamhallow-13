@@ -19,7 +19,7 @@
 	back = /obj/item/storage/backpack
 	box = /obj/item/storage/box/survival/syndie
 	belt = /obj/item/gun/ballistic/automatic/pistol/clandestine
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	shoes = /obj/item/clothing/shoes/combat
 	l_pocket = /obj/item/paper/fluff/vr/fluke_ops
 	r_pocket = /obj/item/pen/edagger

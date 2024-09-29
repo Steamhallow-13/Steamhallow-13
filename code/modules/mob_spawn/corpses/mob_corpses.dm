@@ -12,7 +12,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/swat
@@ -30,7 +30,7 @@
 	name = "Syndicate Commando Corpse"
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/syndicate
 	back = /obj/item/mod/control/pre_equipped/nuclear
@@ -43,7 +43,7 @@
 
 /datum/outfit/syndicatecommandocorpse/lessenedgear
 	name = "Syndicate Commando Corpse (Less Antag Gear)"
-	gloves = /obj/item/clothing/gloves/tackler
+	left_hand = /obj/item/clothing/gloves/tackler
 	back = null
 	id = null
 	id_trim = null
@@ -55,7 +55,7 @@
 	name = "Syndicate Commando Corpse (Softsuit)"
 	suit = /obj/item/clothing/suit/space/syndicate/black
 	head = /obj/item/clothing/head/helmet/space/syndicate/black
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	back = null
 	id = null
 	id_trim = null
@@ -70,7 +70,7 @@
 	name = "Syndicate Stormtrooper Corpse"
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	left_hand = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/syndicate
 	back = /obj/item/mod/control/pre_equipped/elite
@@ -90,7 +90,7 @@
 	shoes = /obj/item/clothing/shoes/combat
 	neck = /obj/item/clothing/inner_neck/large_scarf/syndie
 	glasses = /obj/item/clothing/glasses/cold
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/swat
@@ -183,7 +183,7 @@
 	uniform = /obj/item/clothing/under/costume/soviet
 	shoes = /obj/item/clothing/shoes/jackboots
 	head = /obj/item/clothing/head/costume/bearpelt
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	mask = /obj/item/clothing/mask/gas
 
 
@@ -204,7 +204,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	suit = /obj/item/clothing/suit/armor/bulletproof
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	left_hand = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset
 	head = /obj/item/clothing/head/helmet/alt
 	mask = /obj/item/clothing/mask/balaclava
@@ -303,7 +303,7 @@
 	uniform = /obj/item/clothing/under/rank/security/officer
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	left_hand = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	head = /obj/item/clothing/head/helmet/swat/nanotrasen
@@ -322,7 +322,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	head = /obj/item/clothing/head/helmet/swat/nanotrasen
@@ -340,7 +340,7 @@
 	name = "\improper NT Elite Assault Officer Corpse"
 	uniform = /obj/item/clothing/under/rank/centcom/military
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	back = /obj/item/mod/control/pre_equipped/responsory/security
 	id = /obj/item/card/id/advanced/centcom
@@ -358,7 +358,7 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/green
 	suit = /obj/item/clothing/suit/apron/surgical
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	gloves = /obj/item/clothing/gloves/latex/nitrile
+	left_hand = /obj/item/clothing/gloves/latex/nitrile
 	ears = /obj/item/radio/headset
 	back = /obj/item/storage/backpack/satchel/med
 	id = /obj/item/card/id/advanced
@@ -374,7 +374,7 @@
 	uniform = /obj/item/clothing/under/color/yellow
 	suit = /obj/item/clothing/suit/hooded/bee_costume
 	shoes = /obj/item/clothing/shoes/sneakers/yellow
-	gloves = /obj/item/clothing/gloves/color/yellow
+	left_hand = /obj/item/clothing/gloves/color/yellow
 	ears = /obj/item/radio/headset
 	belt = /obj/item/storage/belt/fannypack/yellow/bee_terrorist
 	id = /obj/item/card/id/advanced

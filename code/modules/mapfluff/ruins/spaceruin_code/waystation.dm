@@ -68,7 +68,7 @@
 	uniform = /obj/item/clothing/under/rank/security/officer
 	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	left_hand = /obj/item/clothing/gloves/tackler/combat
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	head = /obj/item/clothing/head/helmet/swat/nanotrasen
 	back = /obj/item/storage/backpack/security

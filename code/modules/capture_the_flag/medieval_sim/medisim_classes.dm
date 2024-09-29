@@ -5,7 +5,7 @@
 	uniform = /obj/item/clothing/under/color/red
 	shoes = /obj/item/clothing/shoes/plate/red
 	suit = /obj/item/clothing/suit/armor/riot/knight/red
-	gloves = /obj/item/clothing/gloves/plate/red
+	left_hand = /obj/item/clothing/gloves/plate/red
 	head = /obj/item/clothing/head/helmet/knight/red
 	l_hand = /obj/item/claymore
 
@@ -38,7 +38,7 @@
 	uniform = /obj/item/clothing/under/color/blue
 	shoes = /obj/item/clothing/shoes/plate/blue
 	suit = /obj/item/clothing/suit/armor/riot/knight/blue
-	gloves = /obj/item/clothing/gloves/plate/blue
+	left_hand = /obj/item/clothing/gloves/plate/blue
 	head = /obj/item/clothing/head/helmet/knight/blue
 
 /datum/outfit/ctf/medisim/archer/blue
@@ -46,5 +46,5 @@
 
 	uniform = /obj/item/clothing/under/color/blue
 	shoes = /obj/item/clothing/shoes/plate/blue
-	gloves = /obj/item/clothing/gloves/plate/blue
+	left_hand = /obj/item/clothing/gloves/plate/blue
 	head = /obj/item/clothing/head/helmet/knight/blue

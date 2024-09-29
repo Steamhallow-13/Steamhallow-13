@@ -4,7 +4,7 @@
 	uniform = /obj/item/clothing/under/rank/cargo/miner
 	suit = /obj/item/clothing/suit/hooded/wintercoat
 	back = /obj/item/storage/backpack/duffelbag
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/winterboots/ice_boots
 	head = /obj/item/clothing/head/utility/hardhat/orange
 
@@ -14,7 +14,7 @@
 	uniform = /obj/item/clothing/under/rank/cargo/qm
 	suit = /obj/item/clothing/suit/hooded/wintercoat
 	back = /obj/item/storage/backpack/duffelbag
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/winterboots/ice_boots
 	head = /obj/item/clothing/head/utility/hardhat/white
 	glasses = /obj/item/clothing/glasses/sunglasses

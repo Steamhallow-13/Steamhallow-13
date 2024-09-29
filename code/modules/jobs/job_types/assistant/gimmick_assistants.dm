@@ -153,7 +153,7 @@
 	name = "Gimmick Assistant - Lightbringer"
 	uniform = /obj/item/clothing/under/color/yellow
 	head = /obj/item/clothing/head/costume/cueball
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 
 	l_pocket = /obj/item/flashlight/lantern
 	r_pocket = /obj/item/lightreplacer

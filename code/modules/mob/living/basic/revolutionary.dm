@@ -119,7 +119,7 @@
 	uniform = /obj/item/clothing/under/color/grey
 	head = /obj/item/clothing/head/costume/ushanka
 	mask = /obj/item/clothing/mask/gas
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/jackboots
 
 

@@ -63,7 +63,7 @@
 
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/advanced/chameleon
 
@@ -81,7 +81,7 @@
 	display_name = "Melee Operative"
 	desc = "A syndicate operative with multiple knives."
 
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet
 	backpack_contents = list(/obj/item/knife/combat = 6)
@@ -98,7 +98,7 @@
 	suit_store = /datum/outfit/job/security::suit_store
 	belt = /datum/outfit/job/security::belt
 	ears = /datum/outfit/job/security::ears //cant communicate with station i think?
-	gloves = /datum/outfit/job/security::gloves
+	left_hand = /datum/outfit/job/security::gloves
 	head = /datum/outfit/job/security::head
 	shoes = /datum/outfit/job/security::shoes
 	l_pocket = /obj/item/flashlight/seclite
@@ -124,7 +124,7 @@
 	)
 	glasses = /obj/item/clothing/glasses/thermal
 	uniform = /obj/item/clothing/under/syndicate/sniper
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 	l_pocket = /obj/item/knife/combat
 	l_hand = /obj/item/gun/ballistic/rifle/sniper_rifle
 
@@ -136,7 +136,7 @@
 	suit = /obj/item/clothing/suit/toggle/chef
 	head = /obj/item/clothing/head/utility/chefhat
 	mask = /obj/item/clothing/mask/fakemoustache/italian
-	gloves = /obj/item/clothing/gloves/the_sleeping_carp
+	left_hand = /obj/item/clothing/gloves/the_sleeping_carp
 	back = /obj/item/storage/backpack
 	backpack_contents = list(
 		/obj/item/sharpener,
@@ -158,7 +158,7 @@
 
 	shoes = /obj/item/clothing/shoes/combat
 	uniform = /obj/item/clothing/under/syndicate
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/advanced/chameleon
 
@@ -172,7 +172,7 @@
 	uniform = /obj/item/clothing/under/syndicate/rus_army
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/rus_helmet
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	left_hand = /obj/item/clothing/gloves/tackler/combat/insulated
 
 	backpack_contents = list(
 		/obj/item/grenade/smokebomb = 2,
@@ -193,7 +193,7 @@
 	uniform = /obj/item/clothing/under/shorts/green
 	mask = /obj/item/clothing/mask/gas/tiki_mask
 	glasses = /obj/item/clothing/glasses/thermal
-	gloves = /obj/item/clothing/gloves/botanic_leather
+	left_hand = /obj/item/clothing/gloves/botanic_leather
 	belt = /obj/item/gun/syringe/blowgun
 	back = /obj/item/storage/backpack/saddlepack
 	shoes = /obj/item/clothing/shoes/sandal
@@ -215,7 +215,7 @@
 
 	uniform = /obj/item/clothing/under/suit/carpskin
 	head = /obj/item/clothing/head/fedora/carpskin
-	gloves = /obj/item/clothing/gloves/rapid
+	left_hand = /obj/item/clothing/gloves/rapid
 	backpack_contents = list(
 		/obj/item/throwing_star = 6,
 		/obj/item/restraints/legcuffs/bola/tactical = 2,
@@ -283,7 +283,7 @@
 	implants = list(/obj/item/implant/sad_trombone)
 	l_pocket = /obj/item/melee/energy/sword/bananium
 	r_pocket = /obj/item/shield/energy/bananium
-	gloves = /obj/item/clothing/gloves/tackler/rocket
+	left_hand = /obj/item/clothing/gloves/tackler/rocket
 	backpack_contents = list(
 		/obj/item/reagent_containers/spray/waterflower = 1,
 		/obj/item/instrument/bikehorn = 1,
@@ -316,7 +316,7 @@
 	shoes = /obj/item/clothing/shoes/magboots
 	head = /obj/item/clothing/head/utility/hardhat
 	back = /obj/item/fireaxe
-	gloves = /obj/item/clothing/gloves/color/yellow
+	left_hand = /obj/item/clothing/gloves/color/yellow
 
 /datum/outfit/deathmatch_loadout/battler/scientist
 	name = "Deathmatch: Scientist"
@@ -564,7 +564,7 @@
 	glasses = /datum/outfit/job/hos::glasses
 	suit = /obj/item/clothing/suit/armor/hos/hos_formal
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/compact
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	left_hand = /obj/item/clothing/gloves/tackler/combat
 	belt = /obj/item/gun/energy/e_gun/hos
 	r_hand = /obj/item/melee/baton/security/loaded
 	l_hand = /obj/item/shield/riot/tele
@@ -584,7 +584,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	neck = /obj/item/bedsheet/captain
 	glasses = /obj/item/clothing/glasses/sunglasses
-	gloves = /obj/item/clothing/gloves/captain
+	left_hand = /obj/item/clothing/gloves/captain
 	belt = /obj/item/storage/belt/sabre
 	l_hand = /obj/item/gun/energy/laser/captain
 	r_pocket = /obj/item/assembly/flash
@@ -601,7 +601,7 @@
 	suit = /obj/item/clothing/suit/hooded/ablative
 	shoes = /obj/item/clothing/shoes/chameleon/noslip
 	glasses = /obj/item/clothing/glasses/thermal/syndi
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	suit_store = /obj/item/gun/energy/recharge/ebow
 	l_hand = /obj/item/melee/energy/sword
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/stimulants
@@ -658,7 +658,7 @@
 	uniform = /obj/item/clothing/under/color/grey/ancient
 	mask = /obj/item/clothing/mask/gas
 	shoes = /obj/item/clothing/shoes/sneakers/black
-	gloves = /obj/item/clothing/gloves/cut
+	left_hand = /obj/item/clothing/gloves/cut
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/methamphetamine
 	r_pocket = /obj/item/stock_parts/power_store/cell/high
 	belt = /obj/item/storage/belt/utility/full
@@ -713,7 +713,7 @@
 	l_pocket = /obj/item/toy/crayon/spraycan/mimecan
 	r_pocket = /obj/item/food/grown/banana/mime
 	neck = /datum/outfit/job/mime::neck
-	gloves = /datum/outfit/job/mime::gloves
+	left_hand = /datum/outfit/job/mime::gloves
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/cup/glass/bottle/bottleofnothing,
@@ -743,7 +743,7 @@
 	suit_store = /obj/item/knife/kitchen
 	head = /obj/item/clothing/head/utility/chefhat
 	mask = /obj/item/clothing/mask/fakemoustache/italian
-	gloves = /obj/item/clothing/gloves/the_sleeping_carp
+	left_hand = /obj/item/clothing/gloves/the_sleeping_carp
 	back = /obj/item/storage/backpack
 
 	backpack_contents = list(
@@ -770,7 +770,7 @@
 	uniform = /obj/item/clothing/under/trek/command/next
 	l_pocket = /obj/item/gun/energy/e_gun/mini
 	r_pocket = /obj/item/extinguisher/mini
-	gloves = /obj/item/clothing/gloves/fingerless
+	left_hand = /obj/item/clothing/gloves/fingerless
 	belt = /obj/item/storage/belt/utility/full/inducer
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
@@ -786,7 +786,7 @@
 	id_trim = /datum/id_trim/job/janitor
 	id = /obj/item/card/id/advanced/chameleon
 	uniform = /obj/item/clothing/under/rank/civilian/janitor
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	belt = /obj/item/storage/belt/janitor/full
 	shoes = /obj/item/clothing/shoes/chameleon/noslip
 	r_hand  = /obj/item/mop/advanced
@@ -863,7 +863,7 @@
 	id_trim = /datum/id_trim/job/atmospheric_technician
 	id = /obj/item/card/id/advanced/chameleon
 	belt = /obj/item/storage/belt/utility/atmostech
-	gloves = /obj/item/clothing/gloves/color/plasmaman/atmos
+	left_hand = /obj/item/clothing/gloves/color/plasmaman/atmos
 	shoes = /obj/item/clothing/shoes/workboots
 	r_pocket = /obj/item/tank/internals/plasmaman/belt/full
 
@@ -894,7 +894,7 @@
 	uniform = /obj/item/clothing/under/color/rainbow
 	l_pocket = /obj/item/toy/cattoy
 	r_pocket = /obj/item/restraints/handcuffs/fake
-	gloves = /obj/item/clothing/gloves/color/rainbow
+	left_hand = /obj/item/clothing/gloves/color/rainbow
 	belt = /obj/item/melee/curator_whip
 	shoes = /obj/item/clothing/shoes/sneakers/rainbow
 
@@ -948,7 +948,7 @@
 	belt = /obj/item/melee/cultblade/dagger
 	l_pocket = /obj/item/flashlight/flare/culttorch
 	r_pocket = /obj/item/flashlight/flare/culttorch
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/cult/alt
 	l_hand = /obj/item/shield/mirror // the dreaded return!!
 
@@ -976,7 +976,7 @@
 	belt = /obj/item/melee/cultblade/dagger
 	l_pocket = /obj/item/flashlight/flare/culttorch
 	r_pocket = /obj/item/flashlight/flare/culttorch
-	gloves = /obj/item/clothing/gloves/color/red
+	left_hand = /obj/item/clothing/gloves/color/red
 	shoes = /obj/item/clothing/shoes/cult
 	l_hand = null
 
@@ -1128,7 +1128,7 @@
 	uniform = /obj/item/clothing/under/rank/civilian/chaplain
 	id_trim = null
 	belt = /obj/item/nullrod // choose any!
-	gloves = /obj/item/clothing/gloves/plate
+	left_hand = /obj/item/clothing/gloves/plate
 	shoes = /obj/item/clothing/shoes/plate
 	l_pocket = /obj/item/flashlight/lantern/on
 	r_pocket = /obj/item/reagent_containers/cup/glass/bottle/holywater
@@ -1158,7 +1158,7 @@
 	uniform = /obj/item/clothing/under/chameleon
 	id_trim = null
 	belt = /obj/item/brass_spear
-	gloves = /obj/item/clothing/gloves/tinkerer
+	left_hand = /obj/item/clothing/gloves/tinkerer
 	shoes = /obj/item/clothing/shoes/bronze
 	l_pocket = /obj/item/reagent_containers/cup/beaker/synthflesh // they used to turn their dmg into tox with a spell. close enough
 	r_pocket = /obj/item/reagent_containers/cup/beaker/synthflesh

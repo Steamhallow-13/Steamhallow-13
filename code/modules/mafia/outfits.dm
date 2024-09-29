@@ -17,7 +17,7 @@
 	name = "Mafia Syndicate"
 	uniform = /obj/item/clothing/under/syndicate
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 
 /datum/outfit/mafia/lavaland
 	name = "Mafia Wastelander"
@@ -35,7 +35,7 @@
 
 /datum/outfit/mafia/snowy
 	name = "Mafia Outwear"
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/hooded/wintercoat
 	shoes = /obj/item/clothing/shoes/winterboots
 	uniform = /obj/item/clothing/under/rank/civilian/curator/treasure_hunter
@@ -43,7 +43,7 @@
 /datum/outfit/mafia/gothic
 	name = "Mafia Castlegoer"
 	glasses = /obj/item/clothing/glasses/monocle
-	gloves = /obj/item/clothing/gloves/color/white
+	left_hand = /obj/item/clothing/gloves/color/white
 	shoes = /obj/item/clothing/shoes/laceup
 	suit = /obj/item/clothing/suit/costume/gothcoat
 	uniform = /obj/item/clothing/under/costume/buttondown/slacks/service
@@ -62,7 +62,7 @@
 	neck = /obj/item/clothing/inner_neck/tie/detective
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	suit = /obj/item/clothing/suit/jacket/det_suit
-	gloves = /obj/item/clothing/gloves/color/black
+	left_hand = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/fedora/det_hat
 	mask = /obj/item/cigarette
 
@@ -89,7 +89,7 @@
 	name = "Mafia Security Officer"
 
 	uniform = /obj/item/clothing/under/rank/security/officer
-	gloves = /obj/item/clothing/gloves/color/black/security
+	left_hand = /obj/item/clothing/gloves/color/black/security
 	head = /obj/item/clothing/head/helmet/sec
 	suit = /obj/item/clothing/suit/armor/vest/alt
 	shoes = /obj/item/clothing/shoes/jackboots
@@ -116,7 +116,7 @@
 	uniform = /obj/item/clothing/under/rank/security/head_of_security
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/armor/hos/trenchcoat
-	gloves = /obj/item/clothing/gloves/color/black/security
+	left_hand = /obj/item/clothing/gloves/color/black/security
 	head = /obj/item/clothing/head/hats/hos/beret
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 
@@ -126,7 +126,7 @@
 	uniform = /obj/item/clothing/under/rank/security/warden
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit = /obj/item/clothing/suit/armor/vest/warden/alt
-	gloves = /obj/item/clothing/gloves/color/black/security
+	left_hand = /obj/item/clothing/gloves/color/black/security
 	head = /obj/item/clothing/head/hats/warden/red
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 
@@ -150,7 +150,7 @@
 	name = "Mafia Obsessed"
 	uniform = /obj/item/clothing/under/misc/overalls
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	gloves = /obj/item/clothing/gloves/latex
+	left_hand = /obj/item/clothing/gloves/latex
 	mask = /obj/item/clothing/mask/surgical
 	suit = /obj/item/clothing/suit/apron
 

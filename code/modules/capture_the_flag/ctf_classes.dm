@@ -6,7 +6,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/armor/vest/ctf
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/combat
+	left_hand = /obj/item/clothing/gloves/combat
 	id = /obj/item/card/id/away
 	belt = /obj/item/gun/ballistic/automatic/pistol/deagle/ctf
 	l_pocket = /obj/item/ammo_box/magazine/recharge/ctf
@@ -69,7 +69,7 @@
 	name = "CTF Assaulter (Solo)"
 	suit = /obj/item/clothing/suit/armor/vest/ctf/light
 	l_hand = /obj/item/gun/ballistic/shotgun/ctf
-	gloves = /obj/item/clothing/gloves/tackler/rocket
+	left_hand = /obj/item/clothing/gloves/tackler/rocket
 	l_pocket = /obj/item/ammo_box/magazine/recharge/ctf/shotgun
 	r_pocket = /obj/item/ammo_box/magazine/recharge/ctf/shotgun
 	belt = null

@@ -56,7 +56,7 @@
 	uniform = /obj/item/clothing/under/costume/referee
 	shoes = /obj/item/clothing/shoes/laceup
 	mask = /obj/item/clothing/mask/whistle/minigame
-	gloves = /obj/item/clothing/gloves/latex
+	left_hand = /obj/item/clothing/gloves/latex
 	head = /obj/item/clothing/head/soft/black
 	taller_chance = 15
 
@@ -72,7 +72,7 @@
 	uniform = /obj/item/clothing/under/color/grey/ancient
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	mask = /obj/item/clothing/mask/gas/prop
-	gloves = /obj/item/clothing/gloves/color/fyellow
+	left_hand = /obj/item/clothing/gloves/color/fyellow
 	belt = /obj/item/storage/belt/utility
 	// assistants should be random unknowns so no id card
 	has_card = FALSE
@@ -118,7 +118,7 @@
 	uniform = /obj/item/clothing/under/costume/soviet
 	shoes = /obj/item/clothing/shoes/winterboots
 	head = /obj/item/clothing/head/costume/ushanka
-	gloves = /obj/item/clothing/gloves/color/brown
+	left_hand = /obj/item/clothing/gloves/color/brown
 
 /datum/outfit/basketball/ash_gladiators
 	name = "Basketball Ash Gladiators"
