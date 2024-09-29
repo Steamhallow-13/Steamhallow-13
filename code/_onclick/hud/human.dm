@@ -452,6 +452,15 @@
 	toggleable_inventory += inv_box
 
 	inv_box = new /atom/movable/screen/inventory(null, src)
+	inv_box.name = "tail"
+	inv_box.icon = ui_style
+	inv_box.icon_state = "tail"
+	inv_box.icon_full = "template"
+	inv_box.screen_loc = ui_tail
+	inv_box.slot_id = ITEM_SLOT_TAIL
+	toggleable_inventory += inv_box
+
+	inv_box = new /atom/movable/screen/inventory(null, src)
 	inv_box.name = "belt"
 	inv_box.icon = ui_style
 	inv_box.icon_state = "belt"

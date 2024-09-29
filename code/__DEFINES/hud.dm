@@ -96,16 +96,43 @@
 #define ui_spacesuit "EAST-1:28,CENTER-4:14"
 #define ui_stamina "EAST-1:28,CENTER-3:14"
 
-//Pop-up inventory
+/// Pop-up inventory
 #define ui_shoes "WEST+1:8,SOUTH:5"
 #define ui_iclothing "WEST:6,SOUTH+1:7"
 #define ui_oclothing "WEST+1:8,SOUTH+1:7"
+#define ui_inner_legwear "WEST:6,SOUTH+1:7"
+#define ui_outer_legwear "WEST:6,SOUTH+1:7"
 #define ui_gloves "WEST+2:10,SOUTH+1:7"
+// Left Hand
+#define ui_left_hand "WEST+2:10,SOUTH+1:7"
+#define ui_left_thumb "WEST+2:10,SOUTH+1:7"
+#define ui_left_index "WEST+2:10,SOUTH+1:7"
+#define ui_left_middle "WEST+2:10,SOUTH+1:7"
+#define ui_left_ring "WEST+2:10,SOUTH+1:7"
+#define ui_left_pinky "WEST+2:10,SOUTH+1:7"
+// Right Hand
+#define ui_right_hand "WEST+2:10,SOUTH+1:7"
+#define ui_right_thumb "WEST+2:10,SOUTH+1:7"
+#define ui_right_index "WEST+2:10,SOUTH+1:7"
+#define ui_right_middle "WEST+2:10,SOUTH+1:7"
+#define ui_right_ring "WEST+2:10,SOUTH+1:7"
+#define ui_right_pinky "WEST+2:10,SOUTH+1:7"
 #define ui_glasses "WEST:6,SOUTH+3:11"
+#define ui_maw "WEST+1:8,SOUTH+2:9"
 #define ui_mask "WEST+1:8,SOUTH+2:9"
 #define ui_ears "WEST+2:10,SOUTH+2:9"
+#define ui_ears_left "WEST+2:10,SOUTH+2:9"
+#define ui_ears_right "WEST+2:10,SOUTH+2:9"
 #define ui_neck "WEST:6,SOUTH+2:9"
+#define ui_outer_neck "WEST:6,SOUTH+2:9"
 #define ui_head "WEST+1:8,SOUTH+3:11"
+// Organ Dependant
+#define ui_chest "WEST+1:8,SOUTH+3:11"
+#define ui_groin "WEST+1:8,SOUTH+3:11"
+#define ui_vagina "WEST+1:8,SOUTH+3:11"
+#define ui_dick "WEST+1:8,SOUTH+3:11"
+#define ui_anus "WEST+1:8,SOUTH+3:11"
+#define ui_tail "WEST+1:8,SOUTH+3:11"
 
 //Generic living
 #define ui_living_pull "EAST-1:28,CENTER-3:15"
