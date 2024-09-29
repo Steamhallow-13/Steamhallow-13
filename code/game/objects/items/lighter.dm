@@ -163,10 +163,10 @@
 	var/mob/living/carbon/human/human_user = user
 	if(!istype(human_user) || HAS_TRAIT(human_user, TRAIT_RESISTHEAT) || HAS_TRAIT(human_user, TRAIT_RESISTHEATHANDS))
 		hand_protected = TRUE
-	else if(!istype(human_user.gloves, /obj/item/clothing/gloves))
+	else if(!istype(human_user.left_hand, /obj/item/clothing/gloves))
 		hand_protected = FALSE
 	else
-		var/obj/item/clothing/gloves/gloves = human_user.gloves
+		var/obj/item/clothing/gloves/gloves = human_user.left_hand
 		if(gloves.max_heat_protection_temperature)
 			hand_protected = (gloves.max_heat_protection_temperature > 360)
 

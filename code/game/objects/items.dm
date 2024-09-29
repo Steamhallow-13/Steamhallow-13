@@ -904,6 +904,7 @@
 /obj/item/proc/get_surgery_tool_overlay(tray_extended)
 	return null
 
+/// STEAMHALLOW FLAG - IMPORTANT FOR INVENTORY
 /obj/item/proc/update_slot_icon()
 	if(!ismob(loc))
 		return
@@ -913,8 +914,10 @@
 		owner.update_worn_oversuit()
 	if(flags & ITEM_SLOT_I_TORSOWEAR)
 		owner.update_worn_undersuit()
-	if(flags & ITEM_SLOT_GLOVES)
-		owner.update_worn_gloves()
+	if(flags & ITEM_SLOT_L_HAND)
+		owner.update_worn_left_hand()
+	if(flags & ITEM_SLOT_R_HAND)
+		owner.update_worn_right_hand()
 	if(flags & ITEM_SLOT_EYES)
 		owner.update_worn_glasses()
 	if(flags & ITEM_SLOT_EARS)
@@ -925,8 +928,6 @@
 		owner.update_worn_head()
 	if(flags & ITEM_SLOT_FEET)
 		owner.update_worn_shoes()
-	if(flags & ITEM_SLOT_ID)
-		owner.update_worn_id()
 	if(flags & ITEM_SLOT_BELT)
 		owner.update_worn_belt()
 	if(flags & ITEM_SLOT_BACK)
@@ -1584,14 +1585,17 @@
  * When called on an item, and given a body targeting zone, this will return TRUE if the item slot matches the target zone, and FALSE otherwise.
  * Currently supports the jumpsuit, outersuit, backpack, belt, gloves, hat, ears, neck, mask, eyes, and feet slots. All other slots will auto return FALSE.
  */
+/// STEAMHALLOW FLAG - IMPORTANT TO INVENTORY
 /obj/item/proc/compare_zone_to_item_slot(zone)
 	switch(slot_flags)
 		if(ITEM_SLOT_I_TORSOWEAR, ITEM_SLOT_O_TORSOWEAR, ITEM_SLOT_BACK)
 			return (zone == BODY_ZONE_CHEST)
 		if(ITEM_SLOT_BELT)
 			return (zone == BODY_ZONE_PRECISE_GROIN)
-		if(ITEM_SLOT_GLOVES)
-			return (zone == BODY_ZONE_R_ARM || zone == BODY_ZONE_L_ARM)
+		if(ITEM_SLOT_L_HAND)
+			return (zone == BODY_ZONE_L_ARM)
+		if(ITEM_SLOT_R_HAND)
+			return (zone == BODY_ZONE_R_ARM)
 		if(ITEM_SLOT_HEAD, ITEM_SLOT_EARS, ITEM_SLOT_NECK)
 			return (zone == BODY_ZONE_HEAD)
 		if(ITEM_SLOT_MASK)

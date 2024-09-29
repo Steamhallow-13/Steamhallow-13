@@ -139,9 +139,6 @@
 			if(ITEM_SLOT_BELT)
 				default_layer = BELT_LAYER
 				default_icon = 'icons/mob/clothing/belt.dmi'
-			if(ITEM_SLOT_ID)
-				default_layer = ID_LAYER
-				default_icon = 'icons/mob/clothing/id.dmi'
 			if(ITEM_SLOT_I_TORSOWEAR)
 				default_layer = UNIFORM_LAYER
 				default_icon = DEFAULT_UNIFORM_FILE
@@ -151,9 +148,12 @@
 			if(ITEM_SLOT_O_TORSOWEAR)
 				default_layer = SUIT_LAYER
 				default_icon = DEFAULT_SUIT_FILE
-			if(ITEM_SLOT_GLOVES)
-				default_layer = GLOVES_LAYER
+			if(ITEM_SLOT_L_HAND)
+				default_layer = GLOVES_LAYER // STEAMHALLOW FLAG - might need to granularize this? maybe
 				default_icon = 'icons/mob/clothing/hands.dmi'
+			if(ITEM_SLOT_R_HAND)
+				default_layer = GLOVES_LAYER // STEAMHALLOW FLAG - might need to granularize this? maybe
+				default_icon = 'icons/mob/clothing/hands.dmi' // defo this tho
 			if(ITEM_SLOT_FEET)
 				default_layer = SHOES_LAYER
 				default_icon = DEFAULT_SHOES_FILE
@@ -287,7 +287,7 @@ GLOBAL_LIST_INIT(strippable_mannequin_items, create_strippable_list(list(
 
 /datum/strippable_item/mannequin_slot/gloves
 	key = STRIPPABLE_ITEM_GLOVES
-	item_slot = ITEM_SLOT_GLOVES
+	item_slot = ITEM_SLOT_L_HAND // STEAMHALLOW FLAG :(
 
 /datum/strippable_item/mannequin_slot/feet
 	key = STRIPPABLE_ITEM_FEET

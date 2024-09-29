@@ -25,8 +25,10 @@
 		update_worn_ears()
 	if(slot_flags & ITEM_SLOT_EYES)
 		update_worn_glasses()
-	if(slot_flags & ITEM_SLOT_GLOVES)
-		update_worn_gloves()
+	if(slot_flags & ITEM_SLOT_L_HAND)
+		update_worn_left_hand()
+	if(slot_flags & ITEM_SLOT_R_HAND)
+		update_worn_right_hand()
 	if(slot_flags & ITEM_SLOT_HEAD)
 		update_worn_head()
 	if(slot_flags & ITEM_SLOT_FEET)
@@ -85,6 +87,7 @@
 	SHOULD_CALL_PARENT(TRUE)
 	SEND_SIGNAL(src, COMSIG_MOB_UPDATE_HELD_ITEMS)
 
+/// STEAMHALLOW FLAG - Everything below important to inventory
 ///Updates the mask overlay & HUD element.
 /mob/proc/update_worn_mask(update_obscured = FALSE)
 	return
@@ -128,8 +131,12 @@
 /mob/proc/update_worn_shoes(update_obscured = FALSE)
 	return
 
-///Updates the glasses overlay & HUD element.
-/mob/proc/update_worn_gloves(update_obscured = FALSE)
+///Updates the left hand overlay & HUD element.
+/mob/proc/update_worn_left_hand(update_obscured = FALSE)
+	return
+
+///Updates the Right hand overlay & HUD element.
+/mob/proc/update_worn_right_hand(update_obscured = FALSE)
 	return
 
 ///Updates the suit storage overlay & HUD element.
