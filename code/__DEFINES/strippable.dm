@@ -1,4 +1,5 @@
 // All of these must be matched in StripMenu.js.
+/// STEAMHALLOW FLAG - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 #define STRIPPABLE_ITEM_HEAD "head"
 #define STRIPPABLE_ITEM_BACK "back"
 #define STRIPPABLE_ITEM_MASK "mask"
@@ -10,7 +11,6 @@
 #define STRIPPABLE_ITEM_GLOVES "gloves"
 #define STRIPPABLE_ITEM_FEET "shoes"
 #define STRIPPABLE_ITEM_SUIT_STORAGE "suit_storage"
-#define STRIPPABLE_ITEM_ID "id"
 #define STRIPPABLE_ITEM_BELT "belt"
 #define STRIPPABLE_ITEM_LPOCKET "left_pocket"
 #define STRIPPABLE_ITEM_RPOCKET "right_pocket"

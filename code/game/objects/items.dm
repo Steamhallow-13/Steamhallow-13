@@ -932,7 +932,7 @@
 		owner.update_worn_belt()
 	if(flags & ITEM_SLOT_BACK)
 		owner.update_worn_back()
-	if(flags & ITEM_SLOT_NECK)
+	if(flags & ITEM_SLOT_I_NECK)
 		owner.update_worn_i_neck()
 
 ///Returns the temperature of src. If you want to know if an item is hot use this proc.
@@ -1596,7 +1596,7 @@
 			return (zone == BODY_ZONE_L_ARM)
 		if(ITEM_SLOT_R_HAND)
 			return (zone == BODY_ZONE_R_ARM)
-		if(ITEM_SLOT_HEAD, ITEM_SLOT_EARS, ITEM_SLOT_NECK)
+		if(ITEM_SLOT_HEAD, ITEM_SLOT_EARS, ITEM_SLOT_I_NECK)
 			return (zone == BODY_ZONE_HEAD)
 		if(ITEM_SLOT_MASK)
 			return (zone == BODY_ZONE_PRECISE_MOUTH)

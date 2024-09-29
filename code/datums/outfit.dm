@@ -17,12 +17,6 @@
 	///Name of the outfit (shows up in the equip admin verb)
 	var/name = "Naked"
 
-	/// Type path of item to go in the idcard slot
-	var/id = null
-
-	/// Type path of ID card trim associated with this outfit.
-	var/id_trim = null
-
 	/// Type path of item to go in uniform slot
 	var/uniform = null
 
@@ -200,29 +194,13 @@
 	if(mask)
 		EQUIP_OUTFIT_ITEM(mask, ITEM_SLOT_MASK)
 	if(neck)
-		EQUIP_OUTFIT_ITEM(neck, ITEM_SLOT_NECK)
+		EQUIP_OUTFIT_ITEM(neck, ITEM_SLOT_I_NECK)
 	if(ears)
 		EQUIP_OUTFIT_ITEM(ears, ITEM_SLOT_EARS)
 	if(glasses)
 		EQUIP_OUTFIT_ITEM(glasses, ITEM_SLOT_EYES)
 	if(back)
 		EQUIP_OUTFIT_ITEM(back, ITEM_SLOT_BACK)
-	if(id)
-		EQUIP_OUTFIT_ITEM(id, ITEM_SLOT_ID)
-	if(!visualsOnly && id_trim && user.wear_id)
-		var/obj/item/card/id/id_card = user.wear_id
-		if(!istype(id_card)) //If an ID wasn't found in their ID slot, it's probably something holding their ID like a wallet or PDA
-			id_card = locate() in user.wear_id
-
-		if(istype(id_card)) //Make sure that we actually found an ID to modify, otherwise this runtimes and cancels equipping the outfit
-			id_card.registered_age = user.age
-			if(id_trim)
-				if(!SSid_access.apply_trim_to_card(id_card, id_trim))
-					WARNING("Unable to apply trim [id_trim] to [id_card] in outfit [name].")
-				user.sec_hud_set_ID()
-
-	if(suit_store)
-		EQUIP_OUTFIT_ITEM(suit_store, ITEM_SLOT_SUITSTORE)
 
 	if(undershirt)
 		user.undershirt = initial(undershirt.name)
@@ -361,7 +339,7 @@
 
 /// Return a list of all the types that are required to disguise as this outfit type
 /datum/outfit/proc/get_chameleon_disguise_info()
-	var/list/types = list(uniform, suit, back, belt, left_hand, right_hand, shoes, head, mask, neck, ears, glasses, id, l_pocket, r_pocket, suit_store, r_hand, l_hand)
+	var/list/types = list(uniform, suit, back, belt, left_hand, right_hand, shoes, head, mask, neck, ears, glasses, l_pocket, r_pocket, suit_store, r_hand, l_hand)
 	types += chameleon_extras
 	types += skillchips
 	list_clear_nulls(types)
@@ -371,7 +349,6 @@
 /// This should not be things that do unique stuff in Initialize() based off their location, since we'll be storing them for a while
 /datum/outfit/proc/get_types_to_preload()
 	var/list/preload = list()
-	preload += id
 	preload += uniform
 	preload += suit
 	preload += suit_store
@@ -429,8 +406,6 @@
 	.["neck"] = neck
 	.["ears"] = ears
 	.["glasses"] = glasses
-	.["id"] = id
-	.["id_trim"] = id_trim
 	.["l_pocket"] = l_pocket
 	.["r_pocket"] = r_pocket
 	.["suit_store"] = suit_store
@@ -444,6 +419,7 @@
 	.["accessory"] = accessory
 
 /// Copy most vars from another outfit to this one
+/// STEAMHALLOW FLAG - important
 /datum/outfit/proc/copy_from(datum/outfit/target)
 	name = target.name
 	uniform = target.uniform
@@ -458,8 +434,6 @@
 	neck = target.neck
 	ears = target.ears
 	glasses = target.glasses
-	id = target.id
-	id_trim = target.id_trim
 	l_pocket = target.l_pocket
 	r_pocket = target.r_pocket
 	suit_store = target.suit_store
@@ -498,8 +472,6 @@
 	neck = text2path(outfit_data["neck"])
 	ears = text2path(outfit_data["ears"])
 	glasses = text2path(outfit_data["glasses"])
-	id = text2path(outfit_data["id"])
-	id_trim = text2path(outfit_data["id_trim"])
 	l_pocket = text2path(outfit_data["l_pocket"])
 	r_pocket = text2path(outfit_data["r_pocket"])
 	suit_store = text2path(outfit_data["suit_store"])

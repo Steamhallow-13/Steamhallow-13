@@ -130,7 +130,7 @@
 			if(ITEM_SLOT_MASK)
 				default_layer = FACEMASK_LAYER
 				default_icon = 'icons/mob/clothing/mask.dmi'
-			if(ITEM_SLOT_NECK)
+			if(ITEM_SLOT_I_NECK)
 				default_layer = NECK_LAYER
 				default_icon = 'icons/mob/clothing/neck.dmi'
 			if(ITEM_SLOT_BACK)
@@ -205,7 +205,6 @@ GLOBAL_LIST_INIT(strippable_mannequin_items, create_strippable_list(list(
 	/datum/strippable_item/mannequin_slot/neck,
 	/datum/strippable_item/mannequin_slot/back,
 	/datum/strippable_item/mannequin_slot/belt,
-	/datum/strippable_item/mannequin_slot/id,
 	/datum/strippable_item/mannequin_slot/uniform,
 	/datum/strippable_item/mannequin_slot/suit,
 	/datum/strippable_item/mannequin_slot/gloves,
@@ -263,7 +262,7 @@ GLOBAL_LIST_INIT(strippable_mannequin_items, create_strippable_list(list(
 
 /datum/strippable_item/mannequin_slot/neck
 	key = STRIPPABLE_ITEM_NECK
-	item_slot = ITEM_SLOT_NECK
+	item_slot = ITEM_SLOT_I_NECK
 
 /datum/strippable_item/mannequin_slot/back
 	key = STRIPPABLE_ITEM_BACK
@@ -272,10 +271,6 @@ GLOBAL_LIST_INIT(strippable_mannequin_items, create_strippable_list(list(
 /datum/strippable_item/mannequin_slot/belt
 	key = STRIPPABLE_ITEM_BELT
 	item_slot = ITEM_SLOT_BELT
-
-/datum/strippable_item/mannequin_slot/id
-	key = STRIPPABLE_ITEM_ID
-	item_slot = ITEM_SLOT_ID
 
 /datum/strippable_item/mannequin_slot/uniform
 	key = STRIPPABLE_ITEM_JUMPSUIT
